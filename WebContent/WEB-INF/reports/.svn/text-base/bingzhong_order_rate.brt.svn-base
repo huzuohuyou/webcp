@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="GBK" ?>
+<report version="3.0">
+	<head>
+		<property name="type">0</property>
+		<name><![CDATA[dept_order_rate]]></name>
+		<dataSets>
+			<dataSet name="ds" type="Self" >
+				<property name="dataSource"></property>
+				<property name="desc"><![CDATA[]]></property>
+				<property name="query"><![CDATA[com.goodwillcis.cp.bingzhong.BZOrderRate]]></property>
+				<property name="beginRow">0</property>
+				<property name="endRow">0</property>
+				<queryParam name="start_time" />
+				<queryParam name="end_time" />
+			</dataSet>
+		</dataSets>
+		<parameters>
+			<parameter name="start_time" type="6">
+				<property name="dateFormat"></property>
+				<property name="default"></property>
+				<property name="desc">开始时间</property>
+				<property name="source">0</property>
+			</parameter>
+			<parameter name="end_time" type="6">
+				<property name="dateFormat"></property>
+				<property name="default"></property>
+				<property name="desc">结束时间</property>
+				<property name="source">0</property>
+			</parameter>
+		</parameters>
+		<variables/>
+		<subReports/>
+	</head>
+	<body>
+		<sheet id="sheet1">
+			<page>
+				<property name="margin-left">9</property>
+				<property name="margin-right">9</property>
+				<property name="margin-top">9</property>
+				<property name="margin-bottom">9</property>
+			</page>
+			<grid row="13" col="4">
+				<properties>
+				</properties>
+				<rows>
+					<row id="1">
+						<property name="type">1</property>
+					</row>
+					<row id="2">
+						<property name="type">1</property>
+					</row>
+					<row id="3">
+						<property name="type">1</property>
+						<property name="height">15</property>
+					</row>
+					<row id="4">
+						<property name="type">1</property>
+					</row>
+					<row id="5">
+					</row>
+					<row id="6">
+					</row>
+					<row id="7">
+					</row>
+					<row id="8">
+					</row>
+					<row id="9">
+					</row>
+					<row id="10">
+					</row>
+					<row id="11">
+					</row>
+					<row id="12">
+					</row>
+					<row id="13">
+					</row>
+				</rows>
+				<columns>
+					<column id="1">
+						<property name="width">150</property>
+					</column>
+					<column id="2">
+						<property name="width">150</property>
+					</column>
+					<column id="3">
+						<property name="width">150</property>
+					</column>
+					<column id="4">
+						<property name="width">150</property>
+					</column>
+				</columns>
+				<cells>
+					<cell id="1,1" type="0" >
+					</cell>
+					<cell id="1,2" type="0" >
+					</cell>
+					<cell id="1,3" type="0" >
+					</cell>
+					<cell id="1,4" type="0" >
+					</cell>
+					<cell id="2,1" type="0" colspan="4" >
+						<property name="value"><![CDATA[病种医嘱执行率]]></property>
+						<property name="font-size">16</property>
+						<property name="bold">0</property>
+					</cell>
+					<cell id="3,1" type="0" >
+						<property name="bold">0</property>
+					</cell>
+					<cell id="3,2" type="0" >
+					</cell>
+					<cell id="3,3" type="0" >
+					</cell>
+					<cell id="3,4" type="0" >
+					</cell>
+					<cell id="4,1" type="0" >
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="4,2" type="0" colspan="3" >
+						<property name="value"><![CDATA[="统计时间段为："+@start_time+"至"+@end_time]]></property>
+						<property name="align">2</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+					</cell>
+					<cell id="5,1" type="0" >
+						<property name="value"><![CDATA[病种]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="5,2" type="0" >
+						<property name="value"><![CDATA[下达医嘱总数]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="5,3" type="0" >
+						<property name="value"><![CDATA[下达临床路径医嘱数]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="5,4" type="0" >
+						<property name="value"><![CDATA[医嘱执行率]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="6,1" type="0" >
+						<property name="value"><![CDATA[=ds.select(病种)]]></property>
+						<property name="ext-direction">3</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="6,2" type="0" >
+						<property name="value"><![CDATA[=ds.select(下达医嘱总数)]]></property>
+						<property name="view-format">1|###0;(###0)</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="6,3" type="0" >
+						<property name="value"><![CDATA[=ds.select(下达临床路径医嘱数)]]></property>
+						<property name="view-format">1|###0;(###0)</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="6,4" type="0" >
+						<property name="value"><![CDATA[=ds.select(医嘱执行率)]]></property>
+						<property name="view-format">1|###0%;(###0%)</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="7,1" type="0" >
+						<property name="value"><![CDATA[合计]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="7,2" type="0" >
+						<property name="value"><![CDATA[=ds.sum(下达医嘱总数)]]></property>
+						<property name="view-format">1|###0;(###0)</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="7,3" type="0" >
+						<property name="value"><![CDATA[=ds.sum(下达临床路径医嘱数)]]></property>
+						<property name="view-format">1|###0;(###0)</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="7,4" type="0" >
+						<property name="value"><![CDATA[=C7{}/B7{}]]></property>
+						<property name="view-format">1|###0%;(###0%)</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="8,1" type="0" >
+					</cell>
+					<cell id="8,2" type="0" >
+					</cell>
+					<cell id="8,3" type="0" >
+					</cell>
+					<cell id="8,4" type="0" >
+					</cell>
+					<cell id="9,1" type="0" >
+					</cell>
+					<cell id="9,2" type="0" >
+					</cell>
+					<cell id="9,3" type="0" >
+					</cell>
+					<cell id="9,4" type="0" >
+					</cell>
+					<cell id="10,1" type="0" >
+					</cell>
+					<cell id="10,2" type="0" >
+					</cell>
+					<cell id="10,3" type="0" >
+					</cell>
+					<cell id="10,4" type="0" >
+					</cell>
+					<cell id="11,1" type="0" >
+					</cell>
+					<cell id="11,2" type="0" >
+					</cell>
+					<cell id="11,3" type="0" >
+					</cell>
+					<cell id="11,4" type="0" >
+					</cell>
+					<cell id="12,1" type="0" >
+					</cell>
+					<cell id="12,2" type="0" >
+					</cell>
+					<cell id="12,3" type="0" >
+					</cell>
+					<cell id="12,4" type="0" >
+					</cell>
+					<cell id="13,1" type="0" >
+					</cell>
+					<cell id="13,2" type="0" >
+					</cell>
+					<cell id="13,3" type="0" >
+					</cell>
+					<cell id="13,4" type="0" >
+					</cell>
+				</cells>
+			</grid>
+		</sheet>
+	</body>
+	<param-form col="2">
+		<ctrl id="start_time" type="1" label="开始时间">
+		</ctrl>
+		<ctrl id="end_time" type="1" label="结束时间">
+		</ctrl>
+	</param-form>
+</report>

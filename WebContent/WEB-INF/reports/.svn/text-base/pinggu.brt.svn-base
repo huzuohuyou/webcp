@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="GBK" ?>
+<report version="3.0">
+	<head>
+		<property name="type">0</property>
+		<name><![CDATA[pinggu]]></name>
+		<dataSets/>
+		<parameters/>
+		<variables/>
+		<subReports/>
+	</head>
+	<body>
+		<sheet id="sheet1">
+			<page>
+				<property name="pageRowNum">40</property>
+				<property name="printLocation">0</property>
+			</page>
+			<grid row="34" col="11">
+				<properties>
+				</properties>
+				<rows>
+					<row id="1">
+					</row>
+					<row id="2">
+						<property name="height">50</property>
+					</row>
+					<row id="3">
+					</row>
+					<row id="4">
+					</row>
+					<row id="5">
+					</row>
+					<row id="6">
+					</row>
+					<row id="7">
+					</row>
+					<row id="8">
+					</row>
+					<row id="9">
+					</row>
+					<row id="10">
+					</row>
+					<row id="11">
+					</row>
+					<row id="12">
+					</row>
+					<row id="13">
+					</row>
+					<row id="14">
+					</row>
+					<row id="15">
+					</row>
+					<row id="16">
+					</row>
+					<row id="17">
+					</row>
+					<row id="18">
+					</row>
+					<row id="19">
+					</row>
+					<row id="20">
+					</row>
+					<row id="21">
+					</row>
+					<row id="22">
+					</row>
+					<row id="23">
+					</row>
+					<row id="24">
+					</row>
+					<row id="25">
+					</row>
+					<row id="26">
+					</row>
+					<row id="27">
+					</row>
+					<row id="28">
+					</row>
+					<row id="29">
+					</row>
+					<row id="30">
+					</row>
+					<row id="31">
+					</row>
+					<row id="32">
+					</row>
+					<row id="33">
+					</row>
+					<row id="34">
+					</row>
+				</rows>
+				<columns>
+					<column id="1">
+						<property name="width">42</property>
+					</column>
+					<column id="2">
+						<property name="width">37</property>
+					</column>
+					<column id="3">
+						<property name="width">33</property>
+					</column>
+					<column id="4">
+					</column>
+					<column id="5">
+					</column>
+					<column id="6">
+						<property name="width">35</property>
+					</column>
+					<column id="7">
+						<property name="width">28</property>
+					</column>
+					<column id="8">
+					</column>
+					<column id="9">
+					</column>
+					<column id="10">
+						<property name="width">65</property>
+					</column>
+					<column id="11">
+					</column>
+				</columns>
+				<cells>
+					<cell id="1,1" type="0" colspan="8" >
+					</cell>
+					<cell id="1,9" type="0" >
+						<property name="value"><![CDATA[编号：]]></property>
+					</cell>
+					<cell id="1,10" type="0" colspan="2" >
+						<property name="value"><![CDATA[___________]]></property>
+					</cell>
+					<cell id="2,1" type="0" colspan="11" >
+						<property name="value"><![CDATA[临床路径管理试点调查评估表]]></property>
+						<property name="font-size">16</property>
+						<property name="bold">0</property>
+					</cell>
+					<cell id="3,1" type="0" colspan="4" >
+						<property name="value"><![CDATA[福建省]]></property>
+					</cell>
+					<cell id="3,5" type="0" colspan="4" >
+					</cell>
+					<cell id="3,9" type="0" >
+						<property name="value"><![CDATA[医院名称：]]></property>
+						<property name="align">2</property>
+					</cell>
+					<cell id="3,10" type="0" colspan="2" >
+						<property name="value"><![CDATA[厦门中山医院]]></property>
+						<property name="underline">0</property>
+						<property name="align">0</property>
+					</cell>
+					<cell id="4,1" type="0" colspan="2" >
+						<property name="value"><![CDATA[填表人：]]></property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+					</cell>
+					<cell id="4,3" type="0" colspan="6" >
+						<property name="value"><![CDATA[                                ]]></property>
+						<property name="underline">0</property>
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+					</cell>
+					<cell id="4,9" type="0" >
+						<property name="value"><![CDATA[填表时间：]]></property>
+						<property name="align">2</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="4,10" type="0" colspan="2" >
+						<property name="value"><![CDATA[                              ]]></property>
+						<property name="view-format">4|yyyy年M月d日</property>
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+					</cell>
+					<cell id="5,1" type="0" >
+						<property name="value"><![CDATA[序号]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="5,2" type="0" colspan="6" >
+						<property name="value"><![CDATA[项目]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="5,8" type="0" colspan="4" >
+						<property name="value"><![CDATA[填写内容]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="6,1" type="0" >
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="6,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[一、医院基本情况调查]]></property>
+						<property name="bold">0</property>
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="7,1" type="0" rowspan="2" >
+						<property name="value"><![CDATA[1]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1;1:0,0,0:1</border>
+					</cell>
+					<cell id="7,2" type="0" rowspan="2" colspan="2" >
+						<property name="value"><![CDATA[床位数]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1;1:0,0,0:1</border>
+					</cell>
+					<cell id="7,4" type="0" colspan="4" >
+						<property name="value"><![CDATA[现有编制床位数]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="7,8" type="0" >
+						<property name="value"><![CDATA[1200]]></property>
+						<property name="underline">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="7,9" type="0" >
+						<property name="value"><![CDATA[张]]></property>
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="7,10" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="7,11" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="8,4" type="0" colspan="4" >
+						<property name="value"><![CDATA[实际使用床位数]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="8,8" type="0" >
+						<property name="value"><![CDATA[1521]]></property>
+						<property name="underline">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="8,9" type="0" >
+						<property name="value"><![CDATA[张]]></property>
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="8,10" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="8,11" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="9,1" type="0" >
+						<property name="value"><![CDATA[2]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="9,2" type="0" colspan="6" >
+						<property name="value"><![CDATA[医院年住院人次数]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="9,8" type="0" >
+						<property name="value"><![CDATA[5.5]]></property>
+						<property name="view-format">1|###0.00;(###0.00)</property>
+						<property name="underline">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="9,9" type="0" >
+						<property name="value"><![CDATA[万人次]]></property>
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="9,10" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="9,11" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="10,1" type="0" >
+						<property name="value"><![CDATA[3]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="10,2" type="0" colspan="6" >
+						<property name="value"><![CDATA[医院年门诊诊疗人次数]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="10,8" type="0" >
+						<property name="value"><![CDATA[7.8]]></property>
+						<property name="underline">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="10,9" type="0" >
+						<property name="value"><![CDATA[万人次]]></property>
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="10,10" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="10,11" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="11,1" type="0" >
+						<property name="value"><![CDATA[4]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="11,2" type="0" colspan="6" >
+						<property name="value"><![CDATA[平均床位使用率]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="11,8" type="0" >
+						<property name="value"><![CDATA[101.15]]></property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="11,9" type="0" >
+						<property name="value"><![CDATA[%]]></property>
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="11,10" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="11,11" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="12,1" type="0" >
+						<property name="value"><![CDATA[5]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="12,2" type="0" colspan="6" >
+						<property name="value"><![CDATA[平均病床周转次数]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="12,8" type="0" >
+						<property name="value"><![CDATA[2.5]]></property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="12,9" type="0" >
+						<property name="value"><![CDATA[人次/张]]></property>
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="12,10" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="12,11" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="13,1" type="0" >
+						<property name="value"><![CDATA[6]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="13,2" type="0" colspan="6" >
+						<property name="value"><![CDATA[医院总收入]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="13,8" type="0" >
+						<property name="value"><![CDATA[8305]]></property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="13,9" type="0" >
+						<property name="value"><![CDATA[万元]]></property>
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="13,10" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="13,11" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="14,1" type="0" >
+						<property name="value"><![CDATA[7]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="14,2" type="0" colspan="6" >
+						<property name="value"><![CDATA[住院收入]]></property>
+						<property name="align">0</property>
+						<property name="indent">24</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="14,8" type="0" >
+						<property name="value"><![CDATA[3637]]></property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="14,9" type="0" >
+						<property name="value"><![CDATA[万元]]></property>
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="14,10" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="14,11" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="15,1" type="0" >
+						<property name="value"><![CDATA[8]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="15,2" type="0" colspan="6" >
+						<property name="value"><![CDATA[门诊收入]]></property>
+						<property name="align">0</property>
+						<property name="indent">24</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="15,8" type="0" >
+						<property name="value"><![CDATA[2134]]></property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="15,9" type="0" >
+						<property name="value"><![CDATA[万元]]></property>
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="15,10" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="15,11" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="16,1" type="0" >
+						<property name="value"><![CDATA[9]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="16,2" type="0" colspan="6" >
+						<property name="value"><![CDATA[药品收入]]></property>
+						<property name="align">0</property>
+						<property name="indent">24</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="16,8" type="0" >
+						<property name="value"><![CDATA[1760]]></property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="16,9" type="0" >
+						<property name="value"><![CDATA[万元]]></property>
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="16,10" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="16,11" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="17,1" type="0" >
+						<property name="value"><![CDATA[10]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="17,2" type="0" colspan="6" >
+						<property name="value"><![CDATA[耗材收入]]></property>
+						<property name="align">0</property>
+						<property name="indent">24</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="17,8" type="0" >
+						<property name="value"><![CDATA[1046]]></property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="17,9" type="0" >
+						<property name="value"><![CDATA[万元]]></property>
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="17,10" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="17,11" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="18,1" type="0" >
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="18,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[ 二、医院临床路径管理实施情况]]></property>
+						<property name="bold">0</property>
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="19,1" type="0" >
+						<property name="value"><![CDATA[11]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="19,2" type="0" colspan="6" >
+						<property name="value"><![CDATA[医院实施临床路径的专业数目]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="19,8" type="0" >
+						<property name="value"><![CDATA[4]]></property>
+						<property name="underline">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="19,9" type="0" >
+						<property name="value"><![CDATA[个]]></property>
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="19,10" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="19,11" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="20,1" type="0" >
+						<property name="value"><![CDATA[12]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="20,2" type="0" colspan="6" >
+						<property name="value"><![CDATA[医院实施临床路径的病种数目]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="20,8" type="0" >
+						<property name="value"><![CDATA[9]]></property>
+						<property name="underline">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="20,9" type="0" >
+						<property name="value"><![CDATA[个]]></property>
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="20,10" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="20,11" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="21,1" type="0" rowspan="3" >
+						<property name="value"><![CDATA[13]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+					</cell>
+					<cell id="21,2" type="0" rowspan="5" >
+						<property name="value"><![CDATA[质量控制信息]]></property>
+						<property name="text-direction">1</property>
+						<property name="size-adjust">2</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+					</cell>
+					<cell id="21,3" type="0" rowspan="3" colspan="5" >
+						<property name="value"><![CDATA[实施临床路径的病例数]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+					</cell>
+					<cell id="21,8" type="0" colspan="2" >
+						<property name="value"><![CDATA[实施临床路径的患者数]]></property>
+					</cell>
+					<cell id="21,10" type="0" >
+						<property name="value"><![CDATA[114]]></property>
+						<property name="underline">0</property>
+					</cell>
+					<cell id="21,11" type="0" >
+						<property name="value"><![CDATA[例]]></property>
+						<property name="align">0</property>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="22,8" type="0" colspan="2" >
+						<property name="value"><![CDATA[完成临床路径的患者数]]></property>
+					</cell>
+					<cell id="22,10" type="0" >
+						<property name="value"><![CDATA[80]]></property>
+						<property name="underline">0</property>
+					</cell>
+					<cell id="22,11" type="0" >
+						<property name="value"><![CDATA[例]]></property>
+						<property name="align">0</property>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="23,8" type="0" colspan="2" >
+						<property name="value"><![CDATA[出现变异的患者数]]></property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+					</cell>
+					<cell id="23,10" type="0" >
+						<property name="value"><![CDATA[14]]></property>
+						<property name="underline">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="23,11" type="0" >
+						<property name="value"><![CDATA[例]]></property>
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="24,1" type="0" >
+						<property name="value"><![CDATA[14]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="24,3" type="0" colspan="5" >
+						<property name="value"><![CDATA[实施临床路径的患者总数占试点病种全院患者总数的比例]]></property>
+						<property name="indent">8</property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="24,8" type="0" >
+						<property name="value"><![CDATA[78]]></property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="24,9" type="0" >
+						<property name="value"><![CDATA[%]]></property>
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="24,10" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="24,11" type="0" >
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="25,1" type="0" >
+						<property name="value"><![CDATA[15]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="25,3" type="0" colspan="5" >
+						<property name="value"><![CDATA[临床路径相关变异分析记录]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="25,8" type="0" >
+						<property name="value"><![CDATA[非常好]]></property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="25,9" type="0" >
+						<property name="value"><![CDATA[比较好]]></property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="25,10" type="0" >
+						<property name="value"><![CDATA[一般]]></property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="25,11" type="0" >
+						<property name="value"><![CDATA[不好]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="26,1" type="0" >
+						<property name="value"><![CDATA[16]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="26,2" type="0" rowspan="5" >
+						<property name="value"><![CDATA[监督与反馈]]></property>
+						<property name="text-direction">1</property>
+						<property name="size-adjust">2</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+					</cell>
+					<cell id="26,3" type="0" colspan="5" >
+						<property name="value"><![CDATA[采取临床路径相关的动态监督]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="26,8" type="0" >
+						<property name="value"><![CDATA[是]]></property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="26,9" type="0" >
+						<property name="value"><![CDATA[否]]></property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="26,10" type="0" >
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="26,11" type="0" >
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="27,1" type="0" >
+						<property name="value"><![CDATA[17]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="27,3" type="0" colspan="5" >
+						<property name="value"><![CDATA[组织院级临床路径实施自评次数]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="27,8" type="0" >
+						<property name="value"><![CDATA[4]]></property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="27,9" type="0" colspan="2" >
+						<property name="value"><![CDATA[次（附记录）]]></property>
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+					</cell>
+					<cell id="27,11" type="0" >
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="28,1" type="0" >
+						<property name="value"><![CDATA[18]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="28,3" type="0" colspan="5" >
+						<property name="value"><![CDATA[组织院级临床路径修订会议次数]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="28,8" type="0" >
+						<property name="value"><![CDATA[2]]></property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="28,9" type="0" colspan="2" >
+						<property name="value"><![CDATA[次（附记录）]]></property>
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+					</cell>
+					<cell id="28,11" type="0" >
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="29,1" type="0" >
+						<property name="value"><![CDATA[19]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="29,3" type="0" colspan="5" >
+						<property name="value"><![CDATA[组织院级临床路径管理培训次数]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="29,8" type="0" >
+						<property name="value"><![CDATA[3]]></property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="29,9" type="0" colspan="2" >
+						<property name="value"><![CDATA[次（附记录）]]></property>
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+					</cell>
+					<cell id="29,11" type="0" >
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="30,1" type="0" >
+						<property name="value"><![CDATA[20]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="30,3" type="0" colspan="5" >
+						<property name="value"><![CDATA[培训内容主要包括]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="30,8" type="0" colspan="4" >
+						<property name="value"><![CDATA[培训主要内容]]></property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="31,1" type="0" >
+						<property name="value"><![CDATA[21]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="31,2" type="0" colspan="6" >
+						<property name="value"><![CDATA[医院信息系统能准确反映的内容]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="31,8" type="0" colspan="4" >
+						<property name="value"><![CDATA[1患者病历信息 2药品及耗材信息 3患者住院阶段质量控制信息 4患者费用信息 5其他]]></property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="32,1" type="0" >
+						<property name="value"><![CDATA[注：]]></property>
+					</cell>
+					<cell id="32,2" type="0" colspan="3" >
+						<property name="value"><![CDATA[1.本表所统计内容均按]]></property>
+						<property name="align">0</property>
+					</cell>
+					<cell id="32,5" type="0" colspan="2" >
+						<property name="value"><![CDATA[2011-09-01]]></property>
+						<property name="view-format">4|yyyy年M月d日</property>
+					</cell>
+					<cell id="32,7" type="0" >
+						<property name="value"><![CDATA[至]]></property>
+					</cell>
+					<cell id="32,8" type="0" colspan="4" >
+						<property name="value"><![CDATA[2011-10-11]]></property>
+						<property name="view-format">4|yyyy年M月d日</property>
+						<property name="align">0</property>
+					</cell>
+					<cell id="33,1" type="0" >
+					</cell>
+					<cell id="33,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[2.平均病床使用率：指“实际占用总床日数”与“实际开放总床日数”之比]]></property>
+						<property name="align">0</property>
+					</cell>
+					<cell id="34,1" type="0" >
+					</cell>
+					<cell id="34,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[3.平均病床周转次数：指“出院人数”与“平均开放床位数”之比]]></property>
+						<property name="align">0</property>
+					</cell>
+				</cells>
+			</grid>
+		</sheet>
+	</body>
+	<param-form col="1">
+	</param-form>
+</report>

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<chart showShadow='true' baseFont='宋体' baseFontSize='24' caption='路径启用情况' xAxisName='情况' yAxisName='数'>
+  <set label='当前启用路径数：' value='68' />
+  <set label='已定义路径数：' value='128' />
+</chart>

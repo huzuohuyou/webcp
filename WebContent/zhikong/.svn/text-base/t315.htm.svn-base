@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>临床路径卫生经济学统计</title>
+    <script type="text/javascript" src="../public/plugins/FusionCharts/FusionCharts.js"></script>
+    <link href="../public/plugins/FusionCharts/style.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="../public/styles/demos.css">
+
+</head>
+<body>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td height="30"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="24" bgcolor="#353c44"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="23"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="24" height="19" valign="bottom"><div align="center"><img src="../public/images/tb.gif" width="14" height="14" /></div></td>
+                <td valign="bottom"><span class="STYLE1"> 2型糖尿病临床路径卫生经济学统计</span></td>
+              </tr>
+            </table></td>
+            <td>&nbsp;</td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td height="30"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="24" bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="23"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><div align="left">
+                <span id="jingji">2型糖尿病临床路径卫生经济学统计</span>
+                            <script type="text/javascript"><!--
+                                var MarChart = new FusionCharts("../public/plugins/FusionCharts/MSColumn2D.swf", "MarChartId", "1060", "300", "0", "1");
+                                MarChart.setXMLUrl("t315a.xml");
+                                MarChart.render("jingji");										  
+                                // -->
+                            </script>                
+                </div></td>
+              </tr>
+            </table></td>
+            <td>&nbsp;</td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td height="1"></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <!-- 纳入路径中费用段最集中的对比 -->
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td height="30"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="24" bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="23"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><div align="left">
+                <span id="narujjduibi">纳入路径病例中前5段总费用出现率与不纳入病例的对比</span>
+                            <script type="text/javascript"><!--
+                                var MarChart1 = new FusionCharts("../public/plugins/FusionCharts/MSColumn2D.swf", "MarChartId", "1060", "300", "0", "1");
+                                MarChart1.setXMLUrl("t315b.xml");
+                                MarChart1.render("narujjduibi");										  
+                                // -->
+                            </script>                
+                </div></td>
+              </tr>
+            </table></td>
+            <td>&nbsp;</td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td height="1"></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <!-- 不纳入中费用段最集中的对比 -->
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td height="30"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="24" bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="23"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><div align="left">
+                <span id="bunajjduibi">不纳入病例中前5段总费用出现率与纳入病例的对比</span>
+                            <script type="text/javascript"><!--
+                                var MarChart1 = new FusionCharts("../public/plugins/FusionCharts/MSColumn2D.swf", "MarChartId", "1060", "300", "0", "1");
+                                MarChart1.setXMLUrl("t315c.xml");
+                                MarChart1.render("bunajjduibi");										  
+                                // -->
+                            </script>                
+                </div></td>
+              </tr>
+            </table></td>
+            <td>&nbsp;</td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td height="1"></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <!-- 各类费用数据统计 -->
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td height="30"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="24" bgcolor="#353c44"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="23"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="24" height="19" valign="bottom"><div align="center"><img src="../public/images/tb.gif" width="14" height="14" /></div></td>
+                <td valign="bottom"><span class="STYLE1"> 各类费用统计</span></td>
+              </tr>
+            </table></td>
+            <td>&nbsp;</td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td><table width="100%" id="tcp" class="users" border="0" cellpadding="0" cellspacing="1" bgcolor="#a8c7ce">
+    <tbody id="tbcp">    
+      <tr>
+        <td width="10%" height="48" bgcolor="d3eaef" rowspan="2" class="STYLE10"><div align="center"><span class="STYLE10">费用类型</span></div></td>
+        <td width="45%" bgcolor="d3eaef" height="24" colspan="5" class="STYLE10"><div align="center"><span class="STYLE10">纳入病例</span></div></td>
+        <td width="45%" bgcolor="d3eaef" height="24" colspan="5" class="STYLE10"><div align="center"><span class="STYLE10">不纳入病例</span></div></td>        
+      </tr>
+      <tr>
+        <td width="9%" height="48" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">最小费用</span></div></td>
+        <td width="9%" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">最大费用</span></div></td>
+        <td width="9%" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">平均费用</span></div></td>
+        <td width="9%" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">出现率最高的费用段</span></div></td>
+        <td width="9%" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">出现率最高的费用段对应出现率</span></div></td>        
+        <td width="9%" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">最小费用</span></div></td>
+        <td width="9%" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">最大费用</span></div></td>
+        <td width="9%" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">平均费用</span></div></td>
+        <td width="9%" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">出现率最高的费用段</span></div></td>
+        <td width="9%" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">出现率最高的费用段对应出现率</span></div></td>
+      </tr>
+      
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">西药费</div></td>
+		<td><div align="center">5887.34</div></td>
+		<td><div align="center">7934.59</div></td>
+		<td><div align="center">6643.23</div></td>
+		<td><div align="center">6501.52<br />≤￥＜<br />6706.24</div></td>
+		<td><div align="center">78.60%</div></td>
+		<td><div align="center">4867.50</div></td>
+		<td><div align="center">9876.50</div></td>
+		<td><div align="center">7354.67</div></td>
+		<td><div align="center">6871.10<br />≤￥＜<br />7372.00</div></td>
+		<td><div align="center">68.35%</div></td>
+		</tr>		
+		
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">化验费</div></td>
+		<td><div align="center">387.34</div></td>
+		<td><div align="center">1078.59</div></td>
+		<td><div align="center">688.23</div></td>
+		<td><div align="center">578.52<br />≤￥＜<br />699.24</div></td>
+		<td><div align="center">61.60%</div></td>
+		<td><div align="center">329.50</div></td>
+		<td><div align="center">1377.50</div></td>
+		<td><div align="center">889.67</div></td>
+		<td><div align="center">675.10<br />≤￥＜<br />904.00</div></td>
+		<td><div align="center">43.35%</div></td>
+		</tr>
+		
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">检查费</div></td>
+		<td><div align="center">450.34</div></td>
+		<td><div align="center">1309.59</div></td>
+		<td><div align="center">689.23</div></td>
+		<td><div align="center">588.52<br />≤￥＜<br />712.24</div></td>
+		<td><div align="center">46.60%</div></td>
+		<td><div align="center">360.50</div></td>
+		<td><div align="center">1489.50</div></td>
+		<td><div align="center">886.67</div></td>
+		<td><div align="center">689.10<br />≤￥＜<br />987.00</div></td>
+		<td><div align="center">35.35%</div></td>
+		</tr>
+		
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">诊疗费</div></td>
+		<td><div align="center">289.34</div></td>
+		<td><div align="center">789.59</div></td>
+		<td><div align="center">455.23</div></td>
+		<td><div align="center">390.52<br />≤￥＜<br />523.24</div></td>
+		<td><div align="center">43.60%</div></td>
+		<td><div align="center">168.50</div></td>
+		<td><div align="center">887.50</div></td>
+		<td><div align="center">654.67</div></td>
+		<td><div align="center">588.10<br />≤￥＜<br />690.00</div></td>
+		<td><div align="center">33.35%</div></td>
+		</tr>
+		
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">放射费</div></td>
+		<td><div align="center">0</div></td>
+		<td><div align="center">0</div></td>
+		<td><div align="center">0</div></td>
+		<td><div align="center">0</div></td>
+		<td><div align="center">0%</div></td>
+		<td><div align="center">0</div></td>
+		<td><div align="center">0</div></td>
+		<td><div align="center">0</div></td>
+		<td><div align="center">0</div></td>
+		<td><div align="center">0%</div></td>
+		</tr>
+		
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">中草药费</div></td>
+		<td><div align="center">128.34</div></td>
+		<td><div align="center">1034.59</div></td>
+		<td><div align="center">679.23</div></td>
+		<td><div align="center">587.52<br />≤￥＜<br />699.24</div></td>
+		<td><div align="center">68.60%</div></td>
+		<td><div align="center">309.50</div></td>
+		<td><div align="center">1126.50</div></td>
+		<td><div align="center">589.67</div></td>
+		<td><div align="center">554.10<br />≤￥＜<br />634.00</div></td>
+		<td><div align="center">37.35%</div></td>
+		</tr>
+		
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">其他费用</div></td>
+		<td><div align="center">367.34</div></td>
+		<td><div align="center">988.59</div></td>
+		<td><div align="center">654.23</div></td>
+		<td><div align="center">602.52<br />≤￥＜<br />701.24</div></td>
+		<td><div align="center">39.60%</div></td>
+		<td><div align="center">238.50</div></td>
+		<td><div align="center">1034.50</div></td>
+		<td><div align="center">876.67</div></td>
+		<td><div align="center">799.10<br />≤￥＜<br />903.00</div></td>
+		<td><div align="center">45.35%</div></td>
+		</tr>
+						
+      </tbody>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td height="1"></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  
+</table>
+
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   

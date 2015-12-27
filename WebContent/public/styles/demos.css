@@ -1,0 +1,46 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+body { font-size: 62.5%; }
+input.text { margin-bottom:12px; width:95%; padding: .4em; }
+fieldset { padding:0; border:0; margin-top:25px; }
+h1 { font-size: 1.2em; margin: .6em 0; }
+div#users-contain { width: 350px; margin: 20px 0; }
+div#users-contain table { margin: 1em 0; border-collapse: collapse; width: 100%; }
+div#users-contain table td, div#users-contain table th { border: 1px solid #eee; padding: .6em 10px; text-align: left; }
+.ui-dialog .ui-state-error { padding: .3em; }
+.validateTips { border: 1px solid transparent; padding: 0.3em; }
+
+.STYLE1 { color: #e1e2e3; font-size: 12px;}
+.STYLE2 { font-size: 12px; color: #0000FF;}
+.STYLE6 {color: #000000; font-size: 12; }
+.STYLE10 {color: #000000; font-size: 12px; }
+.STYLE19 { color: #344b50; font-size: 12px;}
+.STYLE21 { font-size: 12px; color: #3b6375;}
+.STYLE22 { font-size: 12px; color: #295568;}
+.STYLE4 {font-size: 12px}
+
+.ssh { text-align: left; border-width: 1px 0 0 0; background-image: none; margin: .5em 0 0 0; padding: .3em 1em .5em .4em; }
+
+<!-- 连接美化 -->
+.tooltips:hover{
+z-index:3;
+background:none; /*没有这个在IE中不可用*/
+}
+.tooltips span{
+display: none;
+}
+.tooltips:hover span{ /*span 标签仅在 :hover 状态时显示*/
+display:block;
+position:absolute;
+top:21px;
+left:9px;
+width:15em;      /*修改显示窗口的宽度，不加此语句自动调整窗口大小 */
+border:1px solid black;
+background-color:#ccFFFF;
+padding: 3px;
+color:black;
+}

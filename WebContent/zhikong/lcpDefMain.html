@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+        <title>全院路径概要</title>
+        <script type="text/javascript" src="FusionCharts/FusionCharts.js"></script>
+        <link href="FusionCharts/style.css" rel="stylesheet" type="text/css" />
+
+        <style type="text/css">
+            h2.headline {
+                font: normal 110%/137.5% "宋体", Arial, Helvetica, sans-serif;
+                padding: 0;
+                margin: 25px 0 25px 0;
+                color: #7d7c8b;
+                text-align: center;
+            }
+            p.small {
+                font: normal 68.75%/150% Verdana, Geneva, sans-serif;
+                color: #919191;
+                padding: 0;
+                margin: 0 auto;
+                width: 664px;
+                text-align: center;
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <div id="wrapper">
+
+            <div class="content-area">
+                <div id="content-area-inner-main">
+                    <h2 class="headline">全院路径概要</h2>
+
+                    <div class="gen-chart-render">
+
+                        <center>
+                            <span id="listlujing">路径启用情况</span>
+                            <span id="pienarulv">全院路径纳入率</span>
+                            <span id="chartlujingwancheng">全院路径完成情况</span>
+                            <span id="chartlujingpaichu">全院路径排除情况</span>
+
+                            <script type="text/javascript"><!--
+
+				var JanGrid = new FusionCharts("FusionCharts/SSGrid.swf", "JanGridId", "400", "300", "0", "1");
+                                JanGrid.setDataXML("<chart showShadow='true' baseFont='宋体' baseFontSize='24' caption='路径启用情况' xAxisName='情况' yAxisName='数'><set label='当前启用路径数：' value='68' /><set label='已定义路径数：' value='128' /></chart>");
+                                JanGrid.render("listlujing");
+
+                                var MarChart = new FusionCharts("FusionCharts/Pie2D.swf", "MarChartId", "400", "300", "0", "1");
+                                MarChart.setDataXML("<chart baseFont='宋体' baseFontSize='14' caption='全院路径纳入率' bgColor='FFFFFF,CCCCCC' showPercentageValues='0' showShadow='1' plotBorderColor='FFFFFF' formatNumberScale='0' numberSuffix='例' isSmartLineSlanted='1' showValues='1' showLabels='0' showLegend='1' xAxisName='Week' yAxisName='Sales'><set label='纳入病例' value='16873' color='99CC00' alpha='60'/><set label='未纳入病例' value='45897' color='333333' alpha='60'/></chart>");
+                                MarChart.render("pienarulv");										  
+
+                                var JanChart = new FusionCharts("FusionCharts/Column2D.swf", "JanChartId", "400", "300", "0", "1");
+                                JanChart.setDataXML("<chart showShadow='true' baseFont='宋体' baseFontSize='14' caption='全院路径完成情况' xAxisName='路径状态' yAxisName='病例数' numberSuffix='例' formatNumberScale='0' useRoundEdges='1'><set label='路径完成' value='10261' /><set label='路径退出' value='5247' /><set label='路径执行中' value='1365' /></chart>");
+                                JanChart.render("chartlujingwancheng");
+                               
+                                var FebChart = new FusionCharts("FusionCharts/Column2D.swf", "FebChartId", "400", "300", "0", "1");
+                                FebChart.setDataXML("<chart showShadow='true' baseFont='宋体' baseFontSize='12' caption='全院路径排除情况' xAxisName='纳入条件合符情况' yAxisName='病例数' numberSuffix='例' formatNumberScale='0' useRoundEdges='1'><set label='不符合条件' value='35644' /><set label='合符但不纳入' value='10089' /><set label='合符未处理' value='164' /></chart>");
+                                FebChart.render("chartlujingpaichu");
+
+                                // -->
+                            </script>
+                        </center>
+
+                    </div>
+                    <div class="clear"></div>
+                    <p>&nbsp;</p>
+                    <p class="small">    </p>
+                    <div class="underline-dull"></div>
+                </div>
+            </div>
+
+            <div id="footer">
+                <ul>
+                    <li><a href="#"><span> 本月纳入概要 </span></a></li>
+                    <li class="pipe">|</li>
+                    <li><a href="#"><span> 本年纳入概要 </span></a></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

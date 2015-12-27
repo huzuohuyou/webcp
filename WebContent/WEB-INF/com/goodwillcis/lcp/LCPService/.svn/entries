@@ -1,0 +1,52 @@
+8
+
+dir
+807
+https://zwb-pc/svn/jhdcp2/LcpProject/WebContent/WEB-INF/com/goodwillcis/lcp/LCPService
+https://zwb-pc/svn/jhdcp2
+
+
+
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+a02d5324-4e91-cd49-86ca-bfc7c5ded3af
+
+undeploy.wsdd
+file
+
+
+
+
+2012-12-06T03:29:07.078125Z
+10d902f7a392a8ccbc310d69197804c9
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+
+deploy.wsdd
+file
+
+
+
+
+2012-12-06T03:29:07.093750Z
+9ff47a8f00cda7bf5341ec9df65ee524
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+

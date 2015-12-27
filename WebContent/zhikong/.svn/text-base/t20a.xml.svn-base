@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<chart showShadow='true' baseFont='宋体' baseFontSize='12' caption='最高纳入率前 5 家医院' xAxisName='医院名称' yAxisName='纳入率'
+       numberSuffix='%' formatNumberScale='0' useRoundEdges='1'>
+  <set label='厦门市第一医院' value='90.12' />
+  <set label='厦门大学附属中山医院' value='90.10' />
+  <set label='解放军第一七四医院' value='85.45' />
+  <set label='厦门市中医院' value='79.50' />
+  <set label='厦门市妇幼保健院' value='77.88' />
+  <trendLines>
+    <line startValue='70.57' color='359A35' displayvalue='平均纳入率' valueOnRight='1'/>
+  </trendLines>
+</chart>

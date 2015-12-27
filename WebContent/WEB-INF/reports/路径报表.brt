@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="GBK" ?>
+<report version="3.0">
+	<head>
+		<property name="type">0</property>
+		<name><![CDATA[路径报表]]></name>
+		<dataSets>
+			<dataSet name="cp" type="Self" >
+				<property name="dataSource"></property>
+				<property name="desc"><![CDATA[]]></property>
+				<property name="query"><![CDATA[com.goodwillcis.cp.cpinfo.LCPMaster]]></property>
+				<property name="beginRow">0</property>
+				<property name="endRow">0</property>
+				<queryParam name="cp_id" />
+			</dataSet>
+			<dataSet name="node" type="Self" >
+				<property name="dataSource"></property>
+				<property name="desc"><![CDATA[]]></property>
+				<property name="query"><![CDATA[com.goodwillcis.cp.cpinfo.LCPNode]]></property>
+				<property name="beginRow">0</property>
+				<property name="endRow">0</property>
+				<queryParam name="cp_id" />
+			</dataSet>
+			<dataSet name="doctor1" type="Self" >
+				<property name="dataSource"></property>
+				<property name="desc"><![CDATA[]]></property>
+				<property name="query"><![CDATA[com.goodwillcis.cp.cpinfo.LCPNodeDoctorPoint]]></property>
+				<property name="beginRow">0</property>
+				<property name="endRow">0</property>
+				<queryParam name="cp_id" />
+			</dataSet>
+			<dataSet name="doctor2" type="Self" >
+				<property name="dataSource"></property>
+				<property name="desc"><![CDATA[]]></property>
+				<property name="query"><![CDATA[com.goodwillcis.cp.cpinfo.LCPNodeDoctorItem]]></property>
+				<property name="beginRow">0</property>
+				<property name="endRow">0</property>
+				<queryParam name="cp_id" />
+			</dataSet>
+			<dataSet name="nurse1" type="Self" >
+				<property name="dataSource"></property>
+				<property name="desc"><![CDATA[]]></property>
+				<property name="query"><![CDATA[com.goodwillcis.cp.cpinfo.LCPNodeNursePoint]]></property>
+				<property name="beginRow">0</property>
+				<property name="endRow">0</property>
+				<queryParam name="cp_id" />
+			</dataSet>
+			<dataSet name="nurse2" type="Self" >
+				<property name="dataSource"></property>
+				<property name="desc"><![CDATA[]]></property>
+				<property name="query"><![CDATA[com.goodwillcis.cp.cpinfo.LCPNodeNurseItem]]></property>
+				<property name="beginRow">0</property>
+				<property name="endRow">0</property>
+				<queryParam name="cp_id" />
+			</dataSet>
+			<dataSet name="order1" type="Self" >
+				<property name="dataSource"></property>
+				<property name="desc"><![CDATA[]]></property>
+				<property name="query"><![CDATA[com.goodwillcis.cp.cpinfo.LCPNodeOrderPoint]]></property>
+				<property name="beginRow">0</property>
+				<property name="endRow">0</property>
+				<queryParam name="cp_id" />
+			</dataSet>
+			<dataSet name="order2" type="Self" >
+				<property name="dataSource"></property>
+				<property name="desc"><![CDATA[]]></property>
+				<property name="query"><![CDATA[com.goodwillcis.cp.cpinfo.LCPNodeOrderItem]]></property>
+				<property name="beginRow">0</property>
+				<property name="endRow">0</property>
+				<queryParam name="cp_id" />
+			</dataSet>
+			<dataSet name="order0" type="Self" >
+				<property name="dataSource"></property>
+				<property name="desc"><![CDATA[]]></property>
+				<property name="query"><![CDATA[com.goodwillcis.cp.cpinfo.LCPNodeOrderKind]]></property>
+				<property name="beginRow">0</property>
+				<property name="endRow">0</property>
+				<queryParam name="cp_id" />
+			</dataSet>
+		</dataSets>
+		<parameters>
+			<parameter name="cp_id" type="6">
+				<property name="dateFormat"></property>
+				<property name="default">1</property>
+				<property name="desc"></property>
+				<property name="source">0</property>
+			</parameter>
+		</parameters>
+		<variables/>
+		<subReports/>
+	</head>
+	<body>
+		<sheet id="sheet1">
+			<page>
+				<property name="paginateType">4</property>
+				<property name="pageRowNum">35</property>
+				<property name="add-row">0</property>
+			</page>
+			<grid row="14" col="4">
+				<properties>
+				</properties>
+				<rows>
+					<row id="1">
+						<property name="type">1</property>
+						<property name="height">41</property>
+						<property name="rowBreak">0</property>
+						<property name="pageHeader">0</property>
+					</row>
+					<row id="2">
+					</row>
+					<row id="3">
+						<property name="height">22</property>
+					</row>
+					<row id="4">
+						<property name="visible"><![CDATA[=if(@value=="-",false,true)]]></property>
+						<property name="height">22</property>
+					</row>
+					<row id="5">
+						<property name="height">10</property>
+					</row>
+					<row id="6">
+					</row>
+					<row id="7">
+						<property name="height">22</property>
+					</row>
+					<row id="8">
+						<property name="visible"><![CDATA[=if(@value=="-",false,true)]]></property>
+						<property name="height">22</property>
+					</row>
+					<row id="9">
+						<property name="height">10</property>
+					</row>
+					<row id="10">
+					</row>
+					<row id="11">
+						<property name="height">22</property>
+					</row>
+					<row id="12">
+						<property name="visible"><![CDATA[=if(@value=="◆ ",false,true)]]></property>
+						<property name="height">22</property>
+					</row>
+					<row id="13">
+						<property name="visible"><![CDATA[=if(@value=="-",false,true)]]></property>
+						<property name="height">22</property>
+					</row>
+					<row id="14">
+						<property name="height">10</property>
+						<property name="rowBreak">0</property>
+						<property name="pageHeader">0</property>
+					</row>
+				</rows>
+				<columns>
+					<column id="1">
+						<property name="width">30</property>
+					</column>
+					<column id="2">
+						<property name="width">10</property>
+					</column>
+					<column id="3">
+						<property name="width">25</property>
+					</column>
+					<column id="4">
+						<property name="width">575</property>
+					</column>
+				</columns>
+				<cells>
+					<cell id="1,1" type="0" colspan="4" >
+						<property name="value"><![CDATA[=cp.select(CP_NAME)]]></property>
+						<property name="font-size">14</property>
+						<border type="1">2:0,0,0:1;2:0,0,0:1;2:0,0,0:1;2:0,0,0:1</border>
+					</cell>
+					<cell id="2,1" type="0" rowspan="13" >
+						<property name="value"><![CDATA[=node.select(CP_NODE_ID)]]></property>
+						<property name="view"><![CDATA[=node.CP_NODE_NAME]]></property>
+						<property name="ext-direction">3</property>
+						<property name="background"><![CDATA[192,192,192]]></property>
+						<property name="text-direction">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">2:0,0,0:1;null;null;null;null;null;null;null;null;null;null;null;null</border>
+						<border type="3">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+					</cell>
+					<cell id="2,2" type="0" colspan="3" >
+						<property name="value"><![CDATA[主要诊疗工作]]></property>
+						<property name="background"><![CDATA[234,234,234]]></property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">2:0,0,0:1</border>
+					</cell>
+					<cell id="3,2" type="0" rowspan="2" >
+						<property name="value"><![CDATA[=doctor1.select(CP_NODE_DOCTOR_ID,false,CP_NODE_ID=A2)]]></property>
+						<property name="ext-direction">3</property>
+						<property name="ext-left"><![CDATA[A2]]></property>
+						<property name="align">0</property>
+						<property name="visible"><![CDATA[1]]></property>
+						<property name="auto-break">1</property>
+					</cell>
+					<cell id="3,3" type="0" colspan="2" >
+						<property name="value"><![CDATA[="○ " + doctor1.CP_NODE_DOCTOR_TEXT]]></property>
+						<property name="align">0</property>
+						<border type="3">2:0,0,0:1</border>
+					</cell>
+					<cell id="4,3" type="0" colspan="2" >
+						<property name="value"><![CDATA[=if(doctor2.select(CP_NODE_DOCTOR_TEXT,false,CP_NODE_ID=node.cp_NODE_ID and CP_NODE_DOCTOR_ID = B3)!=NULL,"★" + doctor2.select(CP_NODE_DOCTOR_TEXT,false,CP_NODE_ID=node.cp_NODE_ID and CP_NODE_DOCTOR_ID = B3),"-")]]></property>
+						<property name="ext-direction">1</property>
+						<property name="align">0</property>
+						<property name="indent">25</property>
+						<property name="visible"><![CDATA[=if(@value=="-",false,true)]]></property>
+						<property name="size-adjust">1</property>
+						<border type="3">2:0,0,0:1</border>
+					</cell>
+					<cell id="5,2" type="0" colspan="3" >
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">2:0,0,0:1</border>
+					</cell>
+					<cell id="6,2" type="0" colspan="3" >
+						<property name="value"><![CDATA[主要护理工作]]></property>
+						<property name="background"><![CDATA[234,234,234]]></property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">2:0,0,0:1</border>
+					</cell>
+					<cell id="7,2" type="0" rowspan="2" >
+						<property name="value"><![CDATA[=nurse1.select(CP_NODE_NURSE_ID,false,CP_NODE_ID=node.CP_NODE_ID)]]></property>
+						<property name="ext-direction">3</property>
+						<property name="align">0</property>
+						<property name="visible"><![CDATA[1]]></property>
+					</cell>
+					<cell id="7,3" type="0" colspan="2" >
+						<property name="value"><![CDATA[="○ " + nurse1.CP_NODE_NURSE_TEXT]]></property>
+						<property name="align">0</property>
+						<border type="3">2:0,0,0:1</border>
+					</cell>
+					<cell id="8,3" type="0" colspan="2" >
+						<property name="value"><![CDATA[=if(nurse2.select(CP_NODE_NURSE_TEXT,false,CP_NODE_ID=node.cp_NODE_ID and CP_NODE_NURSE_ID = B7)!=NULL,"★" + nurse2.select(CP_NODE_NURSE_TEXT,false,CP_NODE_ID=node.cp_NODE_ID and CP_NODE_NURSE_ID = B7),"-")]]></property>
+						<property name="ext-direction">1</property>
+						<property name="align">0</property>
+						<property name="indent">25</property>
+						<property name="value-break">1</property>
+						<property name="size-adjust">1</property>
+						<border type="3">2:0,0,0:1</border>
+					</cell>
+					<cell id="9,2" type="0" >
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="9,3" type="0" >
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="9,4" type="0" >
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">2:0,0,0:1</border>
+					</cell>
+					<cell id="10,2" type="0" colspan="3" >
+						<property name="value"><![CDATA[重点医嘱]]></property>
+						<property name="background"><![CDATA[234,234,234]]></property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">2:0,0,0:1</border>
+					</cell>
+					<cell id="11,2" type="0" rowspan="3" >
+						<property name="value"><![CDATA[=order0.select(ORDER_KIND,false,CP_NODE_ID=node.CP_NODE_ID)]]></property>
+						<property name="ext-direction">3</property>
+						<property name="align">0</property>
+						<property name="visible"><![CDATA[1]]></property>
+						<border type="1">1:255,255,255:1</border>
+					</cell>
+					<cell id="11,3" type="0" colspan="2" >
+						<property name="value"><![CDATA[=order0.ORDER_KIND_TEXT]]></property>
+						<property name="bold">0</property>
+						<property name="align">0</property>
+						<border type="3">2:0,0,0:1</border>
+					</cell>
+					<cell id="12,3" type="0" rowspan="2" >
+						<property name="value"><![CDATA[=order1.select(CP_NODE_ORDER_ID,false,CP_NODE_ID=node.CP_NODE_ID and ORDER_KIND=B11)]]></property>
+						<property name="ext-direction">3</property>
+						<property name="align">0</property>
+						<property name="visible"><![CDATA[1]]></property>
+						<border type="1">1:255,255,255:1</border>
+					</cell>
+					<cell id="12,4" type="0" >
+						<property name="value"><![CDATA[="○ " + order1.CP_NODE_ORDER_TEXT]]></property>
+						<property name="align">0</property>
+						<border type="3">2:0,0,0:1</border>
+					</cell>
+					<cell id="13,4" type="0" >
+						<property name="value"><![CDATA[=if(order2.select(CP_NODE_ORDER_TEXT,false,CP_NODE_ID=node.cp_NODE_ID and CP_NODE_ORDER_ID = C12)!=NULL,"★" + ORDER2.select(CP_NODE_ORDER_TEXT,false,CP_NODE_ID=node.cp_NODE_ID and CP_NODE_ORDER_ID = C12),"-")]]></property>
+						<property name="ext-direction">1</property>
+						<property name="align">0</property>
+						<property name="indent">25</property>
+						<property name="value-break">1</property>
+						<property name="size-adjust">1</property>
+						<border type="3">2:0,0,0:1</border>
+					</cell>
+					<cell id="14,2" type="0" >
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="14,3" type="0" >
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="14,4" type="0" >
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">2:0,0,0:1</border>
+					</cell>
+				</cells>
+			</grid>
+		</sheet>
+	</body>
+	<param-form col="2">
+		<ctrl id="cp_id" type="1" label="">
+		</ctrl>
+	</param-form>
+</report>

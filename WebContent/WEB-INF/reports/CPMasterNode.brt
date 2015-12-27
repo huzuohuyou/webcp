@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="GBK" ?>
+<report version="3.0">
+	<head>
+		<property name="type">0</property>
+		<name><![CDATA[CPMasterNode]]></name>
+		<dataSets>
+			<dataSet name="ds" type="Self" >
+				<property name="dataSource"></property>
+				<property name="desc"><![CDATA[]]></property>
+				<property name="query"><![CDATA[com.goodwillcis.cp.cpinfo.LCPMaster]]></property>
+				<property name="beginRow">0</property>
+				<property name="endRow">0</property>
+				<queryParam name="cp_id" />
+			</dataSet>
+			<dataSet name="ds1" type="Self" >
+				<property name="dataSource"></property>
+				<property name="desc"><![CDATA[]]></property>
+				<property name="query"><![CDATA[com.goodwillcis.cp.cpinfo.LCPNodeOrder]]></property>
+				<property name="beginRow">0</property>
+				<property name="endRow">0</property>
+				<queryParam name="cp_id" />
+			</dataSet>
+		</dataSets>
+		<parameters>
+			<parameter name="cp_id" type="6">
+				<property name="dateFormat"></property>
+				<property name="default"></property>
+				<property name="desc"></property>
+				<property name="source">0</property>
+			</parameter>
+		</parameters>
+		<variables/>
+		<subReports/>
+	</head>
+	<body>
+		<sheet id="sheet1">
+			<page>
+				<property name="margin-left">0</property>
+				<property name="margin-right">0</property>
+			</page>
+			<grid row="4" col="12">
+				<properties>
+				</properties>
+				<rows>
+					<row id="1">
+						<property name="type">1</property>
+						<property name="height">28</property>
+					</row>
+					<row id="2">
+						<property name="type">2</property>
+						<property name="height">36</property>
+					</row>
+					<row id="3">
+						<property name="type">2</property>
+					</row>
+					<row id="4">
+					</row>
+				</rows>
+				<columns>
+					<column id="1">
+					</column>
+					<column id="2">
+						<property name="width">106</property>
+					</column>
+					<column id="3">
+						<property name="width">102</property>
+					</column>
+					<column id="4">
+						<property name="width">83</property>
+					</column>
+					<column id="5">
+					</column>
+					<column id="6">
+						<property name="width">150</property>
+					</column>
+					<column id="7">
+						<property name="width">113</property>
+					</column>
+					<column id="8">
+					</column>
+					<column id="9">
+						<property name="width">63</property>
+					</column>
+					<column id="10">
+						<property name="width">99</property>
+					</column>
+					<column id="11">
+						<property name="width">95</property>
+					</column>
+					<column id="12">
+						<property name="width">134</property>
+					</column>
+				</columns>
+				<cells>
+					<cell id="1,1" type="0" colspan="12" >
+						<property name="value"><![CDATA[=ds.select(CP_NAME) +医嘱信息]]></property>
+						<property name="font-size">12</property>
+						<property name="bold">0</property>
+						<property name="size-adjust">1</property>
+					</cell>
+					<cell id="2,1" type="0" >
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="2,2" type="0" >
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="2,3" type="0" >
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="2,4" type="0" >
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="2,5" type="0" >
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="2,6" type="0" >
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="2,7" type="0" >
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="2,8" type="0" >
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="2,9" type="0" >
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="2,10" type="0" >
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="2,11" type="0" >
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="2,12" type="0" >
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="3,1" type="0" >
+						<property name="value"><![CDATA[节点名称]]></property>
+						<property name="bold">0</property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="3,2" type="0" >
+						<property name="value"><![CDATA[一级菜单]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="3,3" type="0" >
+						<property name="value"><![CDATA[二级菜单]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="3,4" type="0" >
+						<property name="value"><![CDATA[类型]]></property>
+						<property name="bold">0</property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="3,5" type="0" >
+						<property name="value"><![CDATA[类别]]></property>
+						<property name="bold">0</property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="3,6" type="0" >
+						<property name="value"><![CDATA[项目名称]]></property>
+						<property name="bold">0</property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="3,7" type="0" >
+						<property name="value"><![CDATA[规格]]></property>
+						<property name="bold">0</property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="3,8" type="0" >
+						<property name="value"><![CDATA[用量]]></property>
+						<property name="bold">0</property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="3,9" type="0" >
+						<property name="value"><![CDATA[频次]]></property>
+						<property name="bold">0</property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="3,10" type="0" >
+						<property name="value"><![CDATA[途径]]></property>
+						<property name="bold">0</property>
+						<property name="auto-break">1</property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="3,11" type="0" >
+						<property name="value"><![CDATA[药品一次用量]]></property>
+						<property name="bold">0</property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="3,12" type="0" >
+						<property name="value"><![CDATA[医生嘱托]]></property>
+						<property name="bold">0</property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="4,1" type="0" >
+						<property name="value"><![CDATA[=ds1.select(节点名称)]]></property>
+						<property name="ext-direction">3</property>
+						<property name="size-adjust">1</property>
+						<property name="merge-same">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="4,2" type="0" >
+						<property name="value"><![CDATA[=ds1.select(一级菜单)]]></property>
+						<property name="merge-same">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="4,3" type="0" >
+						<property name="value"><![CDATA[=ds1.select(二级菜单)]]></property>
+						<property name="merge-same">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="4,4" type="0" >
+						<property name="value"><![CDATA[=ds1.select(类型)]]></property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="4,5" type="0" >
+						<property name="value"><![CDATA[=ds1.select(类别)]]></property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="4,6" type="0" >
+						<property name="value"><![CDATA[=ds1.select(项目名称)]]></property>
+						<property name="align">0</property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="4,7" type="0" >
+						<property name="value"><![CDATA[=ds1.select(规格)]]></property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="4,8" type="0" >
+						<property name="value"><![CDATA[=ds1.select(用量)]]></property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="4,9" type="0" >
+						<property name="value"><![CDATA[=ds1.select(频次)]]></property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="4,10" type="0" >
+						<property name="value"><![CDATA[=ds1.select(途径)]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="4,11" type="0" >
+						<property name="value"><![CDATA[=ds1.select(药品一次用量)]]></property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="4,12" type="0" >
+						<property name="value"><![CDATA[=ds1.select(医生嘱托)]]></property>
+						<property name="align">0</property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+				</cells>
+			</grid>
+		</sheet>
+	</body>
+	<param-form col="2">
+		<ctrl id="cp_id" type="1" label="">
+		</ctrl>
+	</param-form>
+</report>

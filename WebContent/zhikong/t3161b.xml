@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<chart showShadow='true' baseFont='宋体' baseFontSize='12' caption='前5种必选未做医嘱比率统计' xAxisName='医嘱' yAxisName='比率'
+       numberSuffix='%' formatNumberScale='0' useRoundEdges='1'>
+  <set label='血常规' value='65.45' />
+  <set label='心电图' value='54.50' />
+  <set label='胸片' value='33.50' />
+  <set label='肝肾功能' value='31.50' />
+  <set label='腹部B超' value='28.50' />
+</chart>

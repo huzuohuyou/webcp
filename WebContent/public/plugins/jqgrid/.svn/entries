@@ -1,0 +1,79 @@
+8
+
+dir
+807
+https://zwb-pc/svn/jhdcp2/LcpProject/WebContent/public/plugins/jqgrid
+https://zwb-pc/svn/jhdcp2
+
+
+
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+a02d5324-4e91-cd49-86ca-bfc7c5ded3af
+
+i18n
+dir
+
+jquery.jqGrid.src.js
+file
+
+
+
+
+2012-12-06T03:29:22.734375Z
+1f751b1de353467363ad751c7062ef7f
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+
+ui.jqgrid.css
+file
+
+
+
+
+2012-12-06T03:29:22.750000Z
+a154f1104ea2d783ea6b3e0934c9eb76
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+
+jquery.jqGrid.min.js
+file
+
+
+
+
+2012-12-06T03:29:22.750000Z
+6aa69d624d8da44fc842beb0d5058487
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+
+jquery.form.js
+file
+
+
+
+
+2012-12-06T03:29:22.765625Z
+8f4bab3ff4dd7f8abb2867e7e9815c2d
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+

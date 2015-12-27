@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>用户管理</title>
+
+
+<link rel="stylesheet" type="text/css" href="../public/plugins/jquery/themes/dcp/jquery-ui-1.8.16.custom.css">
+<link rel="stylesheet" type="text/css" href="../public/plugins/jqgrid/ui.jqgrid.css">
+<link rel="stylesheet" type="text/css" href="../public/plugins/easyui/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="../public/plugins/easyui/themes/icon.css">
+<link rel="stylesheet" type="text/css" href="../public/styles/style.css">
+<link rel="stylesheet" type="text/css" href="../public/plugins/jquery/jquery.autocomplete.css">
+<script type="text/javascript" src="../public/plugins/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../public/plugins/jqgrid/i18n/grid.locale-cn.js"></script>
+<script type="text/javascript" src="../public/plugins/jqgrid/jquery.jqGrid.min.js"></script>
+<script type="text/javascript" src="../public/plugins/easyui/jquery.easyui.min.js"></script>
+<script src="../public/plugins/jquery/jquery.autocomplete.js"></script>
+<script type="text/javascript"><!--
+	var dept_id = "";
+	$(function() {
+		var funsid1= null;
+		var arr =  [ '用户ID', '用户姓名', '登录名', '用户状态','科室编码','科室名称'];
+		var arr1 = [ {name : 'USER_ID',index : 'USER_ID',align:'center',hidden:true}, 
+		 {name : 'USER_NAME',index : 'USER_NAME', width : 90,align:'center'}, 
+		 {name : 'USER_LOGIN',index : 'USER_LOGIN',width : 100,align:'center'}, 
+		 {name : 'USER_STATE',index : 'USER_STATE',width : 30,align:'center'},
+		 {name : 'DEPT_CODE',index : 'DEPT_CODE',width : 80,align:'center',sorttype : "string"},
+		 {name : 'DEPT_NAME',index : 'DEPT_NAME',width : 80,align:'center'}];
+		$("#gridTable").jqGrid({
+			url : '../servlet/RegistUserServlet',//查询要提交的url
+			mtype:"post",
+			postData : {op:'getUserList'},
+			datatype : "json",//数据读取方式
+			height:( $(document).height()-80),
+			colNames : arr,//表格显示所需要的列名
+			colModel : arr1,
+			sortname : 'USER_NAME',//要排序的字段
+			sortorder : 'asc',//设置默认排序方式
+			viewrecords : true,//显示总
+			rowNum : 20,//初始每页显示多少行
+			rowList : [ 20, 40, 60 ],//设置每页显示多少行
+			rownumbers : true,//是否在每行前面显示这是第几行
+			loadtext:'正在加载中.....',//加载时提示的信息
+			pgbuttons : true,//是否显示乱翻页按钮
+			autowidth:true,
+			ondblClickRow:function(){//双击行弹出用户详细信息
+				edit();
+			},
+			jsonReader : {
+				repeatitems : false
+			},
+			pager : "#gridPager"//分页显示所用到的参数
+		});
+		//添加用户
+		 $("#add").click(function() {
+			 document.getElementById("USER_NAME").disabled=false;
+			 	document.getElementById("USER_LOGIN").disabled=false;
+			 	document.getElementById("DEPT_NAME").disabled=false;
+			 	document.getElementById("DEPT_CODE").disabled=true;
+			 	document.getElementById("USER_STATE").disabled=false;
+			  $("#cc").css("display","");
+			  $("#dd").show();
+			  /* 设置注册用户时值为空*/
+			  document.getElementById("USER_NAME").value="";
+			  document.getElementById("USER_LOGIN").value="";
+			  document.getElementById("password").value="";
+			  document.getElementById("repassword").value="";
+			  document.getElementById("DEPT_CODE").value="";
+			  document.getElementById("DEPT_NAME").value="";
+			  $("#funsTree").tree({url:'../servlet/RegistUserServlet?op=getFunsInfo',checkbox:true,animate:true});
+			  $('#dd').dialog({
+				  shadow:true,
+				  modal:true  ,
+				  onBeforeOpen:function(){ 
+					  	$("#cc").show();
+				  		 $("#FormError").css("display","none");
+				  		 $("tr[name='password']").css("display","");
+				 		 $(".ui-state-error").html("");},
+				  title:"新用户注册",
+				  buttons:[{
+						text:'注册',
+						handler:function(){
+							if(inputCheck(true)){
+								$.post("../servlet/RegistUserServlet", { op: "add", USER_NAME: encodeURI($("#USER_NAME").val()) ,USER_STATE: encodeURI($("#USER_STATE").val()),
+									 USER_LOGIN: encodeURI($("#USER_LOGIN").val()),USER_PASSWORD: $("#repassword").val(), DEPT_CODE:encodeURI($("#DEPT_CODE").val()), DEPT_NAME:encodeURI($("#DEPT_NAME").val()),FUNS:getChecked()},
+								function(data){ if(data>0){jQuery("#gridTable").jqGrid('setGridParam').trigger("reloadGrid");$('#dd').dialog('close');}   else{alert("用户注册失败,请联系管理员!")}}, "text");}}
+					},{
+						text:'取消',
+						handler:function(){$('#dd').dialog('close');}
+					}]
+				});	
+		  });
+		
+		//修改用户
+		$("#edit").click(function () {
+			document.getElementById("USER_NAME").disabled=false;
+		 	document.getElementById("USER_LOGIN").disabled=false;
+		 	document.getElementById("DEPT_NAME").disabled=false;
+		 	document.getElementById("DEPT_CODE").disabled=true;
+		 	document.getElementById("USER_STATE").disabled=false;
+			$("#cc").css("display","none");
+			$("#dd").show();
+			var rowid = $("#gridTable").jqGrid('getGridParam','selrow');
+			if(rowid){
+				var rowdata = jQuery('#gridTable').jqGrid('getRowData', rowid);
+				$("#funsTree").tree({url:'../servlet/RegistUserServlet?op=getUserFunsInfo&user_id='+rowdata.USER_ID,checkbox:true,animate:true});
+				 $('#dd').dialog({
+					  shadow:true,
+					  modal:true  ,
+					  onBeforeOpen:function(){ $("#cc").show();
+					  		 $("#FormError").css("display","none");
+					 		 $(".ui-state-error").html("");
+					 		 $("#USER_NAME").val(rowdata.USER_NAME);
+							 $("#USER_LOGIN").val(rowdata.USER_LOGIN);
+							 $("#DEPT_CODE").val(rowdata.DEPT_CODE);
+							 $("#DEPT_NAME").val(rowdata.DEPT_NAME);
+							 $("tr[name='password']").css("display","none");
+					 		 },
+					  title:"用户信息",
+					  buttons:[{
+							text:'确认',
+							handler:function(){
+								if(inputCheck(false)){
+									$.post("../servlet/RegistUserServlet", { op: "edit", USER_NAME: encodeURI($("#USER_NAME").val()) ,USER_STATE: encodeURI($("#USER_STATE").val()),
+										 USER_LOGIN: encodeURI($("#USER_LOGIN").val()),DEPT_NAME:encodeURI($("#DEPT_NAME").val()),DEPT_CODE:encodeURI($("#DEPT_CODE").val()),FUNS:getChecked(),
+										 USER_ID:rowdata.USER_ID},
+											   function(data){
+											     if(data>0){$('#dd').dialog('close');
+											     jQuery("#gridTable").jqGrid('setGridParam').trigger("reloadGrid");//修改成功要重新刷新;
+
+											     }
+											     else{alert("用户编辑失败,请联系管理员!")}
+											   }, "text");
+									}
+							}
+						},{
+							text:'取消',
+							handler:function(){
+								$('#dd').dialog('close');
+							}
+						}]
+					});	
+			}else{
+				alert("请选择要修改的用户!")
+				}
+			});
+		//删除用户				       
+		$("#del").click(function() {
+			var rowid = $("#gridTable").jqGrid('getGridParam','selrow');
+			if(rowid){
+				var rowdata=jQuery('#gridTable').jqGrid('getRowData', rowid);
+					if (confirm("您是否确认删除？")) {
+						$.post("../servlet/RegistUserServlet", { op: "del", ids: rowdata.USER_ID},
+						 function(data){
+							if(data>0){$("#gridTable").jqGrid('delRowData', rowid);
+							jQuery("#gridTable").jqGrid('setGridParam').trigger("reloadGrid");}
+								else{alert("删除失败,请联系管理员");}}, "text");}
+			}else  {alert('请选择要删除的用户！');}
+				});
+		//密码重置
+		$("#resetPassword").click(function() {
+			var rowid = $("#gridTable").jqGrid('getGridParam','selrow');
+			if(rowid){
+				var rowdata = jQuery('#gridTable').jqGrid('getRowData', rowid);
+				if (confirm("确认重置密码为12345")) {
+					$.ajax({
+						type : "POST",
+						url : "../servlet/RegistUserServlet",
+						dataType:"text",
+						data:{op:"resetPassword",userID:rowdata.USER_ID},
+						success : function(data) {
+							if(data>0){alert("密码重置成功,新密码为12345,请登陆后修改");
+								}else {alert("密码重置失败,请联系管理员")}}
+					});
+					}
+				}else{alert("请选择用户进行密码重置!")}
+			});	
+		 
+			
+			var opertion = {
+					delay : 1000,
+					max : 12, // 列表里的条目数
+					minChars : 0, // 自动完成激活之前填入的最小字符
+					width : 400, // 提示的宽度，溢出隐藏
+					scrollHeight : 300, // 提示的高度，溢出显示滚动条
+					matchContains : true, // 包含匹配，就是data参数里的数据，是否只要包含文本框里的数据就显示
+					autoFill : false, // 自动填充
+					cacheLength : 1,
+					parse : function(data) {
+						data = eval(data);
+						var rows = [];
+						for ( var i = 0; i < data.length; i++) {
+							rows[rows.length] = {
+								data : data[i].code + "--" + data[i].name + "--"+ data[i].input,
+								value : data[i].code + "--" + data[i].name,
+								result : data[i].input
+							};}
+						return rows;
+					},
+					formatItem : function(row, i, n) {return row;}
+				};
+			   	$("#DEPT_NAME").autocomplete("../servlet/auto?ops=py&op=dept",opertion);
+				$("#DEPT_NAME").result(function(event, data, formatted){formatted=formatted.split("--");
+				$("#DEPT_NAME").attr("value",formatted[1]);
+				$("#DEPT_CODE").attr("value",formatted[0]);
+				
+
+			}); 
+				var edit = function(){
+				 	document.getElementById("USER_NAME").disabled=true;
+				 	document.getElementById("USER_LOGIN").disabled=true;
+				 	document.getElementById("DEPT_NAME").disabled=true;
+				 	document.getElementById("DEPT_CODE").disabled=true;
+				 	document.getElementById("USER_STATE").disabled=true;
+				 	$("#cc").css("display","none");
+					$("#DEPT_CODE").css("background-color","gray");
+					$("#dd").show();
+					var rowid = $("#gridTable").jqGrid('getGridParam','selrow');
+					if(rowid){
+						var rowdata = jQuery('#gridTable').jqGrid('getRowData', rowid);
+						$("#funsTree").tree({url:'../servlet/RegistUserServlet?op=getUserFunsInfo&user_id='+rowdata.USER_ID,checkbox:true,animate:true});
+						 $('#dd').dialog({
+							  shadow:true,
+							  modal:true  ,
+							  onBeforeOpen:function(){ $("#cc").show();
+							  		 $("#FormError").css("display","none");
+							 		 $(".ui-state-error").html("");
+							 		 $("#USER_NAME").val(rowdata.USER_NAME);
+									 $("#USER_LOGIN").val(rowdata.USER_LOGIN);
+									 $("#DEPT_CODE").val(rowdata.DEPT_CODE);
+									 $("#DEPT_NAME").val(rowdata.DEPT_NAME);
+									 $("tr[name='password']").css("display","none");
+							 		 },
+							  title:"用户信息修改",
+							  buttons:[{
+									text:'关闭',
+									handler:function(){
+										$('#dd').dialog('close');
+									}
+								}]
+							});	
+					}else{
+						alert("请求出错!")
+						}
+					
+				};
+
+//输入检查
+var inputCheck=function(isEdit){
+	if(!$("#USER_NAME").val()){
+		 $("#FormError").css("display","");
+		  $(".ui-state-error").html("用户名必须输入");
+		  return false;
+		}
+	if(!$("#USER_LOGIN").val()){
+		 $("#FormError").css("display","");
+		  $(".ui-state-error").html("登录名必须输入");
+		  return false;
+		}
+	
+	if(isEdit){
+	//验证登录名是否已经存在
+	var isExist;
+	$.ajax({
+	      type : "post",
+	      url : "../servlet/RegistUserServlet",
+	      data :{ op: "isExist", USER_LOGIN: $("#USER_LOGIN").val() },
+	      async : false,//同步验证
+	      dataType:"text",	
+	      success : function(data){
+	    	  isExist= data;
+	      }
+	      });
+	if(isExist>0){//如果存在
+		$("#FormError").css("display","");
+		$(".ui-state-error").html("登录名已存在");
+		return false;
+		}
+
+	if(!$("#password").val()){
+		 $("#FormError").css("display","");
+		  $(".ui-state-error").html("密码必须输入");
+		  return false;
+		}
+
+		if(!$("#repassword").val()){
+			 $("#FormError").css("display","");
+			  $(".ui-state-error").html("确认密码必须输入");
+			  return false;
+			}
+		if($("#password").val()!=$("#repassword").val()){
+			$("#FormError").css("display","");
+			  $(".ui-state-error").html("两次密码输入不一致");
+			  return false;
+			}
+	}
+	
+	if(getChecked()==''){
+		$("#FormError").css("display","");
+		  $(".ui-state-error").html("请分配用户权限");
+		  return false;
+		}
+	 $("#FormError").css("display","none");
+	return  true;
+	}
+
+		//获取权限树中已经选择的权限
+function getChecked(){
+	var nodes = $('#funsTree').tree('getChecked');
+	var s = [];
+	for(var i=0; i<nodes.length; i++){
+		var state=nodes[i].state; 
+		s.push(nodes[i].id);
+		if(!state){ //判断当前选中的节点是否为根节点
+			var pnode = $('#MyTree').tree('getParent',nodes[i].target); //获取当前节点的父节点
+			s.push(pnode.id);
+			}
+	}
+	return removeRepeatElement(s).toString();
+	}
+
+		//删除数组内重复元素
+function removeRepeatElement(ary) {
+     for (var i =0;i < ary.length; i++) {
+        filter:
+            for (var j=i+1; j <ary.length; j++) {
+            if (String(ary[i]) == String(ary[j])) {
+                ary.splice(j, 1);
+            } else {
+                continue   filter;
+            }
+        }
+    }
+    return ary;
+     }
+	});
+	//按条件查询
+	var chaxun=function(){
+		var auto = $(":radio[name='radio11'][checked]").val();
+		var context$=$("#txt11");
+		var context_0=context$[0].value+"";
+		//alert(context_0);
+		jQuery("#gridTable").jqGrid('setGridParam',{url:"../servlet/RegistUserServlet",postData:{op:'query',radio:auto, text:encodeURI(context_0)}}).trigger("reloadGrid");
+	};
+	--></script>
+
+</head>
+
+<div class="navi">
+	<div class="navi_title">用户管理        (双击查看用户权限)</div>
+	<div class="navi_search">
+	 			搜索&gt;&gt; 按
+			  <INPUT id="radio1" CHECKED type="radio" name="radio11" value="yf">用户姓名
+				<INPUT id="radio2" type="radio" name="radio11" value="dl">登录名
+				<INPUT id="radio3" type="radio" name="radio11" value="ks">科室名称
+				<input id="txt11" type="text" name="txt11" oninput="chaxun();" onpropertychange="chaxun();"/>
+				</div>
+	<div class="navi_function">
+	 <a id="add" class="add">注册用户</a>&nbsp;&nbsp;
+		<a id="edit" class="edit">修改</a>&nbsp;&nbsp;
+		<a id="del" class="del">删除</a>&nbsp;&nbsp;
+		<a id="resetPassword">重置密码</a>&nbsp;&nbsp;
+	</div>
+</div>
+<table id="gridTable"></table>
+<div id="gridPager"></div>
+<div id="registryDialog"></div>
+
+<div id="dd"  style="width: 400px; height: 300px;display: none">
+<div id="cc" class="easyui-layout" style="width: 384px; height: 230px;">
+	<div region="west" split="true" style="width: 200px; background: #eee; padding: 10px;" align="center">
+		<form id="FrmGrid_gridTable" style="width: 100%; overflow: auto; position: relative; height: auto;" onsubmit="return false;">
+			<table id="TblGrid_gridTable" border="0" cellspacing="0" cellpadding="3">
+				<tbody>
+					<tr id="FormError" style="display: none">
+						<td class="ui-state-error" colspan="2"></td>
+					</tr>
+					<tr id="tr_USER_NAME" >
+						<td>用户名</td>
+						<td><input id="USER_NAME" type="text" size="10" name="USER_NAME" ></td>
+					</tr>
+					<tr id="tr_USER_LOGIN" >
+						<td>登录名</td>
+						<td class="DataTD"><input id="USER_LOGIN" type="text" size="10" name="USER_LOGIN" ></td>
+					</tr>
+					<tr id="tr_USER_LOGIN"  name="password">
+						<td>密码</td>
+						<td class="DataTD"><input id="password" type="password" size="10" name="USER_LOGIN" ></td>
+					</tr>
+					<tr id="tr_USER_LOGIN"  name="password">
+						<td>确认密码</td>
+						<td class="DataTD"><input id="repassword" type="password" size="10" name="USER_LOGIN" ></td>
+					</tr>
+					<tr id="tr_USER_STATE">
+						<td>用户状态</td>
+						<td class="DataTD"><select id="USER_STATE" class="FormElement" role="select" name="USER_STATE" size="1">
+								<option role="option" value="1">有效</option>
+								<option role="option" value=" 0">无效</option>
+						</select></td>
+					</tr>
+					<tr id="tr_DEPT_CODE" >
+						<td >科室编码</td>
+						<td class="DataTD"><input id="DEPT_CODE" type="text" size="10"  readonly></td>
+					</tr>
+					<tr id="tr_DEPT_NAME" >
+						<td >科室名称</td>
+						<td class="DataTD"><input id="DEPT_NAME" type="text" size="10" ></td>
+					</tr>
+					
+				</tbody>
+			</table>
+		</form>
+	</div>
+	<div region="center" style="padding: 10px; background: #eee;">
+			<div id="funsList">
+				<div>
+					<ul id="funsTree" class="easyui-tree"></ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<chart showShadow='true' baseFont='宋体' baseFontSize='14' caption='全院路径纳入率' bgColor='FFFFFF,CCCCCC' showPercentageValues='0' plotBorderColor='FFFFFF' formatNumberScale='0' numberSuffix='例' isSmartLineSlanted='1' showValues='1' showLabels='0' showLegend='1' xAxisName='Week' yAxisName='Sales'>
+  <set label='纳入病例' value='16873' color='99CC00' alpha='60'/>
+  <set label='未纳入病例' value='45897' color='333333' alpha='60'/>
+</chart>

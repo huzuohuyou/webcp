@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<chart palette='2' rotateNames='0' animation='1' numdivlines='4' caption='2型糖尿病临床路径效率统计' baseFont='宋体' baseFontSize='12'
+       useRoundEdges='1' legendBorderAlpha='0' numberSuffix='天'>
+  <categories font='宋体' fontSize='12'>
+    <category label='平均住院日'/>
+    <category label='最小住院日' />
+    <category label='最大住院日'/>
+  </categories>
+  <dataset seriesname='纳入路径病例' color='A66EDD' alpha='90' showValues='1' dashed='1'>
+    <set value='13' />
+    <set value='10' link='t3111.htm'/>
+    <set value='15' />
+  </dataset>
+  <dataset seriesname='符合条件但不纳入病例' color='F6BD0F' showValues='1' alpha='90'>
+    <set value='15' />
+    <set value='13' />
+    <set value='17' />
+  </dataset>
+  <trendLines>
+    <line startValue='10' endValue='14' color='8BBA00' thickness='1' alpha='20' showOnTop='0' valueOnRight='1'
+          displayValue='路径定义天数范围（10~14天）' isTrendZone='1'/>
+  </trendLines>
+</chart>

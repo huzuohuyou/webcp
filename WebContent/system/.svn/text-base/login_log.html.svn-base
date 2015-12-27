@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<!-- 
+/*----------------------------------------------------------------
+// Copyright (C) 2011 北京嘉和美康信息技术有限公司版权所有。 
+// 文件名：login_log.html
+// 文件功能描述：登陆日志显示页面
+// 创建人：周伟彬
+// 创建日期：2012/08/28
+// 
+//----------------------------------------------------------------*/
+ -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<link rel="stylesheet" href="../public/plugins/jquery/themes/dcp/jquery-ui-1.8.16.custom.css">
+<link rel="stylesheet" href="../public/plugins/jqgrid/ui.jqgrid.css">
+<link rel="stylesheet" href="../public/styles/style.css">
+<script type="text/javascript" src="../bios_web_res/component/date/WdatePicker.js"></script>
+<script type="text/javascript" src="../public/plugins/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../public/plugins/jqgrid/i18n/grid.locale-cn.js"></script>
+<script type="text/javascript" src="../public/plugins/jqgrid/jquery.jqGrid.min.js"></script>
+
+<style type="text/css">
+body {
+	padding: 0em;
+}
+
+.ui-jqgrid tr.jqgrow td {
+	white-space: normal !important;
+	vertical-align: text-top;
+	padding-top: 2px;
+}
+
+.ui-widget {
+	font-size: 12px;
+}
+
+.navi_title {
+	float: left;
+	width: 400px;
+	background: url(../public/images/tb.gif) no-repeat;
+	margin: 5px;
+	padding-left: 20px;
+	overflow-x: hidden;
+}
+</style>
+
+<script type="text/javascript">
+function add_zero(temp)
+{
+ if(temp<10) return "0"+temp;
+ else return temp;
+};
+$(function()
+{
+	var d = new Date();
+	var s = d.getFullYear()+"-" +add_zero(d.getMonth()+1)+ "-01";
+	var e = d.getFullYear()+"-" +add_zero(d.getMonth()+1)+ "-"+d.getDate();
+	$("#date1").val(s);
+	$("#date2").val(e);
+	$.jgrid.ajaxOptions.type = 'post';
+	var searchtype=['cn','eq'];
+		$("#gridTable").jqGrid({
+		url:'../servlet/logServlet?op=getlogin',
+		mtype:"post",
+		postData : {s:s,e:e},
+		datatype: "json",
+		height:( $(document).height()-80),
+		beforeRequest:function(){//每次读取前先清空表中数据
+			 $(this).clearGridData("clearfooter");
+		},
+		colNames:['用户编号','用户名称', '科室编码','科室名称','登录名称', '登录IP', '登录时间','退出时间'],
+		colModel:[
+					{name:'user_id',index:'user_id', width:80,align:"center",searchoptions:{ sopt:searchtype}},
+					{name:'user_name',index:'user_name', width:200,align:"center",searchoptions:{ sopt:searchtype}},
+					{name:'dept_code',index:'dept_code', width:80,align:"center",searchoptions:{ sopt:searchtype}},
+					{name:'dept_name',index:'dept_name', width:200,align:"center",searchoptions:{ sopt:searchtype}},
+					{name:'user_login',index:'user_login', width:80,align:"center",searchoptions:{ sopt:searchtype}},
+					{name:'ip',index:'ip', width:150,align:"center",searchoptions:{ sopt:searchtype}},
+					{name:'login_time',index:'login_time', width:150,align:"center",search:false},
+					{name:'logout_time',index:'logout_time', width:150,align:"center",search:false}	
+				],
+		autowidth : true,
+		viewrecords:true,
+		rowNum:20,
+		rownumbers:true,
+		rowList:[20,40,60],
+		sortorder:"desc",
+		jsonReader:{
+			repeatitems : false
+		},
+		pager:"#gridPager"}).navGrid('#gridPager', {
+			edit : false,
+			add : false,
+			del : false,
+			search:false
+		});
+		
+		var t=document.documentElement.clientWidth;  
+		$(window).resize(function() {
+				if(t != document.documentElement.clientWidth){
+				t = document.documentElement.clientWidth;
+				var ss = getPageSize();
+				$("#gridTable").jqGrid('setGridWidth', ss.WinW-10).jqGrid('setGridHeight', ss.WinH-80);
+				}
+			});
+	});
+
+	var searchTable = function(){
+		var s=$("#date1").val();
+    	var e=$("#date2").val();
+    		if( s >= e){
+        		alert("日期选择错误，请重新选择!");
+        	}else{
+            	var gr = jQuery("#gridTable").jqGrid('setGridParam',{url:"../servlet/logServlet",postData:{op:'getlogin',s:s,e:e}}).trigger("reloadGrid");
+
+        	}
+    	
+	};	
+	
+</script>
+</head>
+
+<body>
+	<div class="navi">
+	 <div class="navi_title">登录日志（无退出时间为正在使用或者非正常退出系统）</div>	
+     <div class="navi_function">	
+	 		登录开始日期：<input  type="text"  width="80%" style=" color:black;width:60px;" id="date1"  readonly onfocus="WdatePicker({isShowWeek:true,minDate:'2011-10-01'})"/>&nbsp;&nbsp;
+			登录结束日期：<input  type="text"  width="80%" style="color:black;width:60px;"  id="date2" readonly onfocus="WdatePicker({isShowWeek:true})"/>
+				&nbsp;&nbsp;
+				<input type="button" value="查询" onclick="searchTable();" style="color: black" /> 
+	 	</div>
+	</div>
+	<div align="center">
+		<div id="gridPager"></div>
+		<table id="gridTable" ></table>
+	</div>
+  
+</body>
+</html>
+
+ 
+
+	

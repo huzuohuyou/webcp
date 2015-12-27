@@ -1,0 +1,155 @@
+8
+
+dir
+807
+https://zwb-pc/svn/jhdcp2/LcpProject/WebContent/public/plugins/jquery
+https://zwb-pc/svn/jhdcp2
+
+
+
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+a02d5324-4e91-cd49-86ca-bfc7c5ded3af
+
+indicator.gif
+file
+
+
+
+
+2012-12-06T03:29:22.546875Z
+03ce3dcc84af110e9da8699a841e5200
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+has-props
+
+jquery.idTabs.min.js
+file
+
+
+
+
+2012-12-06T03:29:22.546875Z
+23fc8bee584755f068571ee9e6702589
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+
+external
+dir
+
+jquery-ui-1.8.11.custom.min.js
+file
+
+
+
+
+2012-12-06T03:29:22.562500Z
+cb893866fb4a42b2254c5650a4cd7a20
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+
+themes
+dir
+
+jquery.autocomplete.js
+file
+
+
+
+
+2012-12-06T03:29:22.578125Z
+11e6e59dc34688d98c5c9124065c244b
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+
+jquery-1.5.1.js
+file
+
+
+
+
+2012-12-06T03:29:22.578125Z
+f2402f0e7b549caae013bc3c05b3a161
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+
+jquery.acts_as_tree_table.js
+file
+
+
+
+
+2012-12-06T03:29:22.593750Z
+c7830beed6e9eabd23ed70b8fb6af314
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+
+images
+dir
+
+jquery.autocomplete.css
+file
+
+
+
+
+2012-12-06T03:29:22.562500Z
+719c9f56c4acd5081ae30fe127a965e4
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+
+demos
+dir
+
+cupertino
+dir
+
+jquery-1.5.1.min.js
+file
+
+
+
+
+2012-12-06T03:29:22.593750Z
+b04a3bccd23ddeb7982143707a63ccf9
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+
+ui
+dir
+
+jquery-1.7.1.min.js
+file
+
+
+
+
+2012-12-06T03:29:22.609375Z
+ddb84c1587287b2df08966081ef063bf
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+

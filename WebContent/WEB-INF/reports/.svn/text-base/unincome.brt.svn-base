@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="GBK" ?>
+<report version="3.0">
+	<head>
+		<property name="type">0</property>
+		<name><![CDATA[unincome]]></name>
+		<dataSets>
+			<dataSet name="ds" type="Self" >
+				<property name="dataSource"></property>
+				<property name="desc"><![CDATA[]]></property>
+				<property name="query"><![CDATA[com.goodwillcis.cp.patientmanager.BnaruTongji]]></property>
+				<property name="beginRow">0</property>
+				<property name="endRow">0</property>
+				<queryParam name="start_time" />
+				<queryParam name="end_time" />
+				<queryParam name="deptcodevalue" />
+			</dataSet>
+		</dataSets>
+		<parameters>
+			<parameter name="start_time" type="6">
+				<property name="dateFormat"></property>
+				<property name="default">2012-03-01</property>
+				<property name="desc"></property>
+				<property name="source">0</property>
+			</parameter>
+			<parameter name="end_time" type="6">
+				<property name="dateFormat"></property>
+				<property name="default"></property>
+				<property name="desc"></property>
+				<property name="source">0</property>
+			</parameter>
+			<parameter name="deptcodevalue" type="6">
+				<property name="dateFormat"></property>
+				<property name="default"></property>
+				<property name="desc"></property>
+				<property name="source">0</property>
+			</parameter>
+		</parameters>
+		<variables/>
+		<subReports/>
+	</head>
+	<body>
+		<sheet id="sheet1">
+			<page>
+				<property name="pageDirection">0</property>
+				<property name="margin-left">3</property>
+				<property name="margin-right">3</property>
+			</page>
+			<grid row="2" col="8">
+				<properties>
+				</properties>
+				<rows>
+					<row id="1">
+					</row>
+					<row id="2">
+					</row>
+				</rows>
+				<columns>
+					<column id="1">
+						<property name="width">81</property>
+					</column>
+					<column id="2">
+						<property name="width">98</property>
+					</column>
+					<column id="3">
+						<property name="width">162</property>
+					</column>
+					<column id="4">
+						<property name="width">123</property>
+					</column>
+					<column id="5">
+						<property name="width">122</property>
+					</column>
+					<column id="6">
+						<property name="width">162</property>
+					</column>
+					<column id="7">
+						<property name="width">172</property>
+					</column>
+					<column id="8">
+						<property name="width">135</property>
+					</column>
+				</columns>
+				<cells>
+					<cell id="1,1" type="0" >
+						<property name="value"><![CDATA[患者编号]]></property>
+						<property name="bold">0</property>
+						<border type="0">1:0,0,0:1</border>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="1,2" type="0" >
+						<property name="value"><![CDATA[患者姓名]]></property>
+						<property name="bold">0</property>
+						<border type="0">1:0,0,0:1</border>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="1,3" type="0" >
+						<property name="value"><![CDATA[入院日期]]></property>
+						<property name="bold">0</property>
+						<border type="0">1:0,0,0:1</border>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="1,4" type="0" >
+						<property name="value"><![CDATA[所属科室]]></property>
+						<property name="bold">0</property>
+						<border type="0">1:0,0,0:1</border>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="1,5" type="0" >
+						<property name="value"><![CDATA[主治医生]]></property>
+						<property name="bold">0</property>
+						<border type="0">1:0,0,0:1</border>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="1,6" type="0" >
+						<property name="value"><![CDATA[不纳入类型]]></property>
+						<property name="bold">0</property>
+						<border type="0">1:0,0,0:1</border>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="1,7" type="0" >
+						<property name="value"><![CDATA[不纳入原因]]></property>
+						<property name="bold">0</property>
+						<border type="0">1:0,0,0:1</border>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="1,8" type="0" >
+						<property name="value"><![CDATA[符合路径]]></property>
+						<property name="bold">0</property>
+						<border type="0">1:0,0,0:1</border>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="2,1" type="0" >
+						<property name="value"><![CDATA[=ds.select(患者编码)]]></property>
+						<property name="ext-direction">3</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="2,2" type="0" >
+						<property name="value"><![CDATA[=ds.select(患者姓名)]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="2,3" type="0" >
+						<property name="value"><![CDATA[=ds.select(入院日期)]]></property>
+						<property name="view-format">5|yyyy-M-d H:mm:ss</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="2,4" type="0" >
+						<property name="value"><![CDATA[=ds.select(所属科室)]]></property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="2,5" type="0" >
+						<property name="value"><![CDATA[=ds.select(主治医生)]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="2,6" type="0" >
+						<property name="value"><![CDATA[=ds.select(不纳入类型)]]></property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="2,7" type="0" >
+						<property name="value"><![CDATA[=ds.select(不纳入原因)]]></property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="2,8" type="0" >
+						<property name="value"><![CDATA[=ds.select(符合路径)]]></property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+				</cells>
+			</grid>
+		</sheet>
+	</body>
+	<param-form col="2">
+		<ctrl id="start_time" type="1" label="">
+		</ctrl>
+		<ctrl id="end_time" type="1" label="">
+		</ctrl>
+		<ctrl id="deptcodevalue" type="1" label="">
+		</ctrl>
+	</param-form>
+</report>

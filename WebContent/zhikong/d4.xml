@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<chart showShadow='true' baseFont='宋体' baseFontSize='12' caption='全市路径排除情况' xAxisName='纳入条件符合情况' yAxisName='病例数' numberSuffix='例' formatNumberScale='0' useRoundEdges='1'>
+  <set label='不符合条件' value='305644' />
+  <set label='符合但不纳入' value='100089' />
+  <set label='符合未处理' value='1640' />
+</chart>

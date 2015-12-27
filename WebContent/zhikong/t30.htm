@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>各路径统计</title>
+    <script type="text/javascript" src="../public/plugins/FusionCharts/FusionCharts.js"></script>
+    <link rel="stylesheet" href="../public/plugins/FusionCharts/style.css" type="text/css" />
+		<link rel="stylesheet" href="../public/styles/demos.css">
+		<style type="text/css"> 
+		<!--
+		a:link{
+		text-decoration:none;
+		color: #000000;
+		font-size: 12px;
+		}
+		a:visited{
+		text-decoration:none;
+		color: #000000;
+		font-size: 12px;
+		}
+		-->
+		</style>
+	</head>
+	<body>
+		<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  		<tr>
+  			<td width="3">&nbsp;</td>
+    			<td height="30">
+    				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				      <tr>
+				        <td height="24" bgcolor="#353c44"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+				          <tr>
+				            <td height="23"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+				              <tr>
+				                <td width="24" height="19" valign="bottom"><div align="center"><img src="../public/images/tb.gif" width="14" height="14" /></div></td>
+				                <td valign="bottom"><span class="STYLE1"> 路径概况</span></td>
+				              </tr>
+				            </table></td>
+				            <td>&nbsp;</td>
+				          </tr>
+				        </table></td>
+				      </tr>
+				    </table>
+				  </td>
+				  <td width="3">&nbsp;</td>
+				</tr>
+			  <tr>
+			  	<td width="3">&nbsp;</td>
+			    <td><table width="100%" id="ttotal" class="users" border="0" cellpadding="0" cellspacing="1" bgcolor="#a8c7ce">
+			    <tbody id="tbtotal">
+			      <tr>
+			        <td width="40%" height="24" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">启用中的路径数</span></div></td>        
+			        <td width="10%" height="24" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">9</span></div></td>
+			        <td width="40%" height="24" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">定义中的路径数</span></div></td>        
+			        <td width="10%" height="24" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">13</span></div></td>        
+			      </tr>
+			      <tr>
+			        <td height="24" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">已发布过的路径数</span></div></td>        
+			        <td height="24" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">13</span></div></td>
+			        <td height="24" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">平均纳入率</span></div></td>        
+			        <td height="24" bgcolor="#00FF00"><div align="center"><span class="STYLE10">86.57%</span></div></td>        
+			      </tr>
+			      <tr>
+			        <td height="24" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">基本路径总数</span></div></td>        
+			        <td height="24" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">9</span></div></td>
+			        <td height="24" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">路径版本总数</span></div></td>        
+			        <td height="24" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">13</span></div></td>        
+			      </tr>
+			    
+			      </tbody>
+			    </table></td>
+			  	<td width="3">&nbsp;</td>
+			  </tr>
+			  <tr>
+			  	<td height="1" width="3">&nbsp;</td>
+			    <td></td>
+			  	<td width="3">&nbsp;</td>
+			  </tr>
+			  <!-- 最高、最低纳入率排行图 -->
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td>
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+      	<tr>
+        <td bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><div align="center">
+                <span id="pienarulv">最高纳入率的 5 条路径</span>
+                <script type="text/javascript"><!--
+                    var MarChart = new FusionCharts("../public/plugins/FusionCharts/Column2D.swf", "CPMaxIncome", "520", "300", "0", "1");
+                    MarChart.setXMLUrl("t301.xml");
+                    MarChart.render("pienarulv");                                
+                    // -->
+                </script>                
+                </div></td>
+              </tr>
+            </table>
+            </td>
+            <td width="10">&nbsp;</td>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><div align="center">
+                <span id="chartlujingpaichu">最低纳入率的 5 条路径</span>
+                            <script type="text/javascript"><!--
+                                var FebChart = new FusionCharts("../public/plugins/FusionCharts/Column2D.swf", "CPMinIncome", "520", "300", "0", "1");
+                                FebChart.setXMLUrl("t302.xml");
+                                FebChart.render("chartlujingpaichu");
+                                // -->
+                            </script>                
+                </div></td>
+              </tr>
+            </table>
+            </td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <tr>
+  	<td height="1" width="3">&nbsp;</td>
+    <td></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td height="35"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="30" bgcolor="#353c44"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="28"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="6%" height="19" valign="bottom"><div align="center"><img src="../public/images/tb.gif" width="14" height="14" /></div></td>
+                <td width="94%" valign="bottom"><span class="STYLE1">&nbsp;各路径情况&nbsp;</span></td>
+              </tr>
+            </table></td>
+            <td><div align="right"><span class="STYLE1">
+              搜索路径 >> 按 <input type="radio" name="radiocpcode" id="radiocpcode" checked />路径编码
+              <input type="radio" name="radiocppy" id="radiocppy" />路径拼音码
+              <input type="radio" name="radiocpwb" id="radiocpwb" />路径五笔码
+              <input type="text" name="txtcpfind" id="txtcpfind" />&nbsp;
+              <input name="btncpfind" type="button" id="btncpfind"	 value="搜索">&nbsp;
+              </span><span class="STYLE1"> &nbsp;</span></div></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td><table width="100%" id="tcp" class="users" border="0" cellpadding="0" cellspacing="1" bgcolor="#a8c7ce">
+    <tbody id="tbcp">    
+      <tr>
+        <td width="8%" height="48" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">路径编码</span></div></td>
+        <td width="34%" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">路径名称</span></div></td>
+        <td width="10%" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">启用时间</span></div></td>
+        <td width="5%" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">是否停用</span></div></td>
+        <td width="9%" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">符合纳入病例</span></div></td>
+        <td width="5%" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">纳入病例</span></div></td>
+        <td width="5%" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">纳入率</span></div></td>
+        <td width="5%" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">完成病例</span></div></td>
+        <td width="5%" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">完成率</span></div></td>
+        <td width="9%" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">完成带变异病例</span></div></td>
+        <td width="5%" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">变异率</span></div></td>
+      </tr>
+      
+		<tr bgcolor="#FFFF00" class="STYLE19">
+		<td height="24"><div align="center">1000.01</div></td>
+		<td><div align="center"><a href="t31.htm">轻症急性胰腺炎</a></div></td>
+		<td><div align="center">2010-07-14</div></td>
+		<td><div align="center">●</div></td>
+		<td><div align="center">1453</div></td>
+		<td><div align="center">1277</div></td>
+		<td><div align="center">87.89%</div></td>
+		<td><div align="center">1066</div></td>
+		<td><div align="center">83.48%</div></td>
+		<td><div align="center">678</div></td>
+		<td><div align="center">63.60%</div></td>
+		</tr>
+
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">1000.02</div></td>
+		<td><div align="center"><a href="t31.htm">轻症急性胰腺炎</a></div></td>
+		<td><div align="center">2011-01-21</div></td>
+		<td><div align="center"></div></td>
+		<td><div align="center">753</div></td>
+		<td><div align="center">688</div></td>
+		<td><div align="center">91.37%</div></td>
+		<td><div align="center">533</div></td>
+		<td><div align="center">77.47%</div></td>
+		<td><div align="center">345</div></td>
+		<td><div align="center">64.73%</div></td>
+		</tr>
+
+		<tr bgcolor="#FFFF00" class="STYLE19">
+		<td height="24"><div align="center">1001.01</div></td>
+		<td><div align="center"><a href="t31.htm">GRAVE病</a></div></td>
+		<td><div align="center">2011-04-14</div></td>
+		<td><div align="center">●</div></td>
+		<td><div align="center">689</div></td>
+		<td><div align="center">609</div></td>
+		<td><div align="center">88.39%</div></td>
+		<td><div align="center">599</div></td>
+		<td><div align="center">98.36%</div></td>
+		<td><div align="center">333</div></td>
+		<td><div align="center">55.59%</div></td>
+		</tr>
+				
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">1001.02</div></td>
+		<td><div align="center"><a href="t31.htm">GRAVE病</a></div></td>
+		<td><div align="center">2011-01-21</div></td>
+		<td><div align="center"></div></td>
+		<td><div align="center">567</div></td>
+		<td><div align="center">487</div></td>
+		<td><div align="center">85.89%</div></td>
+		<td><div align="center">407</div></td>
+		<td><div align="center">83.48%</div></td>
+		<td><div align="center">259</div></td>
+		<td><div align="center">63.60%</div></td>
+		</tr>
+
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">1002.01</div></td>
+		<td><div align="center"><a href="t31.htm">声带息肉</a></div></td>
+		<td><div align="center">2010-12-17</div></td>
+		<td><div align="center"></div></td>
+		<td><div align="center">765</div></td>
+		<td><div align="center">672</div></td>
+		<td><div align="center">87.89%</div></td>
+		<td><div align="center">494</div></td>
+		<td><div align="center">73.48%</div></td>
+		<td><div align="center">329</div></td>
+		<td><div align="center">66.60%</div></td>
+		</tr>
+
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">1003.01</div></td>
+		<td><div align="center"><a href="t31.htm">IgA肾病</a></div></td>
+		<td><div align="center">2010-11-27</div></td>
+		<td><div align="center"></div></td>
+		<td><div align="center">1234</div></td>
+		<td><div align="center">1034</div></td>
+		<td><div align="center">83.77%</div></td>
+		<td><div align="center">967</div></td>
+		<td><div align="center">93.48%</div></td>
+		<td><div align="center">721</div></td>
+		<td><div align="center">74.60%</div></td>
+		</tr>
+			
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">1004.01</div></td>
+		<td><div align="center"><a href="t31.htm">终末期肾脏病</a></div></td>
+		<td><div align="center">2010-08-21</div></td>
+		<td><div align="center"></div></td>
+		<td><div align="center">1678</div></td>
+		<td><div align="center">1420</div></td>
+		<td><div align="center">84.65%</div></td>
+		<td><div align="center">958</div></td>
+		<td><div align="center">67.48%</div></td>
+		<td><div align="center">226</div></td>
+		<td><div align="center">23.60%</div></td>
+		</tr>
+
+		<tr bgcolor="#FFFF00" class="STYLE19">
+		<td height="24"><div align="center">1005.01</div></td>
+		<td><div align="center"><a href="t31.htm">大肠息肉电切术</a></div></td>
+		<td><div align="center">2011-04-14</div></td>
+		<td><div align="center">●</div></td>
+		<td><div align="center">545</div></td>
+		<td><div align="center">469</div></td>
+		<td><div align="center">85.97%</div></td>
+		<td><div align="center">386</div></td>
+		<td><div align="center">82.22%</div></td>
+		<td><div align="center">214</div></td>
+		<td><div align="center">55.34%</div></td>
+		</tr>
+
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">1005.02</div></td>
+		<td><div align="center"><a href="t31.htm">大肠息肉电切术</a></div></td>
+		<td><div align="center">2011-04-14</div></td>
+		<td><div align="center"></div></td>
+		<td><div align="center">578</div></td>
+		<td><div align="center">509</div></td>
+		<td><div align="center">88.12%</div></td>
+		<td><div align="center">393</div></td>
+		<td><div align="center">77.12%</div></td>
+		<td><div align="center">245</div></td>
+		<td><div align="center">62.33%</div></td>
+		</tr>
+
+		<tr bgcolor="#FFFF00" class="STYLE19">
+		<td height="24"><div align="center">1006.01</div></td>
+		<td><div align="center"><a href="t31.htm">慢性中耳炎</a></div></td>
+		<td><div align="center">2011-02-07</div></td>
+		<td><div align="center">●</div></td>
+		<td><div align="center">689</div></td>
+		<td><div align="center">609</div></td>
+		<td><div align="center">88.32%</div></td>
+		<td><div align="center">491</div></td>
+		<td><div align="center">80.56%</div></td>
+		<td><div align="center">97</div></td>
+		<td><div align="center">19.78%</div></td>
+		</tr>
+				
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">1006.02</div></td>
+		<td><div align="center"><a href="t31.htm">慢性中耳炎</a></div></td>
+		<td><div align="center">2011-01-01</div></td>
+		<td><div align="center"></div></td>
+		<td><div align="center">377</div></td>
+		<td><div align="center">312</div></td>
+		<td><div align="center">82.76%</div></td>
+		<td><div align="center">211</div></td>
+		<td><div align="center">67.48%</div></td>
+		<td><div align="center">159</div></td>
+		<td><div align="center">75.23%</div></td>
+		</tr>
+				
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">1007.01</div></td>
+		<td><div align="center"><a href="t31.htm">鼻窦炎</a></div></td>
+		<td><div align="center">2010-10-10</div></td>
+		<td><div align="center"></div></td>
+		<td><div align="center">987</div></td>
+		<td><div align="center">828</div></td>
+		<td><div align="center">83.87%</div></td>
+		<td><div align="center">749</div></td>
+		<td><div align="center">90.48%</div></td>
+		<td><div align="center">273</div></td>
+		<td><div align="center">36.40%</div></td>
+		</tr>
+				
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">1008.01</div></td>
+		<td><div align="center"><a href="t31.htm">慢性硬膜下血肿</a></div></td>
+		<td><div align="center">2011-03-03</div></td>
+		<td><div align="center"></div></td>
+		<td><div align="center">688</div></td>
+		<td><div align="center">605</div></td>
+		<td><div align="center">87.89%</div></td>
+		<td><div align="center">505</div></td>
+		<td><div align="center">83.48%</div></td>
+		<td><div align="center">321</div></td>
+		<td><div align="center">63.60%</div></td>
+		</tr>
+				
+      </tbody>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td height="30"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+     
+        <td width="33%"><div align="left"><span class="STYLE22">&nbsp;&nbsp;&nbsp;&nbsp;共有<strong>13</strong> 条记录，当前第<strong> 1</strong> 页，共 <strong>1</strong> 页</span></div></td>
+        <td width="67%"><table width="312" border="0" align="right" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="49"><div align="center"><a id="" href="#"><img src="../public/images/main_54.gif" width="40" height="15" /></a></div></td>
+            <td width="49"><div align="center"><a id="pageBefore" href="#"><img src="../public/images/main_56.gif" width="45" height="15" /></a></div></td>
+            <td width="49"><div align="center"><a id="pageAfter" href="#"><img src="../public/images/main_58.gif" width="45" height="15"/></a></div></td>
+            <td width="49"><div align="center"><a id="A1" href="#"><img src="../public/images/main_60.gif" width="40" height="15" /></a></div></td>
+            <td width="37" class="STYLE22"><div align="center">转到</div></td>
+            <td width="22"><div align="center">
+              <input type="text" name="textfield" id="textfield"  style="width:20px; height:12px; font-size:12px; border:solid 1px #7aaebd;"/>
+            </div></td>
+            <td width="22" class="STYLE22"><div align="center">页</div></td>
+            <td width="35"><img src="../public/images/main_62.gif" width="26" height="15" onclick="pageSelect()"/></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  
+  <tr>
+  	<td height="3" width="3">&nbsp;</td>
+    <td></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  
+</table>
+
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   

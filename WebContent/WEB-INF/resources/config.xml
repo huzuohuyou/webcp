@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="GBK" ?>
+<Config>
+	<!--报表文件存放目录-->
+	<reportHome>/WEB-INF/reports</reportHome>
+		
+	<!--报表引用图片的存放目录，缺省为reportHome-->
+	<!-- <imageHome>/WEB-INF/reports</imageHome> -->
+		
+	<!--web编码-->
+	<characterEncode>GBK</characterEncode>
+		
+	<!--用户工厂配置-->
+	<userFactory></userFactory>
+	
+	<!--事件处理器配置-->
+	<eventHandler></eventHandler>
+	
+	<!--数据源-->
+	<dsConf>
+		<dataSource>
+			<Name>BIOS_DS</Name> <!-- 数据源名称，与设计器中一致 -->
+			<JNDIPrefix>java:comp/env/</JNDIPrefix> <!-- JNDI查找前缀 -->
+			<JNDIName>BIOS_DS</JNDIName> <!-- 数据源的JNDI资源名称 -->
+			<DBType>HSQL</DBType> <!-- 数据库类型 -->
+			<DBEncode>gb2312</DBEncode> <!-- 数据库编码方式 -->
+			<SQLDecode>false</SQLDecode> <!-- 是否进行Sql语句转码 -->
+			<Default>true</Default> <!-- 是否为默认数据源 -->
+		</dataSource>
+		<!--
+		<dataSource>
+			<Name>test</Name>
+			<JNDIPrefix>java:comp/env/</JNDIPrefix>
+			<JNDIName>devdb</JNDIName>
+			<DBType>oracle</DBType>
+			<DBEncode>GBK</DBEncode>
+			<SQLDecode>false</SQLDecode>
+			<Default>false</Default>
+		</dataSource>
+		-->
+		<!-- xml数据源配置
+		<dataSource type="xml">
+			<Name>XML</Name>
+			<Def name="出版物信息" xml="D:\DATASOURCE_XML\表1.xml" encode=""/>
+			<Def name="表15" xml="D:\DATASOURCE_XML\表15.xml" encode=""/>
+		</dataSource>
+		-->
+		<!-- webservice数据源配置
+		<dataSource type="webservice">
+			<Name>WS</Name>
+			<WSDL>http://www.webxml.com.cn/WebServices/WeatherWebService.asmx?wsdl</WSDL>
+		</dataSource>
+		-->		
+	</dsConf>
+	
+	<!-- 语义层文件存放目录 -->
+	<bizModelHome>/WEB-INF/bizmodel</bizModelHome>
+	 
+	<!-- 系统运行模式，develop | product -->
+	<runMode>develop</runMode>
+	
+	<!-- 缓存 -->
+	<cache>
+		<maxElements>150</maxElements> <!-- 内存中缓存的最大对象数 -->
+		<liveTime>1800</liveTime> <!-- 生命周期(秒) -->
+		<timeout>600</timeout> <!-- 过期时间(秒) -->
+		<useDisk>false</useDisk> <!-- 是否使用硬盘缓存 -->
+		
+		<!-- 配置硬盘缓存的路径，最大对象数，缓冲区大小(M) -->
+		<!--
+		<diskStorekCfg>
+			<path>d:/temp</path>
+			<maxElements>100000</maxElements>
+			<bufferSize>8</bufferSize>
+		</diskStorekCfg>
+		-->
+		
+		<!-- 集群配置 -->
+		<!-- <cluster>192.168.1.10:40000,192.168.1.15:40000</cluster> --> 
+		
+		<!-- 可配置多个缓存组 -->
+		<!-- 
+		<group name="cache2" maxElements="150" liveTime="1800" timeout="600"/>
+		<group name="cache3" maxElements="50" liveTime="36000" timeout="18000">rpts/*.brt</group>
+		 -->
+	</cache>
+	
+	<html>
+		<!--报表在web上的输出尺寸-->
+		<rptwidth>100%</rptwidth>
+		<rptheight>100%</rptheight>
+		
+		<!--输出宽度自适应选项-->
+		<fitwidth>true</fitwidth>
+	
+		<!--页面工具条配置-->
+		<toolbar>
+			<toolbardisplay>bottom</toolbardisplay> <!--工具条显示信息(表格下方、上方、不显示)，bottom | top | none-->
+			<xlsbtn>true</xlsbtn> <!--是否显示整页导出excel按钮-->
+			<xlsbtn1>true</xlsbtn1> <!--是否显示分页导出excel按钮-->
+			<pdfbtn>true</pdfbtn> <!--是否显示导出PDF按钮-->
+			<docbtn>true</docbtn> <!--是否显示导出Word按钮-->
+			<printbtn>true</printbtn> <!--是否显示打印按钮-->
+		</toolbar>
+		
+		<!--填报表页面输出配置-->
+		<fillin>
+			<forwardurl></forwardurl> <!--提交填报表单后，转向的位置-->
+			<errorforward></errorforward> <!--提交填报表单失败时，转向的位置-->
+			<btnalign>center</btnalign> <!--填报按钮位置(左、中、右)，left | center | right-->
+			<submitbtntext> 提 交 </submitbtntext> <!--提交按钮文字-->
+			<resetbtn>true</resetbtn> <!--是否显示重置按钮， true | false-->
+			<resetbtntext> 重 置 </resetbtntext> <!--重置按钮文字-->
+		</fillin>
+	</html>
+	
+	<!--客户端applet打印的java环境配置-->
+	<jreplugin>
+	  	<jreName>/j2re-1_4_2_18-windows-i586-p.exe#Version=1,4,2,18</jreName>
+	  	<jreVersion>1.4</jreVersion>
+	</jreplugin>
+	
+	<!--日志配置-->
+	<log>
+		<level>off</level> <!-- 日志输出级别， debug | warning | error | off -->
+		<fileName>/logs/bios_report.log</fileName> <!-- 日志文件名称 -->
+		<fileCount>1</fileCount> <!-- 日志文件个数 -->
+	</log>
+	
+	<!--URL前缀-->
+	<appUrlPrefix></appUrlPrefix>
+	
+</Config>

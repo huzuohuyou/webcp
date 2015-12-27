@@ -1,0 +1,67 @@
+8
+
+dir
+807
+https://zwb-pc/svn/jhdcp2/LcpProject/src
+https://zwb-pc/svn/jhdcp2
+
+
+
+2015-04-17T03:15:34.999939Z
+807
+zhouweibin
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+a02d5324-4e91-cd49-86ca-bfc7c5ded3af
+
+config.properties
+file
+
+
+
+
+2013-10-30T03:48:40.843750Z
+270f4ba7466616034100e906bbd8062f
+2013-11-01T05:19:41.703125Z
+750
+zhouweibin
+
+bios_server.license
+file
+
+
+
+
+2014-12-18T07:41:47.498406Z
+5a4612254f72994074d0093b9e3849e3
+2015-04-17T03:14:46.827051Z
+806
+zhouweibin
+
+log4j.properties
+file
+
+
+
+
+2012-12-06T03:29:00.890625Z
+bc9e46adcbcd5194bbaf889f3fce4f44
+2012-10-25T11:37:58.015625Z
+552
+zhangkun
+
+com
+dir
+

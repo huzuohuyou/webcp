@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<chart showShadow='true' baseFont='宋体' baseFontSize='12' caption='最高纳入率的 5 条路径' xAxisName='路径名称' yAxisName='纳入率'
+       numberSuffix='%' formatNumberScale='0' useRoundEdges='1'>
+  <set label='厦门德真会齿科中心' value='45.12' />
+  <set label='厦门市精神卫生中心' value='57.56' />
+  <set label='厦门心脏中心' value='60.57' />
+  <set label='厦门市新江医院' value='62.45' />
+  <set label='厦门莲花医院' value='70.88' />
+</chart>

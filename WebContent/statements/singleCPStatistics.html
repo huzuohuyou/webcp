@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<link rel="stylesheet" href="../public/plugins/jquery/themes/dcp/jquery-ui-1.8.16.custom.css">
+<link rel="stylesheet" href="../public/plugins/jqgrid/ui.jqgrid.css">
+<link rel="stylesheet" href="../public/styles/style.css">
+<script type="text/javascript" src="../public/plugins/jquery/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="../public/plugins/jqgrid/i18n/grid.locale-cn.js"></script>
+<script type="text/javascript" src="../public/plugins/jqgrid/jquery.jqGrid.min.js"></script>
+
+<style type="text/css">
+body {
+	padding: 0em;
+}
+
+.ui-jqgrid tr.jqgrow td {
+	white-space: normal !important;
+	vertical-align: text-top;
+	padding-top: 2px;
+}
+
+.ui-widget {
+	font-size: 12px;
+}
+
+.navi_title {
+	float: left;
+	width: 400px;
+	background: url(../images/tb.gif) no-repeat;
+	margin: 5px;
+	padding-left: 20px;
+	overflow-x: hidden;
+}
+</style>
+<script type="text/javascript">
+$(function()
+{
+	$.jgrid.ajaxOptions.type = 'post';
+	var searchtype=['cn','eq'];
+		$("#gridTable").jqGrid({
+		url:'../StatisticsServlet?op=single&opp=1',
+		datatype: "json",
+		height:( $(document).height()-80),
+		beforeRequest:function(){//每次读取前先清空表中数据
+			 $(this).clearGridData("clearfooter");
+		},
+		colNames:['路径编码','路径名称', '所属科室', '路径创建时间', '路径类别'],
+		colModel:[
+					{name:'cp_id',index:'cp_id', width:50,align:"center",searchoptions:{ sopt:searchtype} },
+					{name:'cp_name',index:'cp_name', width:200,align:"center",searchoptions:{ sopt:searchtype}},
+					{name:'dept_name',index:'dept_name', width:80,align:"center",searchoptions:{ sopt:searchtype} }	,
+					{name:'create_date',index:'create_date', width:150,align:"center",sortable:false,search:false},
+					{name:'version_date',index:'version_date', width:150,align:"center",sortable:false,search:false}	
+
+				],
+		autowidth : true,
+		viewrecords:true,
+		rowNum:15,
+		rownumbers:true,
+		rowList:[15,30],
+		jsonReader:{
+			repeatitems : false
+		},
+		pager:"#gridPager"}).navGrid('#gridPager', {
+			edit : false,
+			add : false,
+			del : false,
+			search:false
+		});
+
+		$("#selectCPType").change(function(){
+			var ur='../StatisticsServlet?op=single&opp='+$(this).val();
+			jQuery("#gridTable").setGridParam({url:ur}).hideCol("somecol").trigger("reloadGrid");
+		});
+
+	});
+	var addContact = function() {
+		var rowid = $("#gridTable").jqGrid("getGridParam", "selrow");
+		if (rowid) {
+			var rowData = $("#gridTable").getRowData(rowid);
+			var url="patientIndex.html?cp_id="+rowData.cp_id+"&cp_name="+rowData.cp_name;
+			window.open(url,'_self');
+		}
+	};
+	var searchTable = function(){
+		 $("#gridTable").jqGrid("searchGrid");  
+	};
+	
+
+	
+</script>
+</head>
+
+<body>
+	<div class="navi">
+		<div class="navi_title">
+			病例查看(双击行查看详细信息)
+		</div>
+		
+<div class="navi_function">
+				<select id="selectCPType"  style="color: #000000;">
+				<option value="1" selected="selected"  style="color: #000000;">全部路径</option>
+				<option value="2"  style="color: #000000;" >局发路径</option>
+				<option value="3"  style="color: #000000;">院内自定义路径</option>
+				</select>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="javascript:void(0);" class="infoss" onclick="searchTable();">查询</a>
+	 		</div>
+	</div>
+	<div align="center">
+		<table id="gridTable" ondblclick='addContact()'></table>
+		<div id="gridPager"></div>
+	</div>
+  
+ 
+</body>
+</html>
+
+ 
+
+	

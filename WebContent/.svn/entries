@@ -1,0 +1,156 @@
+8
+
+dir
+807
+https://zwb-pc/svn/jhdcp2/LcpProject/WebContent
+https://zwb-pc/svn/jhdcp2
+
+
+
+2015-04-17T03:14:46.827051Z
+806
+zhouweibin
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+a02d5324-4e91-cd49-86ca-bfc7c5ded3af
+
+charts
+dir
+
+system
+dir
+
+version
+dir
+
+newframes
+dir
+
+WEB-INF
+dir
+
+statements
+dir
+
+help
+dir
+
+match
+dir
+
+cpreport
+dir
+
+route
+dir
+
+META-INF
+dir
+
+service
+dir
+
+bios_web_res
+dir
+
+ReportPrint.jar
+file
+
+
+
+
+2012-12-06T03:29:26.015625Z
+efc71bd77ba8765d7cc2d92fc5c580a7
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+has-props
+
+login.jsp
+file
+819
+
+
+
+2015-05-06T03:45:44.660626Z
+eb9b7090092a9aaf9b0e901300c5775b
+2015-05-06T03:48:35.717927Z
+819
+zhouweibin
+
+cpfeedback
+dir
+
+login
+dir
+
+wsdl
+dir
+
+zhikong
+dir
+
+printHint.jsp
+file
+
+
+
+
+2012-12-06T03:29:26.031250Z
+6e8933f4acad9eca36ff0cebd08d6ef0
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+
+j2re-1_4_2_18-windows-i586-p.exe
+file
+
+
+
+
+2012-12-06T03:29:26.187500Z
+72dc0c236cd33e1ffffa6cfb9191001e
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+has-props
+
+cpmanage
+dir
+
+processing
+dir
+
+sync
+dir
+
+login_liu.jsp
+file
+
+
+
+
+2012-12-06T03:29:26.203125Z
+195b6b2204bb8c3bc7bd425d76a0f2ed
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+
+frames
+dir
+
+public
+dir
+

@@ -1,0 +1,1 @@
+﻿<?xml version="1.0" encoding="utf-8"?> <chart showShadow='true' baseFont='宋体' baseFontSize='12' caption='临床路径不纳入原因出现率统计' xAxisName='不纳入原因类型' yAxisName='比率' numberSuffix='%' formatNumberScale='0' useRoundEdges='1'><set label='诊断不符合' value='10' /><set label='其它' value='20' /><set label='患方拒绝' value='30' /><set label='治疗方案不符合' value='10' /><set label='合并其他疾病' value='30' /></chart>

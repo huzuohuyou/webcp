@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-size: 12px;
+}
+.title {
+	color: #ffffff;
+	font-size: 12px;
+}
+#search_patient{
+	background: url(../public/images/left_32.gif) no-repeat;
+	background-position: 45% 10%;
+}
+#choose_order,#reduce_advice,#reduce_order,#add_advice,#add{
+	background: url(../public/images/t31_1.png) no-repeat;
+	background-position: top center;
+	background-size:39px 39px;
+}
+#confirm,#save{
+	background: url(../public/images/save_01.png) no-repeat;
+	background-position: 45% 10%;
+	background-size:31px 31px;
+}
+#trim_sequence{
+	background: url(../public/images/left_43.gif) no-repeat;
+	background-position: top center;
+	background-size:39px 38px;
+}
+a{
+	display:block;
+	width:80px;
+	float:left;
+	text-align:center; 
+	line-height:77px;
+}
+#top{
+	margin-top:5px;
+}
+#center{
+	margin-top:-20px;
+}
+#bottom{
+}

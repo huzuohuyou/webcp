@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<chart showShadow='true' baseFont='宋体' baseFontSize='12' caption='前5种必选未做医嘱变异原因比率统计' xAxisName='变异原因' yAxisName='比率'
+       numberSuffix='%' formatNumberScale='0' useRoundEdges='1'>
+  <set label='门诊已做' value='28.45' />
+  <set label='近期已做' value='25.50' />
+  <set label='暂不需要' value='16.50' />
+  <set label='其它' value='15.50' />
+  <set label='患方拒绝' value='5.50' />
+</chart>

@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+
+<link rel="stylesheet" type="text/css" href="../public/plugins/jquery/themes/dcp/jquery-ui-1.8.16.custom.css">
+<link rel="stylesheet" type="text/css" href="../public/plugins/jqgrid/ui.jqgrid.css">
+<link rel="stylesheet" href="../public/plugins/jquery/jquery.autocomplete.css"> 
+<link rel="stylesheet" type="text/css" href="../public/plugins/easyui/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="../public/plugins/easyui/themes/icon.css">
+<link rel="stylesheet" type="text/css" href="../public/styles/style.css">
+<script type="text/javascript" src="../public/plugins/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../public/plugins/jqgrid/i18n/grid.locale-cn.js"></script>
+<script type="text/javascript" src="../public/plugins/jqgrid/jquery.jqGrid.min.js"></script>
+<script type="text/javascript" src="../public/plugins/easyui/jquery.easyui.min.js"></script>
+ <script type="text/javascript" src="../public/plugins/My97DatePicker/WdatePicker.js"></script>
+ <script type="text/javascript" src="../public/plugins/jquery/jquery.autocomplete.js"></script>
+	<style type="text/css">
+.navi_title {
+	float: left;
+	width: 200px;
+	margin: 5px;
+	padding-left: 20px;
+	overflow-x: hidden;
+}
+.title {
+	color: #ffffff;
+	font-size: 12px;
+}
+</style>
+<script type="text/javascript">
+//自动搜索诊断与手术码的变量
+var opertionCode={
+    	delay:400,
+    	 max: 12,    //列表里的条目数
+         minChars: 1,   //自动完成激活之前填入的最小字符
+         width: 400,     //提示的宽度，溢出隐藏
+         scrollHeight: 300,   //提示的高度，溢出显示滚动条
+         matchContains: true,    //包含匹配，就是data参数里的数据，是否只要包含文本框里的数据就显示
+         cacheLength:10,  //缓存长度
+         autoFill: false,    //自动填充
+         parse: function(data) { 
+        		data = eval(data);
+          	   	var rows = [];   
+             for(var i=0; i<data.length; i++){   
+               rows[rows.length] = {   
+            		   data:data[i].code+"--"+data[i].name ,   
+                 value:data[i].code+"--"+data[i].name,   
+                 result:data[i].code 
+                 };   }    
+             return rows;   
+              },   
+           formatItem: function(row, i, n) {   
+            	 return row;
+           } };
+function add_zero(temp)
+{
+ if(temp<10) return "0"+temp;
+ else return temp;
+};
+$(function(){
+	var d = new Date();
+	var s = d.getFullYear()+"-" +add_zero(d.getMonth()+1)+ "-01";
+	var e = d.getFullYear()+"-" +add_zero(d.getMonth()+1)+ "-"+d.getDate();
+	$("#date1").val(s);
+	$("#date2").val(e);
+	var Names = ['病人号','病人姓名','科室名称','初步诊断码','诊断名称','本地诊断码','入院时间','下达类型'];
+	var Models =[ {name : 'PATIENT_NO',width : 50,index : 'PATIENT_NO',editable:true,align:'center',
+					editoptions : {readonly:true,size : 30}}, 
+	              {name : 'PATIENT_NAME',index : 'PATIENT_NAME',width : 50,align:'center'},
+	              {name : 'DEPT_ADMISSION_TO',index : 'DEPT_ADMISSION_TO',width : 100,align:'center'},
+	              {name : 'INCOME_CODE',editable:true,editrules:{ required:true},index : 'INCOME_CODE',
+	            	editoptions : {size : 30},width : 90,align:'center'},
+	    		 {name : 'LOCAL_NAME',editable:true,editoptions : {readOnly:true,size : 30},
+	            	edittype:'textarea',editrules:{ required:true},index : 'LOCAL_NAME',width : 250,align:'left'}, 
+	    		 {name : 'LOCAL_CODE',editable:true,editrules:{ required:true},index : 'LOCAL_CODE', 
+	            	width : 70,align:'center',editoptions : {readOnly:true,size : 30}}, 
+	    		 {name : 'ADMISSION_DATE',index : 'ADMISSION_DATE',formatter:'date',
+	            	formatoptions:{srcformat:'Y-m-d H:i:s',newformat:'Y-m-d H:i:s'},width : 120,align:'center',
+	            	sorttype : "string",editoptions : {size : 30}},
+	    		 {name : 'INCOME_TYPE',index : 'INCOME_TYPE',width :45,align:'center'}];
+	//jqgrid定义
+	$("#gridTable").jqGrid({
+		url : '../CPIncomeServlet',//查询要提交的url
+		mtype:"post",
+		postData : {op:'getIncomeList',s:s,e:e,audit:'1'},
+		datatype : "json",//数据读取方式
+		height:( $(document).height()-60),
+		colNames : Names,//表格显示所需要的列名
+		colModel : Models,
+		sortname : 'ADMISSION_DATE',//要排序的字段
+		sortorder : 'desc',//设置默认排序方式
+		viewrecords : true,//显示总
+		rowNum : 20,//初始每页显示多少行
+		rowList : [ 20, 40, 60 ],//设置每页显示多少行
+		rownumbers : true,//是否在每行前面显示这是第几行
+		autowidth:true,
+		ondblClickRow:function(){//双击行调用修改诊断
+			edit();
+		},
+		jsonReader : {
+			repeatitems : false
+		},
+		pager : "#gridPager"//分页显示所用到的参数
+	});
+	var t=document.documentElement.clientWidth; 
+	 $(window).resize(function() {
+			if(t != document.documentElement.clientWidth){
+			t = document.documentElement.clientWidth;
+			var ss = getPageSize();
+			$("#gridTable").jqGrid('setGridWidth', ss.WinW-10).jqGrid('setGridHeight', ss.WinH-80);
+			}
+		});
+});
+//修改诊断与手术的方法
+var edit = function(){
+ 	$("#cc").css("display","none");
+	$("#dd").show();
+	document.getElementById("LOCAL_CODE").disabled=true;
+	document.getElementById("LOCAL_NAME").disabled=true;
+	document.getElementById("PATIENT_NO").disabled=true;
+	var rowid = $("#gridTable").jqGrid('getGridParam','selrow');
+	var rowdata = jQuery('#gridTable').jqGrid('getRowData', rowid);
+	if(rowid){//生成诊断手术修改页面
+		 $('#dd').dialog({
+			  shadow:true,
+			  modal:true  ,
+			  onBeforeOpen:function(){ $("#cc").show();
+			  		 $("#FormError").css("display","none");
+			 		 $(".ui-state-error").html("");
+			 		 $("#PATIENT_NO").val(rowdata.PATIENT_NO);
+					 $("#INCOME_CODE").val(rowdata.INCOME_CODE);
+					 $("#LOCAL_NAME").val(rowdata.LOCAL_NAME);
+					 $("#LOCAL_CODE").val(rowdata.LOCAL_CODE);
+			 		 },
+			  title:"修改病人 "+rowdata.PATIENT_NAME+" 的初步诊断",
+			  buttons:[{
+					text:'修改',
+					handler:function(){
+							$.post("../CPIncomeServlet", { op: "edit", PATIENT_NO: $("#PATIENT_NO").val() ,INCOME_CODE: $("#INCOME_CODE").val(),
+								LOCAL_NAME: $("#LOCAL_NAME").val(),LOCAL_CODE: $("#LOCAL_CODE").val(),INCOME_TYPE: rowdata.INCOME_TYPE},
+							function(data){ if(data == "success"){
+								jQuery("#gridTable").jqGrid('setGridParam').trigger("reloadGrid");
+								$('#dd').dialog('close');
+							}else{
+								alert("修改失败,请联系管理员!")
+								}
+							}, "text");
+						}
+				},{
+					text:'取消',
+					handler:function(){$('#dd').dialog('close');
+				  }
+				}]
+			});	
+	}else{
+		alert("请求出错!")
+		}
+	//自动查找诊断码与诊断码名称
+	if(rowdata.INCOME_TYPE ==  "诊断"){//若为诊断调用自动搜索诊断码并初始化列名
+		$("#INCOME_CODE").autocomplete("../servlet/auto?ops=codes&op=diagnosisCode",opertionCode).result(function(event, data, formatted){
+			 formatted=formatted.split("--");
+			 $("#LOCAL_NAME").attr("value",formatted[1]);
+			 $("#LOCAL_CODE").attr("value",formatted[0]);
+		}); 
+		 $("#td_INCOME_CODE").html("初步诊断编码");
+		 $("#td_LOCAL_CODE").html("本地诊断编码");
+		 $("#td_LOCAL_NAME").html("诊断名称");
+	}else{//若为手僦调用自动搜索手术码并初始化列名
+		$("#INCOME_CODE").autocomplete("../servlet/auto?ops=code&op=operationCode",opertionCode).result(function(event, data, formatted){
+		    formatted=formatted.split("--");
+		    $("#LOCAL_CODE").attr("value",formatted[0]);
+		    $("#LOCAL_NAME").attr("value",formatted[1]);
+		  });
+		 $("#td_INCOME_CODE").html("手术编码");
+		 $("#td_LOCAL_CODE").html("本地手术编码");
+		 $("#td_LOCAL_NAME").html("手术名称");
+	}	
+};
+//按条件搜索方法;
+var chaxun=function(){
+	var auto=$(":radio[name='radio11'][checked]").val();
+	var context$=$("#txt11");
+	var audit = $("select").val();
+	var startDate=$("#date1").val();
+	var endDate=$("#date2").val();
+	var context_0=context$[0].value+"";
+	jQuery("#gridTable").jqGrid('setGridParam',{
+		url:"../CPIncomeServlet",
+		postData:{
+			op:'getIncomeList',
+			audit:audit,
+			s:startDate,
+			e:endDate,
+			radio:auto,
+			text:context_0
+			}
+	}).trigger("reloadGrid");
+};
+</script>
+</head>
+<body>
+<!-- 定义表按条件搜索选项栏 -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="title">
+      		<tr>
+        		<td width="30%" height="24" bgcolor="#353c44">
+        			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	          			<tr>
+	            			<td height="23" width="15%">
+	            				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					              <tr>
+					                <td width="6%" height="19" valign="bottom"><div align="center">
+					                <img src="../public/images/tb.gif" width="14" height="14" /></div></td>
+					                <td width="94%" valign="bottom" >诊断修改(双击修改)</td>
+					              </tr>
+	            				</table>
+	            			</td>
+			      <td width="85%"><div align="center"> 搜索&gt;&gt; 按
+	 			<INPUT id="radio1" CHECKED type="radio" name="radio11" value="cbzdm" >初步诊断码
+			    <INPUT id="radio2"  type="radio" name="radio11" value="brh" >病人号
+			    <INPUT id="radio3" type="radio" name="radio11" value="ksmc">科室名称
+				<input id="txt11" style="width:60px;" type="text" name="txt11" oninput="chaxun();" onpropertychange="chaxun();" style="color:#110;"/>
+				开始日期：<input  type="text"  style=" color:black;width:60px;" id="date1"  
+				readonly onfocus="WdatePicker({isShowWeek:true})"/>&nbsp;&nbsp;
+				结束日期：<input  type="text"  style=" color:black;width:60px;" id="date2"  
+				readonly onfocus="WdatePicker({isShowWeek:true})"/>&nbsp;&nbsp;
+				<input id="chaxun" type="button" value="查询" name="chaxun" onclick="chaxun();" style="color:#110;"/>
+	   			<input id="edit" type="button" value="修改初步诊断" name="edit" onclick="edit();" style="color:#110;"/>
+	   			诊断类型:<select id="audit" name="audit" onchange="chaxun();" style="color: #000000;" >
+					<option value=1  style="color: #000000;" >诊断</option>
+					<option value=2  style="color: #000000;">手术</option>
+					</select>
+					</div>
+			        		</td>
+	          			</tr>
+        			</table>
+        		</td>
+      		</tr>
+    	</table>
+<div align="center">
+<table id="gridTable"></table>
+<div id="gridPager"></div>
+</div>
+<!-- 定义修改诊断码的编辑框 -->
+<div id="dd"  style="width: 400px; height: 300px;display: none">
+<div id="cc" class="easyui-layout" style="width: 384px; height: 230px;">
+	<div region="center" split="true" style="width: 300px; background: #eee; padding: 10px;" align="center">
+		<form id="FrmGrid_gridTable" style="width: 100%; overflow: auto; position: relative; height: auto;" onsubmit="return false;">
+			<table id="TblGrid_gridTable" border="0" cellspacing="0" cellpadding="3">
+				<tbody>
+					<tr id="FormError" style="display: none">
+						<td class="ui-state-error" colspan="2"></td>
+					</tr>
+					<tr id="tr_PATIENT_NO" >
+						<td>病人号</td>
+						<td><input id="PATIENT_NO" type="text" size="30" name="PATIENT_NO" ></td>
+					</tr>
+					<tr id="tr_INCOME_CODE" >
+						<td id="td_INCOME_CODE">初步诊断编码</td>
+						<td class="DataTD"><input id="INCOME_CODE" type="text" size="30" name="INCOME_CODE" ></td>
+					</tr>
+					<tr id="tr_LOCAL_NAME"  >
+						<td id="td_LOCAL_NAME">诊断名称</td>
+						<td class="DataTD"><input id="LOCAL_NAME" type="text" size="30" name="LOCAL_NAME" ></td>
+					</tr>
+					<tr id="tr_LOCAL-CODE" >
+						<td id="td_LOCAL_CODE">本地诊断编码</td>
+						<td class="DataTD"><input id="LOCAL_CODE" type="text" size="30" name="LOCAL_CODE" ></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</div>
+	</div>
+</div>
+</body>
+</html>

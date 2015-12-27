@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<chart showShadow='true' baseFont='宋体' baseFontSize='20' caption='路径启用情况' xAxisName='情况' yAxisName='数'>
+  <set label='启用中的路径数：' value='106' />
+  <set label='停用中的路径数：' value='54' />  
+  <set label='禁用的路径数：' value='138' />
+  <set label='全院平均纳入率（%）：' value='86.57' />
+</chart>

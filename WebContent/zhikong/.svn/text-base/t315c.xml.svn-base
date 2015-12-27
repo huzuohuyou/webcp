@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<chart palette='2' rotateNames='0' animation='1' numdivlines='4' caption='纳入路径病例中前5段总费用出现率与不纳入病例的对比' baseFont='宋体'
+       baseFontSize='12' useRoundEdges='1' legendBorderAlpha='0' numberSuffix='%'>
+  <categories font='宋体' fontSize='12'>
+    <category label='12680.61≤￥＜14092.74'/>
+    <category label='14092.74≤￥＜15504.88'/>
+    <category label='15504.88≤￥＜16917.01'/>
+    <category label='16917.01≤￥＜18329.14'/>
+    <category label='18329.14≤￥＜19741.28'/>
+  </categories>
+  <dataset seriesname='符合条件但不纳入病例' color='F6BD0F' alpha='90' showValues='1' dashed='1'>
+    <set value='48.90' />
+    <set value='21.68' />
+    <set value='11.78' />
+    <set value='5.40' />
+    <set value='3.95' />
+  </dataset>
+  <dataset seriesname='纳入路径病例' color='82CF27' showValues='1' alpha='90'>
+    <set value='10.80' />
+    <set value='11.20' />
+    <set value='36.50' />
+    <set value='24.00' />
+    <set value='13.20' />
+  </dataset>
+</chart>

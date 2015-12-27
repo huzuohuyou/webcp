@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<chart baseFontSize="18" xAxisMinValue="0" xAxisMaxValue="600" yAxisMinValue="0" yAxisMaxValue="500" is3D="1" showFormBtn="0" viewMode="1" bgcolor="FFFFFF" canvasbordercolor="FFFFFF">
+  <styles>
+    <definition>
+       <style name='MyFirstFontStyle' type='font' font='宋体' size='12' />
+    </definition>
+    <application>
+       <apply toObject='DATALABELS' styles='MyFirstFontStyle' />
+    </application>
+  </styles>
+  <dataset seriesName="DS1">
+    <set x="50" y="350" width="70" height="56" name="准入路径" color="35AE00" id="1" />
+    <set x="220" y="350" radius="39" shape="circle" name="住院第1天" color="62D0FE" id="2" link="n-http://www.fusioncharts.com" />
+    <set x="360" y="350" radius="39" shape="circle" name="住院第2-5天" color="62D0FE" id="3" />
+    <set x="500" y="350" radius="39" shape="circle" name="住院第3-6天" color="62D0FE" id="4" />
+    <set x="400" y="200" width="70" height="56" name="完成路径" color="35AE00" id="5" />
+    <set x="200" y="200" width="70" height="56" name="退出路径" color="FE3233" id="6" />
+  </dataset>
+  <connectors color="FF0000" stdThickness="5">
+    <connector strength="0.6" label="" from="1" to="2" color="BBBB00" arrowAtStart="0" arrowAtEnd="1" />
+    <connector strength="0.6" label="" from="2" to="3" color="BBBB00" arrowAtStart="0" arrowAtEnd="1" />
+    <connector strength="0.6" label="" from="3" to="4" color="BBBB00" arrowAtStart="0" arrowAtEnd="1" />
+    <connector strength="0.6" label="" from="4" to="5" color="BBBB00" arrowAtStart="0" arrowAtEnd="1" />
+    <connector strength="0.6" label="" from="2" to="6" color="FF5904" arrowAtStart="0" arrowAtEnd="1" />
+    <connector strength="0.6" label="变异" from="3" to="6" color="FF5904" arrowAtStart="0" arrowAtEnd="1" />
+    <connector strength="0.6" label="" from="4" to="6" color="FF5904" arrowAtStart="0" arrowAtEnd="1" />
+  </connectors>
+  <labels>
+    <label text="原发性急性闭角型青光眼" x="300" y="480" color="EFEFEF" borderColor="0F6A00" fontsize="18" bgColor="35AE00" />
+  </labels>
+</chart>

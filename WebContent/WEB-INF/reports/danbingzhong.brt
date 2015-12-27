@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="GBK" ?>
+<report version="3.0">
+	<head>
+		<property name="type">0</property>
+		<name><![CDATA[danbingzhong]]></name>
+		<dataSets>
+			<dataSet name="ds1" type="Self" >
+				<property name="dataSource"></property>
+				<property name="desc"><![CDATA[]]></property>
+				<property name="query"><![CDATA[com.goodwillcis.cp.danbingzhong.Danbingzhong]]></property>
+				<property name="beginRow">0</property>
+				<property name="endRow">0</property>
+				<queryParam name="cp_id" />
+				<queryParam name="hospital_id" />
+				<queryParam name="start_time" />
+				<queryParam name="end_time" />
+			</dataSet>
+		</dataSets>
+		<parameters>
+			<parameter name="cp_id" type="6">
+				<property name="dateFormat"></property>
+				<property name="default"></property>
+				<property name="desc">路径编号</property>
+				<property name="source">0</property>
+			</parameter>
+			<parameter name="hospital_id" type="17">
+				<property name="dateFormat"></property>
+				<property name="default">1</property>
+				<property name="desc">医院id</property>
+				<property name="source">0</property>
+			</parameter>
+			<parameter name="start_time" type="6">
+				<property name="dateFormat"></property>
+				<property name="default">2011-10-01</property>
+				<property name="desc">起始时间</property>
+				<property name="source">0</property>
+			</parameter>
+			<parameter name="end_time" type="6">
+				<property name="dateFormat"></property>
+				<property name="default"></property>
+				<property name="desc">结束时间</property>
+				<property name="source">0</property>
+			</parameter>
+		</parameters>
+		<variables/>
+		<subReports/>
+	</head>
+	<body>
+		<sheet id="sheet1">
+			<page>
+				<property name="pageRowNum">40</property>
+				<property name="margin-left">25</property>
+			</page>
+			<grid row="37" col="13">
+				<properties>
+				</properties>
+				<rows>
+					<row id="1">
+					</row>
+					<row id="2">
+						<property name="height">28</property>
+					</row>
+					<row id="3">
+					</row>
+					<row id="4">
+					</row>
+					<row id="5">
+					</row>
+					<row id="6">
+					</row>
+					<row id="7">
+					</row>
+					<row id="8">
+					</row>
+					<row id="9">
+					</row>
+					<row id="10">
+					</row>
+					<row id="11">
+					</row>
+					<row id="12">
+					</row>
+					<row id="13">
+					</row>
+					<row id="14">
+					</row>
+					<row id="15">
+					</row>
+					<row id="16">
+					</row>
+					<row id="17">
+					</row>
+					<row id="18">
+					</row>
+					<row id="19">
+					</row>
+					<row id="20">
+					</row>
+					<row id="21">
+					</row>
+					<row id="22">
+					</row>
+					<row id="23">
+					</row>
+					<row id="24">
+					</row>
+					<row id="25">
+					</row>
+					<row id="26">
+					</row>
+					<row id="27">
+					</row>
+					<row id="28">
+					</row>
+					<row id="29">
+					</row>
+					<row id="30">
+					</row>
+					<row id="31">
+					</row>
+					<row id="32">
+					</row>
+					<row id="33">
+					</row>
+					<row id="34">
+					</row>
+					<row id="35">
+					</row>
+					<row id="36">
+					</row>
+					<row id="37">
+					</row>
+				</rows>
+				<columns>
+					<column id="1">
+						<property name="width">38</property>
+					</column>
+					<column id="2">
+						<property name="width">37</property>
+					</column>
+					<column id="3">
+						<property name="width">25</property>
+					</column>
+					<column id="4">
+						<property name="width">33</property>
+					</column>
+					<column id="5">
+						<property name="width">76</property>
+					</column>
+					<column id="6">
+						<property name="width">24</property>
+					</column>
+					<column id="7">
+						<property name="width">18</property>
+					</column>
+					<column id="8">
+						<property name="width">26</property>
+					</column>
+					<column id="9">
+						<property name="width">48</property>
+					</column>
+					<column id="10">
+						<property name="width">30</property>
+					</column>
+					<column id="11">
+						<property name="width">74</property>
+					</column>
+					<column id="12">
+						<property name="width">74</property>
+					</column>
+					<column id="13">
+						<property name="width">66</property>
+					</column>
+				</columns>
+				<cells>
+					<cell id="1,1" type="0" colspan="11" >
+					</cell>
+					<cell id="1,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[编号：____________]]></property>
+					</cell>
+					<cell id="2,1" type="0" colspan="13" >
+						<property name="value"><![CDATA[单病种相关非特异性指标评估表]]></property>
+						<property name="font-size">16</property>
+						<property name="bold">0</property>
+					</cell>
+					<cell id="3,1" type="0" colspan="13" >
+						<property name="font-size">9</property>
+					</cell>
+					<cell id="4,1" type="0" colspan="2" >
+						<property name="value"><![CDATA[医院名称:]]></property>
+						<property name="font-size">9</property>
+						<property name="align">2</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+					</cell>
+					<cell id="4,3" type="0" colspan="3" >
+						<property name="value"><![CDATA[=ds1.select(医院名称)]]></property>
+						<property name="underline">0</property>
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+					</cell>
+					<cell id="4,6" type="0" colspan="3" >
+						<property name="value"><![CDATA[科室名称:]]></property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+					</cell>
+					<cell id="4,9" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(科室名称)]]></property>
+						<property name="underline">0</property>
+						<property name="align">0</property>
+						<property name="size-adjust">3</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+					</cell>
+					<cell id="4,11" type="0" >
+						<property name="value"><![CDATA[病种名称:]]></property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="4,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(病种名称)]]></property>
+						<property name="underline">0</property>
+						<property name="align">0</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+					</cell>
+					<cell id="5,1" type="0" >
+						<property name="value"><![CDATA[序号]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="5,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[评估指标]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="5,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[结果]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="6,1" type="0" >
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="6,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[一、效率指标]]></property>
+						<property name="bold">0</property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="6,12" type="0" colspan="2" >
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="7,1" type="0" >
+						<property name="value"><![CDATA[1]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="7,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[平均住院日（天）]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="7,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(平均住院日)]]></property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="8,1" type="0" >
+						<property name="value"><![CDATA[2]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="8,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[手术病人术前平均住院日（天）]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="8,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(手术病人术前平均住院日)]]></property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="9,1" type="0" >
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="9,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[二、效果指标]]></property>
+						<property name="bold">0</property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="9,12" type="0" colspan="2" >
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="10,1" type="0" >
+						<property name="value"><![CDATA[3]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="10,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[病种死亡率（%）]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="10,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(病种死亡率)]]></property>
+						<property name="view-format">1|###0.0%;-###0.0%</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="11,1" type="0" >
+						<property name="value"><![CDATA[4]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="11,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[治愈率（%）]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="11,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(治愈率)]]></property>
+						<property name="view-format">1|###0.0%;-###0.0%</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="12,1" type="0" >
+						<property name="value"><![CDATA[5]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="12,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[好转率（%）]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="12,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(好转率)]]></property>
+						<property name="view-format">1|###0.0%;-###0.0%</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="13,1" type="0" >
+						<property name="value"><![CDATA[6]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="13,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[医院感染发生率（%）]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="13,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(医院感染发生率)]]></property>
+						<property name="view-format">1|###0.00%;-###0.00%</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="14,1" type="0" >
+						<property name="value"><![CDATA[7]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="14,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[手术病人手术部位感染率（%）]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="14,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(手术病人手术部位感染率)]]></property>
+						<property name="view-format">1|###0.00%;-###0.00%</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="15,1" type="0" rowspan="2" >
+						<property name="value"><![CDATA[8]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1;1:0,0,0:1</border>
+					</cell>
+					<cell id="15,2" type="0" rowspan="2" colspan="2" >
+						<property name="value"><![CDATA[再住院率]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1;1:0,0,0:1</border>
+					</cell>
+					<cell id="15,4" type="0" colspan="8" >
+						<property name="value"><![CDATA[14日再住院率（%）]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="15,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(14日再住院率)]]></property>
+						<property name="view-format">1|###0%;-###0%</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="16,4" type="0" colspan="8" >
+						<property name="value"><![CDATA[31日再住院率（%）]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="16,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(31日再住院率)]]></property>
+						<property name="view-format">1|###0%;-###0%</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="17,1" type="0" >
+						<property name="value"><![CDATA[9]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="17,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[手术病人非计划重返手术室发生率]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="17,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(手术病人非计划重返手术室发生率)]]></property>
+						<property name="view-format">1|###0.0%;-###0.0%</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="18,1" type="0" >
+						<property name="value"><![CDATA[10]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="18,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[前三位常见并发症及其发生率（%）]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="18,12" type="0" colspan="2" >
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="19,1" type="0" >
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="19,2" type="0" >
+						<property name="value"><![CDATA[(1)]]></property>
+						<property name="ext-left"><![CDATA[C19]]></property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="19,3" type="0" colspan="9" >
+						<property name="value"><![CDATA[=ds1.select(前三位常见并发症1)]]></property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="19,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(其发生率1)]]></property>
+						<property name="view-format">1|###0.0%;-###0.0%</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="20,1" type="0" >
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="20,2" type="0" >
+						<property name="value"><![CDATA[(2)]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="20,3" type="0" colspan="9" >
+						<property name="value"><![CDATA[=ds1.select(前三位常见并发症2)]]></property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="20,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(其发生率2)]]></property>
+						<property name="view-format">1|###0.0%;-###0.0%</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="21,1" type="0" >
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="21,2" type="0" >
+						<property name="value"><![CDATA[(3)]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="21,3" type="0" colspan="9" >
+						<property name="value"><![CDATA[=ds1.select(前三位常见并发症3)]]></property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="21,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(其发生率3)]]></property>
+						<property name="view-format">1|###0.0%;-###0.0%</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="22,1" type="0" >
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="22,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[三、工作量指标]]></property>
+						<property name="bold">0</property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="22,12" type="0" colspan="2" >
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="23,1" type="0" >
+						<property name="value"><![CDATA[11]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="23,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[住院患者总人数]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="23,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(住院患者总人数)]]></property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="24,1" type="0" rowspan="2" >
+						<property name="value"><![CDATA[12]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1;1:0,0,0:1</border>
+					</cell>
+					<cell id="24,2" type="0" colspan="2" >
+						<property name="value"><![CDATA[临床路径]]></property>
+						<property name="indent">8</property>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="24,4" type="0" colspan="8" >
+						<property name="value"><![CDATA[进入路径的患者总人次数]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="24,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(进入路径的患者总人次数)]]></property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="25,2" type="0" colspan="2" >
+						<property name="value"><![CDATA[执行情况]]></property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="25,4" type="0" colspan="8" >
+						<property name="value"><![CDATA[完成路径的人次数]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="25,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(完成路径的人次数)]]></property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="26,1" type="0" >
+						<property name="value"><![CDATA[13]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="26,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[出现变异的患者数 ]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="26,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(出现变异的患者数)]]></property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="27,1" type="0" >
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="27,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[四、抗菌药物使用指标]]></property>
+						<property name="bold">0</property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="27,12" type="0" colspan="2" >
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="28,1" type="0" >
+						<property name="value"><![CDATA[14]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="28,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[使用三线抗菌药物的患者比例（%）]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="28,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(使用三线抗菌药物的患者比例)]]></property>
+						<property name="view-format">1|###0.0%;-###0.0%</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="29,1" type="0" >
+						<property name="value"><![CDATA[15]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="29,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[抗生素使用的平均天数]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="29,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(抗生素使用的平均天数)]]></property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="30,1" type="0" >
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="30,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[五、卫生经济学指标]]></property>
+						<property name="bold">0</property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="30,12" type="0" colspan="2" >
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="31,1" type="0" >
+						<property name="value"><![CDATA[16]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="31,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[单病种次均费用（总费用和总药费）]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="31,12" type="0" >
+						<property name="value"><![CDATA[=ds1.select(单病种次均费用总费用)]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="31,13" type="0" >
+						<property name="value"><![CDATA[=ds1.select(单病种次均费用总药费)]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="32,1" type="0" >
+						<property name="value"><![CDATA[17]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="32,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[单病种日均费用（总费用和总药费）]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="32,12" type="0" >
+						<property name="value"><![CDATA[=ds1.select(单病种日均费用总费用)]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="32,13" type="0" >
+						<property name="value"><![CDATA[=ds1.select(单病种日均费用总药费)]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="33,1" type="0" >
+						<property name="value"><![CDATA[18]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="33,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[单病种抗菌药物费用比例（%）]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="33,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(单病种抗菌药物费用比例)]]></property>
+						<property name="view-format">1|###0.0%;-###0.0%</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="34,1" type="0" >
+						<property name="value"><![CDATA[19]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="34,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[单病种耗材费用比例（%）]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="34,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(单病种耗材费用比例)]]></property>
+						<property name="view-format">1|###0.0%;-###0.0%</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="35,1" type="0" >
+						<property name="value"><![CDATA[20]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="35,2" type="0" colspan="10" >
+						<property name="value"><![CDATA[单病种检查费用比例（%）]]></property>
+						<property name="align">0</property>
+						<property name="indent">8</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="35,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(单病种检查费用比例)]]></property>
+						<property name="view-format">1|###0.0%;-###0.0%</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="36,1" type="0" >
+					</cell>
+					<cell id="36,2" type="0" colspan="6" >
+						<property name="value"><![CDATA[注：本表所统计内容均按]]></property>
+						<property name="font-size">8</property>
+						<property name="align">2</property>
+					</cell>
+					<cell id="36,8" type="0" colspan="3" >
+						<property name="value"><![CDATA[=ds1.select(起始时间)]]></property>
+						<property name="font-size">8</property>
+						<property name="align">2</property>
+					</cell>
+					<cell id="36,11" type="0" >
+						<property name="value"><![CDATA[至]]></property>
+						<property name="font-size">8</property>
+					</cell>
+					<cell id="36,12" type="0" colspan="2" >
+						<property name="value"><![CDATA[=ds1.select(结束时间)]]></property>
+						<property name="font-size">8</property>
+						<property name="align">0</property>
+					</cell>
+					<cell id="37,1" type="0" >
+					</cell>
+					<cell id="37,2" type="0" colspan="6" >
+						<property name="value"><![CDATA[此路径开启时间为]]></property>
+						<property name="font-size">8</property>
+						<property name="align">2</property>
+					</cell>
+					<cell id="37,8" type="0" colspan="3" >
+						<property name="value"><![CDATA[=ds1.select(开启时间)]]></property>
+						<property name="font-size">8</property>
+						<property name="align">2</property>
+					</cell>
+					<cell id="37,11" type="0" colspan="2" >
+					</cell>
+					<cell id="37,13" type="0" >
+					</cell>
+				</cells>
+			</grid>
+		</sheet>
+	</body>
+	<param-form col="6">
+		<ctrl id="cp_id" type="1" ctrlType="1" label="病种名称" colSpan="6">
+		</ctrl>
+		<ctrl id="hospital_id" type="1" label="医院id">
+		</ctrl>
+		<ctrl id="start_time" type="1" label="起始时间">
+		</ctrl>
+		<ctrl id="end_time" type="1" label="结束时间">
+		</ctrl>
+	</param-form>
+</report>

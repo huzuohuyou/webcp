@@ -1,0 +1,1 @@
+﻿<?xml version="1.0" encoding="utf-8"?><chart showShadow='true' baseFont='宋体' baseFontSize='12' caption='' xAxisName='变异类型' yAxisName='比率' numberSuffix='%' formatNumberScale='0' useRoundEdges='1'>   <set label='不纳入率（符合条件但不纳入）' value='60.00' />   <set label='路径退出率（纳入后变异退出）' value='0.00' />   <set label='完成路径的变异出现率（完成路径但执行过程中有变异）' value='0.00' /> </chart>

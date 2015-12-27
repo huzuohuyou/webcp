@@ -1,0 +1,52 @@
+8
+
+dir
+807
+https://zwb-pc/svn/jhdcp2/LcpProject/WebContent/WEB-INF/resources
+https://zwb-pc/svn/jhdcp2
+
+
+
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+a02d5324-4e91-cd49-86ca-bfc7c5ded3af
+
+config.xml
+file
+
+
+
+
+2012-12-06T03:29:06.875000Z
+357fe4bb6b792decbcd5cd334e17f1ee
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+
+custom_functions.properties
+file
+
+
+
+
+2012-12-06T03:29:06.890625Z
+27c4f4557c6c0035ef136873740b3d58
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+

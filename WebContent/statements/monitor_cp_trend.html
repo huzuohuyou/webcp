@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>患者路径节点执行</title>
+<link rel="stylesheet" type="text/css" href="../public/styles/style.css">
+<script type="text/javascript" src="../public/plugins/FusionCharts/FusionCharts.js"></script>
+<script type="text/javascript" src="../public/plugins/jquery/jquery-1.7.1.min.js"></script>
+	<style type="text/css"> 
+		.navi_title {
+			float: left;
+			width: 300px;
+			margin: 5px;
+			padding-left: 20px;
+			overflow-x: hidden;
+			}
+	</style>
+<script type="text/javascript">
+$(function(){
+	 var queryStringByName= function (queryName) {
+	        var str = location.href; //取得整个地址栏
+	        if (str.indexOf("?") > -1) {
+	            var queryParam = str.substring(str.indexOf("?") + 1);
+	            //如果有多个参数
+	            //if (queryParam.indexOf("&") > -1)
+	            var param = queryParam.split("&");
+	            for (var a = 0; a < param.length; a++) {
+	                var query = param[a].split("=");
+	                if (query[0] == queryName) {
+	                    return query[1];
+	                 }
+	            }
+	        }
+	        return 0;
+	     };
+	    var cp_id=queryStringByName('cp_id');
+		var MarChart = new FusionCharts("../public/plugins/FusionCharts/MSCombiDY2D.swf","MarChart", $(document).width() - 23, "290");
+		MarChart.setDataURL(escape("../MonitorPatientServlet?op=cpTrend&cp_id="+cp_id));
+		MarChart.render("cpTrend");	
+	});
+</script> 
+</head>
+<body>
+	<div class="navi">
+		<div class="navi_title">路径节点执行趋势图(点击柱状图查看)</div>	
+	</div>
+	<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+			<td bgcolor="#FFFFFF" align="center" colspan="2"><div id="cpTrend">路径节点执行趋势图</div>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,55 @@
+8
+
+dir
+807
+https://zwb-pc/svn/jhdcp2/LcpProject/src/com/goodwillcis/cp
+https://zwb-pc/svn/jhdcp2
+
+
+
+2015-04-17T03:14:46.827051Z
+806
+zhouweibin
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+a02d5324-4e91-cd49-86ca-bfc7c5ded3af
+
+patientmanager
+dir
+
+zhixingdan
+dir
+
+bingzhong
+dir
+
+narulv
+dir
+
+danbingzhong
+dir
+
+shidianpinggu
+dir
+
+analyzeindex
+dir
+
+util
+dir
+
+cpinfo
+dir
+

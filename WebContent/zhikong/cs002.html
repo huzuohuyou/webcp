@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>临床路径图表显示</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+        <script language="JavaScript" src="../public/plugins/FusionCharts/FusionCharts.js"></script>
+
+    </head>
+    <body>
+        <!-- heading -->
+        <center><h3>XX 临床路径</h3></center>
+        <p>&nbsp;</p>
+        <div id="chartdiv" align="center">
+            FusionCharts.
+        </div>
+
+        <script type="text/javascript">
+            var chart = new FusionCharts("../public/plugins/FusionCharts/DragNode.swf", "ChartId", "600", "500", "0", "0");
+            chart.setXMLUrl("cs002.xml");
+            chart.render("chartdiv");
+        </script>
+
+        <P align="center">&nbsp;</P>
+
+    </body>
+</html>

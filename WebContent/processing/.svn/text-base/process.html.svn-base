@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>护士工作提醒</title>
+<link rel="stylesheet" type="text/css" href="../public/plugins/jquery/themes/dcp/jquery-ui-1.8.16.custom.css">
+<link rel="stylesheet" type="text/css" href="../public/plugins/jqgrid/ui.jqgrid.css">
+<link rel="stylesheet" type="text/css" href="../public/styles/style.css">
+<script type="text/javascript" src="../public/plugins/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../public/plugins/jqgrid/i18n/grid.locale-cn.js"></script>
+<script type="text/javascript" src="../public/plugins/jqgrid/jquery.jqGrid.min.js"></script>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	
+	}
+
+th{
+	font-size=12px;
+}
+.title {
+	color: #e1e2e3;
+	font-size: 12px;
+}
+-->
+</style>
+<script type="text/javascript">
+	var queryStringByName= function (queryName) {
+	    var str = location.href; //取得整个地址栏
+	    if (str.indexOf("?") > -1) {
+	        var queryParam = str.substring(str.indexOf("?") + 1);
+	        //如果有多个参数
+	        //if (queryParam.indexOf("&") > -1)
+	        var param = queryParam.split("&");
+	        for (var a = 0; a < param.length; a++) {
+	            var query = param[a].split("=");
+	            if (query[0] == queryName) {
+	                return query[1];
+	             }
+	        }
+	    }
+	    return 0;
+	 };
+	$(function() {
+		dept_name=queryStringByName("dept_name");
+		var arr =  [ '住院号', '患者名称', '入院科室', '纳入路径','当前节点','是否签名'];
+		var arr1 = [ {name : 'inpatient_no',index : 'inpatient_no',width : 80,align:'center'}, 
+		 {name : 'patient_name',index : 'patient_name', width : 80,align:'center'}, 
+		 {name : 'dept_admission_to',index : 'dept_admission_to',width : 100,align:'center'}, 
+		 {name : 'cp_name',index : 'cp_name',width : 120,align:'center'},
+		 {name : 'cp_node_name',index : 'cp_node_name',width : 80,align:'center'},
+		 {name : 'is_sign',index : 'is_sign',width : 80,align:'center'}];
+		$("#gridTable").jqGrid({
+			url : '../PatientInfo',//查询要提交的url
+			mtype:"post",
+			postData : {op:'getPatientList',dept_name:encodeURI(dept_name)},
+			datatype : "json",//数据读取方式
+			height:( $(document).height()-80),
+			colNames : arr,//表格显示所需要的列名
+			colModel : arr1,
+			viewrecords : true,//显示总
+			rowNum : 20,//初始每页显示多少行
+			rowList : [ 10, 20, 30 ],//设置每页显示多少行
+			rownumbers : true,//是否在每行前面显示这是第几行
+			loadtext:'正在加载中.....',//加载时提示的信息
+			pgbuttons : true,//是否显示乱翻页按钮
+			autowidth:true,
+			jsonReader : {
+				repeatitems : false
+			},
+			pager : "#gridPager"//分页显示所用到的参数
+		});
+	});
+	//按条件查询
+	var chaxun=function(){
+		var auto = $(":radio[name='zccx'][checked]").val();
+		var context$=$("#chaxuntext");
+		var context_0=context$[0].value+"";
+		jQuery("#gridTable").jqGrid('setGridParam',{url:"../PatientInfo",postData:{op:'getPatientList',dept_name:encodeURI(dept_name),radio:auto, text:encodeURI(context_0)}}).trigger("reloadGrid");
+	};
+	$(function(){
+        $(window).resize(function(){   
+     	$("#gridTable").setGridWidth($(window).width());
+     	$("#gridTable").setGridHeight($(window).height()-80);
+    	});
+   }); 
+	</script>
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="title">
+      		<tr>
+        		<td height="24" bgcolor="#353c44">
+        			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	          			<tr>
+	            			<td height="23">
+	            				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					              <tr>
+					                <td width="6%" height="19" valign="bottom"><div align="center"><img src="../public/images/tb.gif" width="14" height="14" /></div></td>
+					                <td width="94%" valign="bottom">纳入路径患者信息</td>
+					              </tr>
+	            				</table>
+	            			</td>
+			        		<td><div align="left"> 搜索&gt;&gt; 按
+			        			<input name="zccx" type="radio" value="zy" checked="checked"/>住院号
+						        <input type="radio" name="zccx" value="hz"/>患者名称
+						        <input type="radio" name="zccx" value="lj"/>路径名称
+						        <input type="text" id="chaxuntext" oninput="chaxun();" onpropertychange="chaxun();"/>
+						        </div>
+			        		</td>
+	          			</tr>
+        			</table>
+        		</td>
+      	</tr>
+</table>
+<table id="gridTable"></table>
+<div id="gridPager"></div>
+</body>
+</html>

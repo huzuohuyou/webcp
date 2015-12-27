@@ -1,0 +1,361 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>各院级统计</title>
+    <script type="text/javascript" src="../public/plugins/FusionCharts/FusionCharts.js"></script>
+    <link href="../public/plugins/FusionCharts/style.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="../public/styles/demos.css">
+
+<style type="text/css"> 
+<!--
+a:link{
+text-decoration:none;
+color: #000000;
+font-size: 12px;
+}
+a:visited{
+text-decoration:none;
+color: #000000;
+font-size: 12px;
+}
+-->
+</style>
+
+</head>
+<body>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td height="30"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="24" bgcolor="#353c44"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="23"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="24" height="19" valign="bottom"><div align="center"><img src="../public/images/tb.gif" width="14" height="14" /></div></td>
+                <td valign="bottom"><span class="STYLE1"> 院级概况</span></td>
+              </tr>
+            </table></td>
+            <td>&nbsp;</td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td><table width="100%" id="ttotal" class="users" border="0" cellpadding="0" cellspacing="1" bgcolor="#a8c7ce">
+    <tbody id="tbtotal">
+      <tr>
+        <td width="40%" height="24" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">注册医院数</span></div></td>        
+        <td width="10%" height="24" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">19</span></div></td>
+        <td height="24" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">平均纳入率</span></div></td>        
+        <td height="24" bgcolor="#00FF00"><div align="center"><span class="STYLE10">70.57%</span></div></td>        
+      </tr>
+      <tr>
+        <td height="24" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">医院最少启用路径数</span></div></td>        
+        <td height="24" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">0</span></div></td>
+        <td height="24" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">医院最多启用路径数</span></div></td>        
+        <td height="24" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">23</span></div></td>        
+      </tr>
+    
+      </tbody>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+
+  <tr>
+  	<td height="1" width="3">&nbsp;</td>
+    <td></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <!-- 最高、最低纳入率排行图 -->
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><div align="center">
+                <span id="zuigaoyiyuan">最高纳入率前 5 家医院</span>
+                            <script type="text/javascript"><!--
+                                var MarChart = new FusionCharts("../public/plugins/FusionCharts/Column2D.swf", "CPMaxIncome", "520", "300", "0", "1");
+                                MarChart.setXMLUrl("t20a.xml");
+                                MarChart.render("zuigaoyiyuan");                                
+                                // -->
+                            </script>                
+                </div></td>
+              </tr>
+            </table>
+            </td>
+            <td width="10">&nbsp;</td>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><div align="center">
+                <span id="zuidiyiyuan">最低纳入率前 5 家医院</span>
+                            <script type="text/javascript"><!--
+                                var FebChart = new FusionCharts("../public/plugins/FusionCharts/Column2D.swf", "CPMinIncome", "520", "300", "0", "1");
+                                FebChart.setXMLUrl("t20b.xml");
+                                FebChart.render("zuidiyiyuan");
+                                // -->
+                            </script>                
+                </div></td>
+              </tr>
+            </table>
+            </td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <tr>
+  	<td height="1" width="3">&nbsp;</td>
+    <td></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <!-- 各医院情况 -->
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td height="30"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="24" bgcolor="#353c44"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="23"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="24" height="19" valign="bottom"><div align="center"><img src="../public/images/tb.gif" width="14" height="14" /></div></td>
+                <td valign="bottom"><span class="STYLE1"> 各医院情况统计（排名不分先后）</span></td>
+              </tr>
+            </table></td>
+            <td>&nbsp;</td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td><table width="100%" id="tcp" class="users" border="0" cellpadding="0" cellspacing="1" bgcolor="#a8c7ce">
+    <tbody id="tbcp">    
+      <tr>
+        <td width="20%" height="48" bgcolor="d3eaef" rowspan="2" class="STYLE10"><div align="center"><span class="STYLE10">医院名称</span></div></td>
+        <td width="10%" bgcolor="d3eaef" height="24" rowspan="2" class="STYLE10"><div align="center"><span class="STYLE10">首次上传时间</span></div></td>
+        <td width="5%" bgcolor="d3eaef" height="24" rowspan="2" class="STYLE10"><div align="center"><span class="STYLE10">已上传病例数</span></div></td>
+        <td width="5%" bgcolor="d3eaef" height="24" rowspan="2" class="STYLE10"><div align="center"><span class="STYLE10">启用中路径数</span></div></td>        
+        <td width="30%" bgcolor="d3eaef" height="24" colspan="2" class="STYLE10"><div align="center"><span class="STYLE10">纳入率最高的路径</span></div></td>
+        <td width="30%" bgcolor="d3eaef" height="24" colspan="2" class="STYLE10"><div align="center"><span class="STYLE10">纳入率最低的路径</span></div></td>
+      </tr>
+      <tr>
+        <td width="20%" height="24" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">路径名</span></div></td>
+        <td width="10%" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">纳入率</span></div></td>
+        <td width="20%" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">路径名</span></div></td>
+        <td width="10%" bgcolor="d3eaef" class="STYLE10"><div align="center"><span class="STYLE10">纳入率</span></div></td>
+      </tr>    
+      
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">厦门大学附属中山医院</div></td>
+		<td><div align="center">2010-07-14</div></td>
+		<td><div align="center">25876</div></td>
+		<td><div align="center">23</div></td>
+		<td><div align="center">支气管肺癌</div></td>
+		<td><div align="center">87.89%</div></td>
+		<td><div align="center">2型糖尿病</div></td>
+		<td><div align="center">43.50%</div></td>
+		</tr>
+
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">厦门市第一医院</div></td>
+		<td><div align="center">2010-07-14</div></td>
+		<td><div align="center">23456</div></td>
+		<td><div align="center">21</div></td>
+		<td><div align="center">肾癌</div></td>
+		<td><div align="center">88.25%</div></td>
+		<td><div align="center">股骨干骨折</div></td>
+		<td><div align="center">52.25%</div></td>
+		</tr>
+				
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">解放军第一七四医院</div></td>
+		<td><div align="center">2011-03-04</div></td>
+		<td><div align="center">15876</div></td>
+		<td><div align="center">12</div></td>
+		<td><div align="center">重度膝关节骨关节炎</div></td>
+		<td><div align="center">79.80%</div></td>
+		<td><div align="center">自发性气胸</div></td>
+		<td><div align="center">33.48%</div></td>
+		</tr>
+				
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">厦门市妇幼保健院</div></td>
+		<td><div align="center">2011-02-09</div></td>
+		<td><div align="center">5879</div></td>
+		<td><div align="center">7</div></td>
+		<td><div align="center">计划性剖宫产</div></td>
+		<td><div align="center">90.50%</div></td>
+		<td><div align="center">自然临产阴道分娩</div></td>
+		<td><div align="center">66.50%</div></td>
+		</tr>
+				
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">厦门市中医院</div></td>
+		<td><div align="center">2010-10-18</div></td>
+		<td><div align="center">9876</div></td>
+		<td><div align="center">9</div></td>
+		<td><div align="center">垂体腺瘤</div></td>
+		<td><div align="center">77.89%</div></td>
+		<td><div align="center">三叉神经痛</div></td>
+		<td><div align="center">23.80%</div></td>
+		</tr>
+				
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">厦门眼科中心</div></td>
+		<td><div align="center">2010-12-20</div></td>
+		<td><div align="center">5876</div></td>
+		<td><div align="center">6</div></td>
+		<td><div align="center">原发性急性闭角型青光眼</div></td>
+		<td><div align="center">77.89%</div></td>
+		<td><div align="center">共同性斜视</div></td>
+		<td><div align="center">63.50%</div></td>
+		</tr>
+				
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">厦门市新江医院</div></td>
+		<td><div align="center">2011-05-06</div></td>
+		<td><div align="center">2876</div></td>
+		<td><div align="center">4</div></td>
+		<td><div align="center">老年性白内障</div></td>
+		<td><div align="center">67.90%</div></td>
+		<td><div align="center">麻疹合并肺炎</div></td>
+		<td><div align="center">24.50%</div></td>
+		</tr>
+				
+		<tr bgcolor="#FFFF00" class="STYLE19">
+		<td height="24"><div align="center">厦门市精神卫生中心</div></td>
+		<td><div align="center">-</div></td>
+		<td><div align="center">-</div></td>
+		<td><div align="center">-</div></td>
+		<td><div align="center">-</div></td>
+		<td><div align="center">-</div></td>
+		<td><div align="center">-</div></td>
+		<td><div align="center">-</div></td>
+		</tr>
+				
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">厦门市中西医结合医院</div></td>
+		<td><div align="center">2010-09-23</div></td>
+		<td><div align="center">10876</div></td>
+		<td><div align="center">14</div></td>
+		<td><div align="center">尿道下裂</div></td>
+		<td><div align="center">75.00%</div></td>
+		<td><div align="center">急性肠套叠</div></td>
+		<td><div align="center">44.50%</div></td>
+		</tr>
+				
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">厦门市同安区医院</div></td>
+		<td><div align="center">2010-11-22</div></td>
+		<td><div align="center">5876</div></td>
+		<td><div align="center">9</div></td>
+		<td><div align="center">卵巢良性肿瘤手术治疗</div></td>
+		<td><div align="center">68.89%</div></td>
+		<td><div align="center">房间隔缺损</div></td>
+		<td><div align="center">49.50%</div></td>
+		</tr>
+				
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">厦门莲花医院</div></td>
+		<td><div align="center">2010-10-23</div></td>
+		<td><div align="center">6876</div></td>
+		<td><div align="center">11</div></td>
+		<td><div align="center">腰椎间盘突出症</div></td>
+		<td><div align="center">66.89%</div></td>
+		<td><div align="center">股骨颈骨折</div></td>
+		<td><div align="center">33.50%</div></td>
+		</tr>
+				
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">厦门仁安医院</div></td>
+		<td><div align="center">2010-07-14</div></td>
+		<td><div align="center">5876</div></td>
+		<td><div align="center">6</div></td>
+		<td><div align="center">支气管肺癌</div></td>
+		<td><div align="center">87.89%</div></td>
+		<td><div align="center">型糖尿病</div></td>
+		<td><div align="center">43.50%</div></td>
+		</tr>
+				
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">厦门市第二医院</div></td>
+		<td><div align="center">2010-09-28</div></td>
+		<td><div align="center">4876</div></td>
+		<td><div align="center">8</div></td>
+		<td><div align="center">胃十二指肠溃疡</div></td>
+		<td><div align="center">57.89%</div></td>
+		<td><div align="center">门脉高压症</div></td>
+		<td><div align="center">35.50%</div></td>
+		</tr>
+				
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">厦门市第二医院鼓浪屿分院</div></td>
+		<td><div align="center">2011-01-10</div></td>
+		<td><div align="center">6876</div></td>
+		<td><div align="center">10</div></td>
+		<td><div align="center">急性单纯性阑尾炎</div></td>
+		<td><div align="center">77.79%</div></td>
+		<td><div align="center">乳腺癌</div></td>
+		<td><div align="center">41.20%</div></td>
+		</tr>
+				
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">厦门天济医院</div></td>
+		<td><div align="center">2011-02-07</div></td>
+		<td><div align="center">3876</div></td>
+		<td><div align="center">8</div></td>
+		<td><div align="center">肝硬化腹水</div></td>
+		<td><div align="center">69.07%</div></td>
+		<td><div align="center">反流食管炎</div></td>
+		<td><div align="center">55.50%</div></td>
+		</tr>
+				
+		<tr bgcolor="#FFFFFF" class="STYLE19">
+		<td height="24"><div align="center">厦门心脏中心</div></td>
+		<td><div align="center">2011-01-16</div></td>
+		<td><div align="center">5876</div></td>
+		<td><div align="center">9</div></td>
+		<td><div align="center">血栓性外痔</div></td>
+		<td><div align="center">80.09%</div></td>
+		<td><div align="center">腹股沟疝</div></td>
+		<td><div align="center">40.50%</div></td>
+		</tr>
+				
+		<tr bgcolor="#FFFF00" class="STYLE19">
+		<td height="24"><div align="center">厦门德真会齿科中心</div></td>
+		<td><div align="center">-</div></td>
+		<td><div align="center">-</div></td>
+		<td><div align="center">-</div></td>
+		<td><div align="center">-</div></td>
+		<td><div align="center">-</div></td>
+		<td><div align="center">-</div></td>
+		<td><div align="center">-</div></td>
+		</tr>
+				
+      </tbody>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>  
+  <tr>
+  	<td height="3" width="3">&nbsp;</td>
+    <td></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  
+</table>
+
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   

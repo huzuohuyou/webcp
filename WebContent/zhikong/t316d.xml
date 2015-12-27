@@ -1,0 +1,1 @@
+﻿<?xml version="1.0" encoding="utf-8"?>	<chart showShadow='true' baseFont='宋体' baseFontSize='12' caption='完成路径中医嘱变异原因分类出现率统计' xAxisName='变异原因类型' yAxisName='比率'	       numberSuffix='%' formatNumberScale='0' useRoundEdges='1'><set label='选择可选' value='8.33' /><set label='新增医嘱' value='91.67' /><set label='必选未用' value='66.67' /></chart>

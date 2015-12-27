@@ -1,0 +1,64 @@
+8
+
+dir
+807
+https://zwb-pc/svn/jhdcp2/LcpProject/WebContent/WEB-INF
+https://zwb-pc/svn/jhdcp2
+
+
+
+2014-08-12T08:20:27.437125Z
+802
+zhouweibin
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+a02d5324-4e91-cd49-86ca-bfc7c5ded3af
+
+lib
+dir
+
+server-config.wsdd
+file
+
+
+
+
+2012-12-06T03:29:07.437500Z
+103316cfefb02103b892cba2d82caccc
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+
+resources
+dir
+
+web.xml
+file
+
+
+
+
+2012-12-06T03:29:07.437500Z
+86cd87930dcc12348bc438363833a6df
+2012-10-25T10:22:40.718750Z
+549
+huangjie
+
+com
+dir
+
+reports
+dir
+

@@ -1,0 +1,41 @@
+8
+
+dir
+807
+https://zwb-pc/svn/jhdcp2/LcpProject/WebContent/WEB-INF/lib/olap
+https://zwb-pc/svn/jhdcp2
+
+
+
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+a02d5324-4e91-cd49-86ca-bfc7c5ded3af
+
+olap4j-jdk14.jar
+file
+
+
+
+
+2012-12-06T03:29:04.406250Z
+dca07533c6a7e5073036b3f61f90cb72
+2012-06-20T08:54:51.937500Z
+4
+zhangkun
+has-props
+

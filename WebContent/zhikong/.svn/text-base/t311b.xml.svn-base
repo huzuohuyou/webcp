@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<chart palette='2' rotateNames='0' animation='1' numdivlines='4' caption='2型糖尿病临床路径各住院日分布率' baseFont='宋体' baseFontSize='12'
+       useRoundEdges='1' legendBorderAlpha='0' numberSuffix='%'>
+  <categories font='宋体' fontSize='12'>
+    <category label='住院10日的比率'/>
+    <category label='住院11日的比率'/>
+    <category label='住院12日的比率'/>
+    <category label='住院13日的比率'/>
+    <category label='住院14日的比率'/>
+    <category label='住院15日的比率'/>
+    <category label='住院16日的比率'/>
+    <category label='住院17日的比率'/>
+  </categories>
+  <dataset seriesname='纳入路径病例' color='9ACCF6' alpha='90' showValues='1' dashed='1'>
+    <set value='5.80' />
+    <set value='22.20' />
+    <set value='39.50' />
+    <set value='35.00' />
+    <set value='5.20' />
+    <set value='2.30' />
+    <set value='0' />
+    <set value='0' />
+  </dataset>
+  <dataset seriesname='符合条件但不纳入病例' color='82CF27' showValues='1' alpha='90'>
+    <set value='0' />
+    <set value='0' />
+    <set value='0' />
+    <set value='13.60' />
+    <set value='21.40' />
+    <set value='33.45' />
+    <set value='22.20' />
+    <set value='9.35' />
+  </dataset>
+</chart>

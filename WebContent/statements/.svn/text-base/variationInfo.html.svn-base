@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<link rel="stylesheet" href="../public/plugins/jquery/themes/dcp/jquery-ui-1.8.16.custom.css">
+<link rel="stylesheet" href="../public/plugins/jqgrid/ui.jqgrid.css">
+<link rel="stylesheet" href="../public/styles/style.css">
+<script type="text/javascript" src="../public/plugins/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../public/plugins/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="../public/plugins/jqgrid/i18n/grid.locale-cn.js"></script>
+<script type="text/javascript" src="../public/plugins/jqgrid/jquery.jqGrid.min.js"></script>
+<style type="text/css">
+<!--
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	
+	}
+
+.STYLE10 {color: #000000; font-size: 12px;font-weight:normal; }
+.STYLE11 {color: #000000; font-size: 12px;font-weight:normal;background-color: #d3eaef; }
+
+th{
+	font-size=12px;
+}
+.title {
+	color: #e1e2e3;
+	font-size: 12px;
+}
+-->
+</style>
+<script type="text/javascript">
+$(function(){   
+	 var queryStringByName= function (queryName) {
+	        var str = location.href; //取得整个地址栏
+	        if (str.indexOf("?") > -1) {
+	            var queryParam = str.substring(str.indexOf("?") + 1);
+	            //如果有多个参数
+	            //if (queryParam.indexOf("&") > -1)
+	            var param = queryParam.split("&");
+	            for (var a = 0; a < param.length; a++) {
+	                var query = param[a].split("=");
+	                if (query[0] == queryName) {
+	                    return query[1];
+	                 }
+	            }
+	        }
+	        return 0;
+	     };
+ 		s=queryStringByName('s');
+	 	e=queryStringByName('e');
+		var d = new Date();
+		var vYear = d.getFullYear();
+		var vMon = d.getMonth() + 1;
+		var vDay = d.getDate();
+		e=vYear+'-'+(vMon<10 ? "0" + vMon : vMon)+"-"+(vDay<10 ? "0"+ vDay : vDay);
+		s=vYear+'-'+(vMon<10 ? "0" + vMon : vMon)+"-01"; 
+		$("#date1").val(s);
+		$("#date2").val(e);
+		$("#gridTable").jqGrid({
+		url:'../MonitorPatientServlet',
+		datatype: "json",
+		mtype:"post",
+		postData : {
+			op:'orderVariation',
+			s:s,
+			e:e
+		},
+		height:( $(document).height()-80),
+		sortname : 'patient_no',//要排序的字段
+		sortorder : 'desc',//设置默认排序方式
+		autowidth : true,
+		viewrecords:true,
+		rownumbers:true,
+		rowNum:20,
+		rowList:[20,40,60],
+		jsonReader:{repeatitems : false},
+		beforeRequest:function(){//每次读取前先清空表中数据
+			 $(this).clearGridData("clearfooter");
+		},
+		colNames:['患者名称','住院号','入院科室','路径名称','路径节点','变异医嘱','变异原因','记录时间','操作人'],
+		colModel:[
+					{name:'patient_no',index:'patient_no', width:60,align:"center"},
+					{name:'patient_name',index:'patient_name', width:60,align:"center"},
+					{name:'dept_admission_to',index:'dept_admission_to', width:80,align:"center"},
+					{name:'cp_name',index:'cp_name', width:100,align:"left",sortable:false,search:false},
+					{name:'cp_node_name',index:'cp_node_name', width:100,align:"left",sortable:false,search:false},
+					{name:'local_order_text',index:'local_order_text', width:130,align:"left",sortable:false,search:false},
+					{name:'variation',index:'variation', width:180,align:"left",sortable:false,search:false},
+					{name:'exe_date',index:'exe_date', width:60,align:"center",sortable:false,search:false,formatter:'date', formatoptions: {newformat:'Y-m-d'}},
+					{name:'user_name',index:'user_name', width:60,align:"center"}
+				],
+		
+		pager:"#gridPager"}).navGrid('#gridPager', {
+			edit : false,
+			add : false,
+			del : false,
+			search:false
+		});
+		
+		$("#chaxun").click(function(){
+			s=$("#date1").val();
+	    	e=$("#date2").val();
+	    	jQuery("#gridTable").jqGrid('setGridParam',{url:"../MonitorPatientServlet",postData:{op:"orderVariation",s:s,e:e},page:1}).trigger("reloadGrid");
+		});
+	});
+	
+var chaxun=function(){
+	var auto=$(":radio[name='zccx'][checked]").val();
+	var context$=$("#chaxuntext");
+	var context_0=context$[0].value+"";
+	if(auto=="1"){
+		jQuery("#gridTable").jqGrid('setGridParam',{url:"../MonitorPatientServlet",postData:{op:"orderVariation",patientName:context_0},page:1}).trigger("reloadGrid");
+	}
+	if(auto=="2"){
+		jQuery("#gridTable").jqGrid('setGridParam',{url:"../MonitorPatientServlet",postData:{op:"orderVariation",patientNo:context_0},page:1}).trigger("reloadGrid");
+	}
+	if(auto=="3"){
+		jQuery("#gridTable").jqGrid('setGridParam',{url:"../MonitorPatientServlet",postData:{op:"orderVariation",dept:context_0},page:1}).trigger("reloadGrid");
+	}
+	if(auto=="4"){
+		jQuery("#gridTable").jqGrid('setGridParam',{url:"../MonitorPatientServlet",postData:{op:"orderVariation",userName:context_0},page:1}).trigger("reloadGrid");
+	}
+};
+</script>
+</head>
+<body>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" class="title">
+      		<tr>
+        		<td height="24" bgcolor="#353c44">
+        			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	          			<tr>
+	            			<td height="23">
+	            				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					              <tr>
+					                <td width="6%" height="19" valign="bottom"><div align="center"><img src="../public/images/tb.gif" width="14" height="14" /></div></td>
+					                <td width="94%" valign="bottom">已出院未完成路径病历信息</td>
+					              </tr>
+	            				</table>
+	            			</td>
+	            
+			        		<td><div align="left"> 搜索&gt;&gt; 按
+			        			<input type="radio" name="zccx" value="1"/>患者名称
+						        <input type="radio" name="zccx" value="2" checked="checked"/>住院号
+						        <input type="radio" name="zccx" value="3"/>入院科室
+						        <input type="radio" name="zccx" value="4"/>操作人
+						        <input type="text" id="chaxuntext" oninput="chaxun();" onpropertychange="chaxun();" />
+						        </div>
+			        		</td>
+			        		<td>
+			        			<div >
+								起始日期：<input  type="text"  width="80%" style=" color:black;width:60px;" id="date1"  readonly onfocus="WdatePicker({isShowWeek:true})"/>&nbsp;&nbsp;
+								结束日期：<input  type="text"  width="80%" style="color:black;width:60px;"  id="date2" readonly onfocus="WdatePicker({isShowWeek:true})"/>&nbsp;&nbsp;&nbsp;
+										 <input type="button" value="查询" id="chaxun" style="color:black"  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								</div>
+			        		</td>
+	          			</tr>
+        			</table>
+        		</td>
+      		</tr>
+    	</table>
+	<div align="center">
+		<table id="gridTable"></table>
+		<div id="gridPager"></div>
+	</div>
+</body>
+</html>
+
+
+

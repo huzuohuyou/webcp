@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<chart showShadow='true' baseFont='宋体' baseFontSize='12' caption='最低纳入率的 5 条路径' xAxisName='路径名称' yAxisName='纳入率' numberSuffix='%' formatNumberScale='0' useRoundEdges='1'>
+  <set label='舌癌' value='45.12' link='t31.htm' />
+  <set label='唇裂' value='55.45' link='t31.htm' />
+  <set label='腭裂' value='58.57' link='t31.htm' />
+  <set label='乳腺癌' value='67.56' link='t31.htm' />
+  <set label='支气管肺癌' value='77.88' link='t31.htm' />
+</chart>

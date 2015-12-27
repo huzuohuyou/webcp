@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>单一临床路径统计</title>
+    <script type="text/javascript" src="../public/plugins/FusionCharts/FusionCharts.js"></script>
+    <link href="../public/plugins/FusionCharts/style.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="../public/styles/demos.css">
+<style type="text/css"> 
+<!--
+a:link{
+text-decoration:none;
+color: #000000;
+font-size: 12px;
+}
+a:visited{
+text-decoration:none;
+color: #000000;
+font-size: 12px;
+}
+-->
+</style>
+
+</head>
+<body>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td height="30"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="24" bgcolor="#353c44"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="23"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="24" height="19" valign="bottom"><div align="center"><img src="../public/images/tb.gif" width="14" height="14" /></div></td>
+                <td valign="bottom"><span class="STYLE1"> 2型糖尿病临床路径概况</span></td>
+              </tr>
+            </table></td>
+            <td>&nbsp;</td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <!-- 效率统计 -->
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td><table width="100%" id="ttotal" class="users" border="0" cellpadding="0" cellspacing="1" bgcolor="#a8c7ce">
+    <tbody id="tbtotal">
+      <tr>            
+        <td height="24" bgcolor="353c44" class="STYLE6" colspan="3"><div align="center"><span class="STYLE1">临床路径效率统计（路径定义平均住院日：12天）</span></div></td>        
+        <td width="120" bgcolor="#FFFFFF" rowspan="5"><div align="center"><a href="t311.htm"><img src="../public/images/t31_1.png" width="64" height="64" alt="进入详细的效率统计" /><br />效率详细统计</a></div></td>
+      </tr>
+      <tr>
+        <td height="24" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">纳入病例的平均住院日</span></div></td>        
+        <td bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">纳入病例的最小住院日</span></div></td>        
+        <td bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">纳入病例的最大住院日</span></div></td>        
+      </tr>
+      <tr>
+        <td height="24" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">13</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">10</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">15</span></div></td>
+      </tr>
+      <tr>
+        <td height="24" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">不纳入路径的平均住院日</span></div></td>        
+        <td bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">不纳入路径的最小住院日</span></div></td>        
+        <td bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">不纳入路径的最大住院日</span></div></td>        
+      </tr>
+      <tr>
+        <td height="24" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">15</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">13</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">17</span></div></td>
+      </tr>
+      </tbody>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <tr>
+  	<td height="1" width="3">&nbsp;</td>
+    <td></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <!-- 效果统计 -->
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td><table width="100%" id="Table1" class="users" border="0" cellpadding="0" cellspacing="1" bgcolor="#a8c7ce">
+    <tbody id="Tbody1">
+      <tr>            
+        <td width="120" height="24" bgcolor="#FFFFFF" rowspan="5"><div align="center"><a href="t312.htm"><img src="../public/images/t31_2.png" width="64" height="64" alt="进入详细的效果统计" /><br />效果详细统计</a></div></td>
+        <td bgcolor="353c44" class="STYLE6" colspan="3"><div align="center"><span class="STYLE1">临床路径效果统计</span></div></td>        
+      </tr>
+      <tr>
+        <td height="24" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">纳入病例的死亡率</span></div></td>        
+        <td bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">纳入病例的治愈率</span></div></td>        
+        <td bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">纳入病例的好转率</span></div></td>        
+      </tr>
+      <tr>
+        <td height="24" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">3.20%</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">25.50%</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">62.30%</span></div></td>
+      </tr>
+      <tr>
+        <td height="24" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">不纳入路径的死亡率</span></div></td>        
+        <td bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">不纳入路径的治愈率</span></div></td>        
+        <td bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">不纳入路径的好转率</span></div></td>        
+      </tr>
+      <tr>
+        <td height="24" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">4.10%</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">15.40%</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">50.50%</span></div></td>
+      </tr>
+      </tbody>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <tr>
+  	<td height="1" width="3">&nbsp;</td>
+    <td></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <!-- 工作量统计 -->
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td><table width="100%" id="Table2" class="users" border="0" cellpadding="0" cellspacing="1" bgcolor="#a8c7ce">
+    <tbody id="Tbody2">
+      <tr>            
+        <td height="24" bgcolor="353c44" class="STYLE6" colspan="3"><div align="center"><span class="STYLE1">临床路径工作量统计（开始时间：2011-01-12）</span></div></td>        
+        <td width="120" bgcolor="#FFFFFF" rowspan="5"><div align="center"><img src="../public/images/t31_3.png" width="64" height="64" alt="进入详细的工作量统计" /><br />工作量详细统计</div></td>
+      </tr>
+      <tr>
+        <td height="24" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">入院总病例数</span></div></td>        
+        <td bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">符合纳入条件病例数</span></div></td>        
+        <td bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">纳入路径病例数</span></div></td>        
+      </tr>
+      <tr>
+        <td height="24" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">103569</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">13587</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">13099</span></div></td>
+      </tr>
+      <tr>
+        <td height="24" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">路径执行中病例数</span></div></td>        
+        <td bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">完成路径病例数</span></div></td>        
+        <td bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">变异退出路径病例数</span></div></td>        
+      </tr>
+      <tr>
+        <td height="24" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">1056</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">10587</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">1456</span></div></td>
+      </tr>
+      </tbody>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <tr>
+  	<td height="1" width="3">&nbsp;</td>
+    <td></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <!-- 抗菌药物使用统计 -->
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td><table width="100%" id="Table3" class="users" border="0" cellpadding="0" cellspacing="1" bgcolor="#a8c7ce">
+    <tbody id="Tbody3">
+      <tr>            
+        <td width="120" height="24" bgcolor="#FFFFFF" rowspan="5"><div align="center"><a href="t314.htm"><img src="../public/images/t31_4.png" width="64" height="64" alt="进入详细的抗菌药物使用统计" /><br />抗菌药物详细统计</a></div></td>
+        <td bgcolor="353c44" class="STYLE6" colspan="2"><div align="center"><span class="STYLE1">临床路径抗菌药物使用统计</span></div></td>        
+      </tr>
+      <tr>
+        <td height="24" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">纳入病例中平均使用抗菌药物的比率</span></div></td>        
+        <td bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">纳入病例中平均使用抗菌药物的天数</span></div></td>        
+      </tr>
+      <tr>
+        <td height="24" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">87.45%</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">7</span></div></td>
+      </tr>
+      <tr>
+        <td height="24" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">不纳入路径中平均使用抗菌药物的比率</span></div></td>        
+        <td bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">不纳入路径中平均使用抗菌药物的天数</span></div></td>        
+      </tr>
+      <tr>
+        <td height="24" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">98.45%</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">9</span></div></td>
+      </tr>
+      </tbody>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <tr>
+  	<td height="1" width="3">&nbsp;</td>
+    <td></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <!-- 卫生经济学统计 -->
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td><table width="100%" id="Table4" class="users" border="0" cellpadding="0" cellspacing="1" bgcolor="#a8c7ce">
+    <tbody id="Tbody4">
+      <tr>            
+        <td height="24" bgcolor="353c44" class="STYLE6" colspan="3"><div align="center"><span class="STYLE1">临床路径卫生经济学统计（路径定义平均总费用：13800元）</span></div></td>        
+        <td width="120" bgcolor="#FFFFFF" rowspan="5"><div align="center"><a href="t315.htm"><img src="../public/images/t31_5.png" width="64" height="64" alt="进入详细的卫生经济学统计" /><br />经济学详细统计</a></div></td>
+      </tr>
+      <tr>
+        <td height="24" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">纳入病例的平均总费用</span></div></td>        
+        <td bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">纳入病例的最小总费用</span></div></td>        
+        <td bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">纳入病例的最大总费用</span></div></td>        
+      </tr>
+      <tr>
+        <td height="24" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">13678.50</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">10623.45</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">21333.50</span></div></td>
+      </tr>
+      <tr>
+        <td height="24" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">不纳入路径的平均总费用</span></div></td>        
+        <td bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">不纳入路径的最小总费用</span></div></td>        
+        <td bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">不纳入路径的最大总费用</span></div></td>        
+      </tr>
+      <tr>
+        <td height="24" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">15668.50</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">9856.34</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">23977.68</span></div></td>
+      </tr>
+      </tbody>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <tr>
+  	<td height="1" width="3">&nbsp;</td>
+    <td></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <!-- 变异统计 -->
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td><table width="100%" id="Table5" class="users" border="0" cellpadding="0" cellspacing="1" bgcolor="#a8c7ce">
+    <tbody id="Tbody5">
+      <tr>            
+        <td width="120" height="24" bgcolor="#FFFFFF" rowspan="5"><div align="center"><a href="t316.htm"><img src="../public/images/t31_6.png" width="64" height="64" alt="进入详细的变异统计" /><br />变异详细统计</a></div></td>
+        <td bgcolor="353c44" class="STYLE6" colspan="3"><div align="center"><span class="STYLE1">临床路径变异统计</span></div></td>        
+      </tr>
+      <tr>
+        <td height="24" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">不纳入率（符合条件但不纳入的比率）</span></div></td>        
+        <td bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">路径退出率（由于变异而退出路径比率）</span></div></td>        
+      </tr>
+      <tr>
+        <td height="24" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">23.45%</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">33.50%</span></div></td>
+      </tr>
+      <tr>
+        <td height="24" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">完成路径变异率（完成路径病例中出现变异的比率）</span></div></td>        
+        <td bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">出现率最高的医嘱变异原因及出现率</span></div></td>        
+      </tr>
+      <tr>
+        <td height="24" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">88.50%</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">选用可选（77.50%）</span></div></td>
+      </tr>
+      </tbody>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <tr>
+  	<td height="1" width="3">&nbsp;</td>
+    <td></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+    
+</table>
+
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   

@@ -1,0 +1,58 @@
+8
+
+dir
+807
+https://zwb-pc/svn/jhdcp2/LcpProject/WebContent/public/plugins/My97DatePicker
+https://zwb-pc/svn/jhdcp2
+
+
+
+2012-07-13T09:23:50.171875Z
+233
+zhangkun
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+a02d5324-4e91-cd49-86ca-bfc7c5ded3af
+
+lang
+dir
+
+skin
+dir
+
+calendar.js
+file
+
+
+
+
+2012-12-06T03:29:23.187500Z
+56e6caecd692c51d12fb14eaa2bcb058
+2012-07-13T09:23:50.171875Z
+233
+zhangkun
+
+WdatePicker.js
+file
+
+
+
+
+2012-12-06T03:29:23.187500Z
+14e14c80b71c4042af9ae1f1c6808a17
+2012-07-13T09:23:50.171875Z
+233
+zhangkun
+

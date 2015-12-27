@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="GBK" ?>
+<report version="3.0">
+	<head>
+		<property name="type">0</property>
+		<name><![CDATA[narulv5]]></name>
+		<dataSets>
+			<dataSet name="ds" type="Self" >
+				<property name="dataSource"></property>
+				<property name="desc"><![CDATA[]]></property>
+				<property name="query"><![CDATA[com.goodwillcis.cp.narulv.CPnarulv5]]></property>
+				<property name="beginRow">0</property>
+				<property name="endRow">0</property>
+				<queryParam name="hospital_id" />
+				<queryParam name="start_time" />
+				<queryParam name="end_time" />
+				<queryParam name="deptcodevalue" />
+			</dataSet>
+		</dataSets>
+		<parameters>
+			<parameter name="hospital_id" type="17">
+				<property name="dateFormat"></property>
+				<property name="default">1</property>
+				<property name="desc">医院ID</property>
+				<property name="source">0</property>
+			</parameter>
+			<parameter name="start_time" type="6">
+				<property name="dateFormat"></property>
+				<property name="default"></property>
+				<property name="desc">开始时间</property>
+				<property name="source">0</property>
+			</parameter>
+			<parameter name="end_time" type="6">
+				<property name="dateFormat"></property>
+				<property name="default"></property>
+				<property name="desc">结束时间</property>
+				<property name="source">0</property>
+			</parameter>
+			<parameter name="deptcodevalue" type="6">
+				<property name="dateFormat"></property>
+				<property name="default">0</property>
+				<property name="desc">科室编码</property>
+				<property name="source">0</property>
+			</parameter>
+		</parameters>
+		<variables/>
+		<subReports/>
+	</head>
+	<body>
+		<sheet id="sheet1">
+			<page>
+				<property name="paginateType">3</property>
+				<property name="pageColNum">17</property>
+				<property name="pageDirection">0</property>
+				<property name="margin-left">9</property>
+				<property name="margin-right">9</property>
+				<property name="margin-top">9</property>
+				<property name="margin-bottom">9</property>
+			</page>
+			<grid row="6" col="5">
+				<properties>
+				</properties>
+				<rows>
+					<row id="1">
+						<property name="type">1</property>
+					</row>
+					<row id="2">
+						<property name="type">1</property>
+						<property name="height">26</property>
+					</row>
+					<row id="3">
+						<property name="type">1</property>
+						<property name="height">15</property>
+					</row>
+					<row id="4">
+						<property name="type">1</property>
+					</row>
+					<row id="5">
+						<property name="type">2</property>
+					</row>
+					<row id="6">
+					</row>
+				</rows>
+				<columns>
+					<column id="1">
+						<property name="width">121</property>
+					</column>
+					<column id="2">
+						<property name="width">119</property>
+					</column>
+					<column id="3">
+						<property name="width">169</property>
+					</column>
+					<column id="4">
+						<property name="width">180</property>
+					</column>
+					<column id="5">
+						<property name="width">124</property>
+					</column>
+				</columns>
+				<cells>
+					<cell id="1,1" type="0" >
+					</cell>
+					<cell id="1,2" type="0" >
+					</cell>
+					<cell id="1,3" type="0" >
+					</cell>
+					<cell id="1,4" type="0" colspan="2" >
+						<property name="value"><![CDATA[编号：_________________]]></property>
+						<property name="align">2</property>
+					</cell>
+					<cell id="2,1" type="0" colspan="5" >
+						<property name="value"><![CDATA[按入院科室查看节点医嘱签名]]></property>
+						<property name="font-size">16</property>
+						<property name="bold">0</property>
+					</cell>
+					<cell id="3,1" type="0" >
+					</cell>
+					<cell id="3,2" type="0" >
+					</cell>
+					<cell id="3,3" type="0" >
+					</cell>
+					<cell id="3,4" type="0" >
+					</cell>
+					<cell id="3,5" type="0" >
+					</cell>
+					<cell id="4,1" type="0" >
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="4,2" type="0" >
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="4,3" type="0" >
+						<border type="1">1:0,0,0:1</border>
+					</cell>
+					<cell id="4,4" type="0" colspan="2" >
+						<property name="value"><![CDATA[="统计时间段为："+@start_time+"至"+@end_time]]></property>
+						<property name="align">2</property>
+						<border type="1">1:0,0,0:1;1:0,0,0:1</border>
+					</cell>
+					<cell id="5,1" type="0" >
+						<property name="value"><![CDATA[所属科室]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="5,2" type="0" >
+						<property name="value"><![CDATA[患者编码]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="5,3" type="0" >
+						<property name="value"><![CDATA[路径名称]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="5,4" type="0" >
+						<property name="value"><![CDATA[节点名称]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="5,5" type="0" >
+						<property name="value"><![CDATA[确认人名称]]></property>
+						<property name="bold">0</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="6,1" type="0" >
+						<property name="value"><![CDATA[=ds.select(科室名称)]]></property>
+						<property name="ext-direction">3</property>
+						<property name="size-adjust">1</property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="2">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="6,2" type="0" >
+						<property name="value"><![CDATA[=ds.select(患者编码)]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="6,3" type="0" >
+						<property name="value"><![CDATA[=ds.select(路径名称)]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="6,4" type="0" >
+						<property name="value"><![CDATA[=ds.select(节点名称)]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+					<cell id="6,5" type="0" >
+						<property name="value"><![CDATA[=ds.select(确认人名称)]]></property>
+						<border type="1">1:0,0,0:1</border>
+						<border type="3">1:0,0,0:1</border>
+					</cell>
+				</cells>
+			</grid>
+		</sheet>
+	</body>
+	<param-form col="2">
+		<ctrl id="hospital_id" type="1" label="医院ID">
+		</ctrl>
+		<ctrl id="start_time" type="1" ctrlType="3" label="开始时间">
+		</ctrl>
+		<ctrl id="end_time" type="1" ctrlType="3" label="结束时间">
+		</ctrl>
+		<ctrl id="deptcodevalue" type="1" label="科室编码">
+		</ctrl>
+	</param-form>
+</report>

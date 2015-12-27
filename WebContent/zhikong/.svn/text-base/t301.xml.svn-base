@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<chart showShadow='true' baseFont='宋体' baseFontSize='12' caption='最高纳入率的 5 条路径' xAxisName='路径名称' yAxisName='纳入率'
+       numberSuffix='%' formatNumberScale='0' useRoundEdges='1'>
+  <set label='慢性阻塞性肺疾病' value='98.12' link='t31.htm' />
+  <set label='支气管扩张症' value='94.45' link='t31.htm' />
+  <set label='自发性气胸' value='93.57' link='t31.htm' />
+  <set label='肝硬化腹水' value='90.56' link='t31.htm' />
+  <set label='轻症急性胰腺炎' value='89.88' link='t31.htm' />
+  <trendLines>
+    <line startValue='86.57' color='359A35' displayvalue='平均纳入率' valueOnRight='1'/>
+  </trendLines>
+</chart>

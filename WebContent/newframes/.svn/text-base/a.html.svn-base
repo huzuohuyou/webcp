@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../public/plugins/easyui/easyui.css">
+<link rel="stylesheet" type="text/css" href="../public/plugins/easyui/icon.css">
+<script type="text/javascript" src="../public/plugins/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../public/plugins/easyui/jquery.easyui.min.js"></script>
+</head>
+<body>
+<div region="west"   style="width: 147px; padding1: 1px; overflow: hidden; ">
+		<div id="p" class="easyui-panel" title="My Title" icon="icon-save"
+	collapsible="true" minimizable="true" maximizable=true closable="true"
+	style="width: 147px; height: 600px; padding: 10px; background: #fafafa;">
+		
+		<div style="width:147px; height:30px;"  >
+	    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" background="../public/images/main_29.gif" >
+				<tr height="30">
+					<td width="24%">&nbsp;</td>
+					<td width="43%" valign="middle" style="font-size: 12px;color: #000000;">功能菜单</td>
+					<td width="33%" style="cursor:pointer"  onClick="hideLeft();"  align="right" title="单击隐藏">
+					<img src="../public/plugins/easyui/images/layout_button_left.gif" ></td>
+				</tr>
+			</table>
+</div>
+
+				
+				
+				
+<!-- 功能菜单（动态生成） -->
+		<div class="easyui-accordion" height="600px" border="false">
+
+	
+       <div title="本地化管理" style="padding: 10px; overflow: auto;" selected="true" iconCls="icon-ok" height="100px" >
+        <table>
+        <tr height="38" onmouseout="this.style.backgroundImage='url()';this.style.borderStyle='none'"
+           style="cursor:pointer" onClick="showBg();changeTitle('本地化管理&gt;匹配管理','../match/match.jsp');"
+           onMouseOver="">
+              <td width="33" height="28"><img src="../public/images/left_11.gif" width="28" height="28"></td>
+              <td width="99" height="23" class="STYLE4">匹配管理</td>
+        </tr>
+        <tr height="38" onmouseout="this.style.backgroundImage='url()';this.style.borderStyle='none'"
+           style="cursor:pointer" onClick="showBg();changeTitle('本地化管理&gt;路径维护','../cpmanage/cplist.jsp');"
+           onMouseOver="">
+              <td width="33" height="28"><img src="../public/images/left_12.gif" width="28" height="28"></td>
+              <td width="99" height="23" class="STYLE4">路径维护</td>
+        </tr>
+	
+
+      </table></div>
+      <div title="路径报表" style="padding: 10px; overflow: auto;" iconCls="icon-ok">
+        <table>
+		
+        <tr height="38" onmouseout="this.style.backgroundImage='url()';this.style.borderStyle='none'"
+           style="cursor:pointer" onClick="showBg();changeTitle('路径报表&gt;全院报表','../statements/institution.jsp');"
+           onMouseOver="">
+              <td width="33" height="28"><img src="../public/images/left_21.gif" width="28" height="28"></td>
+              <td width="99" height="23" class="STYLE4">全院报表</td>
+        </tr>
+	
+		
+        <tr height="38" onmouseout="this.style.backgroundImage='url()';this.style.borderStyle='none'"
+           style="cursor:pointer" onClick="showBg();changeTitle('路径报表&gt;单路径报表','../statements/single.jsp');"
+           onMouseOver="">
+              <td width="33" height="28"><img src="../public/images/left_22.gif" width="28" height="28"></td>
+              <td width="99" height="23" class="STYLE4">单路径报表</td>
+        </tr>
+	
+		
+        <tr height="38" onmouseout="this.style.backgroundImage='url()';this.style.borderStyle='none'"
+           style="cursor:pointer" onClick="showBg();changeTitle('路径报表&gt;路径诊断码报表','../statements/income.jsp');"
+           onMouseOver="">
+              <td width="33" height="28"><img src="../public/images/left_23.gif" width="28" height="28"></td>
+              <td width="99" height="23" class="STYLE4">路径诊断码报表</td>
+        </tr>
+	
+
+      </table></div>
+      <div title="路径统计" style="padding: 10px; overflow: auto;" iconCls="icon-ok">
+        <table>
+		
+        <tr height="38" onmouseout="this.style.backgroundImage='url()';this.style.borderStyle='none'"
+           style="cursor:pointer" onClick="showBg();changeTitle('路径统计&gt;路径统计','../zhikong/zhikong_cp_tongji.jsp');"
+           onMouseOver="">
+              <td width="33" height="28"><img src="../public/images/left_31.gif" width="28" height="28"></td>
+              <td width="99" height="23" class="STYLE4">路径统计</td>
+        </tr>
+	
+		
+        <tr height="38" onmouseout="this.style.backgroundImage='url()';this.style.borderStyle='none'"
+           style="cursor:pointer" onClick="showBg();changeTitle('路径统计&gt;病例查看','../ZhikongCpIndexServlet');"
+           onMouseOver="">
+              <td width="33" height="28"><img src="../public/images/left_32.gif" width="28" height="28"></td>
+              <td width="99" height="23" class="STYLE4">病例查看</td>
+        </tr>
+	
+
+      </table></div>
+      <div title="运维管理" style="padding: 10px; overflow: auto;" iconCls="icon-ok">
+        <table>
+		
+        <tr height="38" onmouseout="this.style.backgroundImage='url()';this.style.borderStyle='none'"
+           style="cursor:pointer" onClick="showBg();changeTitle('运维管理&gt;同步统计','../sync/zhikong.jsp');"
+           onMouseOver="">
+              <td width="33" height="28"><img src="../public/images/left_41.gif" width="28" height="28"></td>
+              <td width="99" height="23" class="STYLE4">同步统计</td>
+        </tr>
+	
+		
+        <tr height="38" onmouseout="this.style.backgroundImage='url()';this.style.borderStyle='none'"
+           style="cursor:pointer" onClick="showBg();changeTitle('运维管理&gt;手工同步','../sync/index.jsp');"
+           onMouseOver="">
+              <td width="33" height="28"><img src="../public/images/left_42.gif" width="28" height="28"></td>
+              <td width="99" height="23" class="STYLE4">手工同步</td>
+        </tr>
+	
+		
+        <tr height="38" onmouseout="this.style.backgroundImage='url()';this.style.borderStyle='none'"
+           style="cursor:pointer" onClick="showBg();changeTitle('运维管理&gt;更新管理','../sync/update_list.jsp');"
+           onMouseOver="">
+              <td width="33" height="28"><img src="../public/images/left_43.gif" width="28" height="28"></td>
+              <td width="99" height="23" class="STYLE4">更新管理</td>
+        </tr>
+	
+
+      </table></div>
+      <div title="系统维护" style="padding: 10px; overflow: auto;" iconCls="icon-ok">
+        <table>
+
+            <tr   height="38" onMouseOver="this.style.backgroundImage='url(../public/images/tab_bg.gif)';this.style.borderStyle='solid';this.style.borderWidth='1px';this.style.borderColor='#adb9c2'; "onmouseout="this.style.backgroundImage='url()';this.style.borderStyle='none'">
+              <td width="33" height="28"><img src="../public/images/left_51.gif" width="28" height="28"></td>
+                    <td height="23" class="STYLE4" style="cursor:pointer"  onClick="changeTitle('系统维护&gt;用户管理','../system/user_list.jsp'); ">用户管理</td>
+                  </tr>
+
+</table>
+</div>
+<!-- 版本说明 -->
+	<div title="版本：V1.0.1" style="padding: 10px; overflow: auto;" iconCls="icon-tip">
+	Copyright © 2011 - 2012 JH. All Rights Reserved. 中国仪器进出口(集团)公司  版权所有
+	</div>
+</div>
+<!-- End 功能菜单 -->
+	</div>
+	</div>
+</body>
+</html>

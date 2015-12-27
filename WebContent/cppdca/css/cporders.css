@@ -1,0 +1,75 @@
+@CHARSET "UTF-8";
+
+
+table {
+	*border-collapse: collapse; /* IE7 and lower */
+	border-spacing: 0;
+	width: 100%;
+}
+thead {
+background-color: #2b2c30;
+}
+#myorders{
+	margin-right: auto;
+	margin-left: auto;
+	width: 80%;
+}
+#mygraph{
+	text-align:center;
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+}
+
+.bordered th {
+	background-color: #26272B;
+	border-left: none;
+	border-right: none ;
+	border-bottom: 2px solid #3F4045;
+	border-top: 2px solid #3F4045;
+	padding: 10px;
+	text-align: left;
+}
+
+.bordered td {
+	border-left: none;
+	border-right: none ;
+	border-bottom: 2px solid #3F4045;
+	border-top: 2px solid #3F4045;
+	padding: 10px;
+	text-align: left;
+}
+
+
+
+
+.bordered th:first-child {
+	-moz-border-radius: 6px 0 0 0;
+	//-webkit-border-radius: 6px 0 0 0;
+	//border-radius: 6px 0 0 0;
+}
+
+.bordered th:last-child {
+	-moz-border-radius: 0 6px 0 0;
+	//-webkit-border-radius: 0 6px 0 0;
+	//border-radius: 0 6px 0 0;
+}
+
+.bordered th:only-child {
+	-moz-border-radius: 6px 6px 0 0;
+	-webkit-border-radius: 6px 6px 0 0;
+	//border-radius: 6px 6px 0 0;
+}
+
+.bordered tr:last-child td:first-child {
+	-moz-border-radius: 0 0 0 6px;
+	-webkit-border-radius: 0 0 0 6px;
+	//border-radius: 0 0 0 6px;
+}
+
+.bordered tr:last-child td:last-child {
+	-moz-border-radius: 0 0 6px 0;
+	-webkit-border-radius: 0 0 6px 0;
+	//border-radius: 0 0 6px 0;
+}
+

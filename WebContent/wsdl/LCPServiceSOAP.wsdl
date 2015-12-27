@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://lcp.goodwillcis.com/LCPService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LCPService" targetNamespace="http://lcp.goodwillcis.com/LCPService/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://lcp.goodwillcis.com/LCPService/">
+      <xsd:element name="FunCPRegPatient">
+        <xsd:complexType>
+          <xsd:sequence>
+          	<xsd:element name="inSize" type="xsd:int"/>
+          	<xsd:element name="inRegData" type="xsd:hexBinary"/>
+          	<xsd:element name="inPatiID" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPRegPatientResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="outReg" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPGetStatus">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="inPatiID" type="xsd:string"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPGetStatusResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="outStatus" type="xsd:int"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetFirstPage">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="inPatiID" type="xsd:string"/>
+      			<xsd:element name="inSize" type="xsd:int"/>
+      			<xsd:element name="inPatiData" type="xsd:hexBinary"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetFirstPageResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="outRes" type="xsd:int"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetDiagnosis">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="inPatiID" type="xsd:string"/>
+      			<xsd:element name="inSize" type="xsd:int"/>
+      			<xsd:element name="inDiagData" type="xsd:hexBinary"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetDiagnosisResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="outRes" type="xsd:int"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetOperation">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="inPatiID" type="xsd:string"/>
+      			<xsd:element name="inSize" type="xsd:int"/>
+      			<xsd:element name="inOperData" type="xsd:hexBinary"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetOperationResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="outRes" type="xsd:int"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetDoctorItem">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="inPatiID" type="xsd:string"/>
+      			<xsd:element name="inSize" type="xsd:int"/>
+      			<xsd:element name="inDoctData" type="xsd:hexBinary"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetDoctorItemResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="outRes" type="xsd:int"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetNurseItem">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="inPatiID" type="xsd:string"/>
+      			<xsd:element name="inSize" type="xsd:int"/>
+      			<xsd:element name="inNurData" type="xsd:hexBinary"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetNurseItemResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="outRes" type="xsd:int"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetOrderItem">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="inPatiID" type="xsd:string"/>
+      			<xsd:element name="inSize" type="xsd:int"/>
+      			<xsd:element name="inOrderData" type="xsd:hexBinary"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetOrderItemResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="outRes" type="xsd:int"/>
+
+
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPGetItemSet">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="inPatiID" type="xsd:string"/>
+      			<xsd:element name="inNodeID" type="xsd:int"/>
+      			<xsd:element name="inItemType" type="xsd:int"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPGetItemSetResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="outRes" type="xsd:int"/>
+      			<xsd:element name="outSize" type="xsd:int"/>
+      			<xsd:element name="outItemData" type="xsd:hexBinary"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunGetMatchItem">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="inMatchType" type="xsd:string"/>
+      			<xsd:element name="localCode" type="xsd:string"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunGetMatchItemResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="outRes" type="xsd:int"/>
+      			<xsd:element name="outMatchData" type="xsd:hexBinary"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetEmrDoc">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="inPatiID" type="xsd:string"/>
+      			<xsd:element name="inSize" type="xsd:int"/>
+      			<xsd:element name="inEmrDocData" type="xsd:hexBinary"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetEmrDocResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="outRes" type="xsd:int"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunSetOrderVariation">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="inPatiID" type="xsd:string"/>
+      			<xsd:element name="inSize" type="xsd:int"/>
+      			<xsd:element name="varData" type="xsd:hexBinary"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunSetOrderVariationResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="outRes" type="xsd:int"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPDischarge">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="inSize" type="xsd:int"/>
+      			<xsd:element name="inDisData" type="xsd:hexBinary"/>
+      			<xsd:element name="inPatiID" type="xsd:string"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPDischargeResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="outRes" type="xsd:int"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetOrderState">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="inPatiID" type="xsd:string"/>
+
+
+
+      			<xsd:element name="inSize" type="xsd:int"/>
+      			<xsd:element name="inOrderStateData" type="xsd:hexBinary"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetOrderStateResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="outRes" type="xsd:int"/>
+
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPGetOrderVariation">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="inPatiID" type="xsd:string"/>
+      			<xsd:element name="inNodeID" type="xsd:int"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPGetOrderVariationResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="outRes" type="xsd:int"/>
+      			<xsd:element name="outVarBagData" type="xsd:hexBinary">
+      			</xsd:element>
+      			<xsd:element name="outSize" type="xsd:int"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetOrderVariation">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="inPatiID" type="xsd:string"/>
+      			<xsd:element name="inOrderVarData" type="xsd:hexBinary">
+      			</xsd:element>
+      			<xsd:element name="inSize" type="xsd:int"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetOrderVariationResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="outRes" type="xsd:int"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunUpOneOrderState">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="cpId" type="xsd:int"/>
+      			<xsd:element name="cpNodeId" type="xsd:int"/>
+      			<xsd:element name="cpNodeOrderId" type="xsd:int"/>
+      			<xsd:element name="inState" type="xsd:int"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunUpOneOrderStateResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="outRes" type="xsd:int"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetItemSet">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="inPatiID" type="xsd:string"/>
+      			<xsd:element name="inStateType" type="xsd:int"/>
+      			<xsd:element name="inSize" type="xsd:int"/>
+      			<xsd:element name="stateData" type="xsd:hexBinary">
+      			</xsd:element>
+
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetItemSetResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="outRes" type="xsd:int"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunSet">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="in" type="xsd:string"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunSetResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="out" type="xsd:string"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunGetOrderItems">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="cpId" type="xsd:int"/>
+      			<xsd:element name="dataType" type="xsd:int"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunGetOrderItemsResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="outRes" type="xsd:int"/>
+      			<xsd:element name="cpOrderData" type="xsd:hexBinary"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetLIS">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="inPatiID" type="xsd:string"/>
+      			<xsd:element name="inSize" type="xsd:int"/>
+      			<xsd:element name="inLISData" type="xsd:hexBinary"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetLISResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="outRes" type="xsd:int"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetPACS">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="inPatiID" type="xsd:string"/>
+      			<xsd:element name="inSize" type="xsd:int"/>
+      			<xsd:element name="inPACSData" type="xsd:hexBinary"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetPACSResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="outRes" type="xsd:int"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetFee">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="inPatiID" type="xsd:string"/>
+      			<xsd:element name="inSize" type="xsd:int"/>
+      			<xsd:element name="inFeeData" type="xsd:hexBinary"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPSetFeeResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="outRes" type="xsd:int"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPGetDictVariation">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="in" type="xsd:string"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FunCPGetDictVariationResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="outRes" type="xsd:int"/>
+      			<xsd:element name="outSize" type="xsd:int"/>
+      			<xsd:element name="outDictData" type="xsd:hexBinary"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="FunCPRegPatientRequest">
+    <wsdl:part element="tns:FunCPRegPatient" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPRegPatientResponse">
+    <wsdl:part element="tns:FunCPRegPatientResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPGetStatusRequest">
+  	<wsdl:part element="tns:FunCPGetStatus" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPGetStatusResponse">
+  	<wsdl:part element="tns:FunCPGetStatusResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetFirstPageRequest">
+  	<wsdl:part element="tns:FunCPSetFirstPage" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetFirstPageResponse">
+  	<wsdl:part element="tns:FunCPSetFirstPageResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetDiagnosisRequest">
+  	<wsdl:part element="tns:FunCPSetDiagnosis" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetDiagnosisResponse">
+  	<wsdl:part element="tns:FunCPSetDiagnosisResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetOperationRequest">
+  	<wsdl:part element="tns:FunCPSetOperation" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetOperationResponse">
+  	<wsdl:part element="tns:FunCPSetOperationResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetDoctorItemRequest">
+  	<wsdl:part element="tns:FunCPSetDoctorItem" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetDoctorItemResponse">
+  	<wsdl:part element="tns:FunCPSetDoctorItemResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetNurseItemRequest">
+  	<wsdl:part element="tns:FunCPSetNurseItem" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetNurseItemResponse">
+  	<wsdl:part element="tns:FunCPSetNurseItemResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetOrderItemRequest">
+  	<wsdl:part element="tns:FunCPSetOrderItem" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetOrderItemResponse">
+  	<wsdl:part element="tns:FunCPSetOrderItemResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPGetItemSetRequest">
+  	<wsdl:part element="tns:FunCPGetItemSet" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPGetItemSetResponse">
+  	<wsdl:part element="tns:FunCPGetItemSetResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunGetMatchItemRequest">
+  	<wsdl:part element="tns:FunGetMatchItem" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunGetMatchItemResponse">
+  	<wsdl:part element="tns:FunGetMatchItemResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetEmrDocRequest">
+  	<wsdl:part element="tns:FunCPSetEmrDoc" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetEmrDocResponse">
+  	<wsdl:part element="tns:FunCPSetEmrDocResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunSetOrderVariationRequest">
+  	<wsdl:part element="tns:FunSetOrderVariation" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunSetOrderVariationResponse">
+  	<wsdl:part element="tns:FunSetOrderVariationResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPDischargeRequest">
+  	<wsdl:part element="tns:FunCPDischarge" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPDischargeResponse">
+  	<wsdl:part element="tns:FunCPDischargeResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetOrderStateRequest">
+  	<wsdl:part element="tns:FunCPSetOrderState" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetOrderStateResponse">
+  	<wsdl:part element="tns:FunCPSetOrderStateResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPGetOrderVariationRequest">
+  	<wsdl:part element="tns:FunCPGetOrderVariation" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPGetOrderVariationResponse">
+  	<wsdl:part element="tns:FunCPGetOrderVariationResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetOrderVariationRequest">
+  	<wsdl:part element="tns:FunCPSetOrderVariation" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetOrderVariationResponse">
+  	<wsdl:part element="tns:FunCPSetOrderVariationResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunUpOneOrderStateRequest">
+  	<wsdl:part element="tns:FunUpOneOrderState" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunUpOneOrderStateResponse">
+  	<wsdl:part element="tns:FunUpOneOrderStateResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetItemSetRequest">
+  	<wsdl:part element="tns:FunCPSetItemSet" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetItemSetResponse">
+  	<wsdl:part element="tns:FunCPSetItemSetResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunSetRequest">
+  	<wsdl:part element="tns:FunSet" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunSetResponse">
+  	<wsdl:part element="tns:FunSetResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunGetOrderItemsRequest">
+  	<wsdl:part element="tns:FunGetOrderItems" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunGetOrderItemsResponse">
+  	<wsdl:part element="tns:FunGetOrderItemsResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetLISRequest">
+  	<wsdl:part element="tns:FunCPSetLIS" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetLISResponse">
+  	<wsdl:part element="tns:FunCPSetLISResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetPACSRequest">
+  	<wsdl:part element="tns:FunCPSetPACS" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetPACSResponse">
+  	<wsdl:part element="tns:FunCPSetPACSResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetFeeRequest">
+  	<wsdl:part element="tns:FunCPSetFee" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPSetFeeResponse">
+  	<wsdl:part element="tns:FunCPSetFeeResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPGetDictVariationRequest">
+  	<wsdl:part element="tns:FunCPGetDictVariation" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="FunCPGetDictVariationResponse">
+  	<wsdl:part element="tns:FunCPGetDictVariationResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="LCPService">
+    <wsdl:operation name="FunCPRegPatient">
+      <wsdl:input message="tns:FunCPRegPatientRequest"/>
+      <wsdl:output message="tns:FunCPRegPatientResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="FunCPGetStatus">
+    	<wsdl:input message="tns:FunCPGetStatusRequest"/>
+    	<wsdl:output message="tns:FunCPGetStatusResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="FunCPSetFirstPage">
+    	<wsdl:input message="tns:FunCPSetFirstPageRequest"/>
+    	<wsdl:output message="tns:FunCPSetFirstPageResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="FunCPSetDiagnosis">
+    	<wsdl:input message="tns:FunCPSetDiagnosisRequest"/>
+    	<wsdl:output message="tns:FunCPSetDiagnosisResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="FunCPSetOperation">
+    	<wsdl:input message="tns:FunCPSetOperationRequest"/>
+    	<wsdl:output message="tns:FunCPSetOperationResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="FunCPSetDoctorItem">
+    	<wsdl:input message="tns:FunCPSetDoctorItemRequest"/>
+    	<wsdl:output message="tns:FunCPSetDoctorItemResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="FunCPSetNurseItem">
+    	<wsdl:input message="tns:FunCPSetNurseItemRequest"/>
+    	<wsdl:output message="tns:FunCPSetNurseItemResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="FunCPSetOrderItem">
+    	<wsdl:input message="tns:FunCPSetOrderItemRequest"/>
+    	<wsdl:output message="tns:FunCPSetOrderItemResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="FunCPGetItemSet">
+    	<wsdl:input message="tns:FunCPGetItemSetRequest"/>
+    	<wsdl:output message="tns:FunCPGetItemSetResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="FunGetMatchItem">
+    	<wsdl:input message="tns:FunGetMatchItemRequest"/>
+    	<wsdl:output message="tns:FunGetMatchItemResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="FunCPSetEmrDoc">
+    	<wsdl:input message="tns:FunCPSetEmrDocRequest"/>
+    	<wsdl:output message="tns:FunCPSetEmrDocResponse"/>
+    </wsdl:operation>
+
+    <wsdl:operation name="FunCPDischarge">
+    	<wsdl:input message="tns:FunCPDischargeRequest"/>
+    	<wsdl:output message="tns:FunCPDischargeResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="FunCPSetOrderState">
+    	<wsdl:input message="tns:FunCPSetOrderStateRequest"/>
+    	<wsdl:output message="tns:FunCPSetOrderStateResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="FunCPGetOrderVariation">
+    	<wsdl:input message="tns:FunCPGetOrderVariationRequest"/>
+    	<wsdl:output message="tns:FunCPGetOrderVariationResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="FunCPSetOrderVariation">
+    	<wsdl:input message="tns:FunCPSetOrderVariationRequest"/>
+    	<wsdl:output message="tns:FunCPSetOrderVariationResponse"/>
+    </wsdl:operation>
+
+    <wsdl:operation name="FunCPSetItemSet">
+    	<wsdl:input message="tns:FunCPSetItemSetRequest"/>
+    	<wsdl:output message="tns:FunCPSetItemSetResponse"/>
+    </wsdl:operation>
+
+    
+        <wsdl:operation name="FunCPSetLIS">
+    	<wsdl:input message="tns:FunCPSetLISRequest"/>
+    	<wsdl:output message="tns:FunCPSetLISResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="FunCPSetPACS">
+    	<wsdl:input message="tns:FunCPSetPACSRequest"/>
+    	<wsdl:output message="tns:FunCPSetPACSResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="FunCPSetFee">
+    	<wsdl:input message="tns:FunCPSetFeeRequest"/>
+    	<wsdl:output message="tns:FunCPSetFeeResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="FunCPGetDictVariation">
+    	<wsdl:input message="tns:FunCPGetDictVariationRequest"/>
+    	<wsdl:output message="tns:FunCPGetDictVariationResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LCPServiceSOAP" type="tns:LCPService">
+
+  	<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+  	<wsdl:operation name="FunCPRegPatient">
+
+  		<soap:operation soapAction="http://lcp.goodwillcis.com/LCPService/FunCPRegPatient"/>
+  		<wsdl:input>
+
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="FunCPGetStatus">
+  		<soap:operation soapAction="http://lcp.goodwillcis.com/LCPService/FunCPGetStatus"/>
+  		<wsdl:input>
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="FunCPSetFirstPage">
+  		<soap:operation soapAction="http://lcp.goodwillcis.com/LCPService/FunCPSetFirstPage"/>
+  		<wsdl:input>
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="FunCPSetDiagnosis">
+  		<soap:operation soapAction="http://lcp.goodwillcis.com/LCPService/FunCPSetDiagnosis"/>
+  		<wsdl:input>
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="FunCPSetOperation">
+  		<soap:operation soapAction="http://lcp.goodwillcis.com/LCPService/FunCPSetOperation"/>
+  		<wsdl:input>
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="FunCPSetDoctorItem">
+  		<soap:operation soapAction="http://lcp.goodwillcis.com/LCPService/FunCPSetDoctorItem"/>
+  		<wsdl:input>
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="FunCPSetNurseItem">
+  		<soap:operation soapAction="http://lcp.goodwillcis.com/LCPService/FunCPSetNurseItem"/>
+  		<wsdl:input>
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="FunCPSetOrderItem">
+  		<soap:operation soapAction="http://lcp.goodwillcis.com/LCPService/FunCPSetOrderItem"/>
+  		<wsdl:input>
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="FunCPGetItemSet">
+  		<soap:operation soapAction="http://lcp.goodwillcis.com/LCPService/FunCPGetItemSet"/>
+  		<wsdl:input>
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="FunGetMatchItem">
+  		<soap:operation soapAction="http://lcp.goodwillcis.com/LCPService/FunGetMatchItem"/>
+  		<wsdl:input>
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="FunCPSetEmrDoc">
+  		<soap:operation soapAction="http://lcp.goodwillcis.com/LCPService/FunCPSetEmrDoc"/>
+  		<wsdl:input>
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="FunCPDischarge">
+  		<soap:operation soapAction="http://lcp.goodwillcis.com/LCPService/FunCPDischarge"/>
+  		<wsdl:input>
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="FunCPSetOrderState">
+  		<soap:operation soapAction="http://lcp.goodwillcis.com/LCPService/FunCPSetOrderState"/>
+  		<wsdl:input>
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="FunCPGetOrderVariation">
+  		<soap:operation soapAction="http://lcp.goodwillcis.com/LCPService/FunCPGetOrderVariation"/>
+  		<wsdl:input>
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="FunCPSetOrderVariation">
+  		<soap:operation soapAction="http://lcp.goodwillcis.com/LCPService/FunCPSetOrderVariation"/>
+  		<wsdl:input>
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="FunCPSetItemSet">
+  		<soap:operation soapAction="http://lcp.goodwillcis.com/LCPService/FunCPSetItemSet"/>
+  		<wsdl:input>
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="FunCPSetLIS">
+  		<soap:operation soapAction="http://lcp.goodwillcis.com/LCPService/FunCPSetLIS"/>
+  		<wsdl:input>
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="FunCPSetPACS">
+  		<soap:operation soapAction="http://lcp.goodwillcis.com/LCPService/FunCPSetPACS"/>
+  		<wsdl:input>
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="FunCPSetFee">
+  		<soap:operation soapAction="http://lcp.goodwillcis.com/LCPService/FunCPSetFee"/>
+  		<wsdl:input>
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="FunCPGetDictVariation">
+  		<soap:operation soapAction="http://lcp.goodwillcis.com/LCPService/FunCPGetDictVariation"/>
+  		<wsdl:input>
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LCPService">
+    <wsdl:port binding="tns:LCPServiceSOAP" name="LCPServiceSOAP">
+      <soap:address location="http://localhost:8080/LcpProject/services/LCPServiceSOAP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

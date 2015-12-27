@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<chart showShadow='true' baseFont='宋体' baseFontSize='14' caption='全院路径完成情况' xAxisName='路径状态' yAxisName='病例数' numberSuffix='例' formatNumberScale='0' useRoundEdges='1'>
+  <set label='路径完成' value='10261' />
+  <set label='路径退出' value='5247' />
+  <set label='路径执行中' value='1365' />
+</chart>

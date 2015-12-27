@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<chart palette='2' rotateNames='0' animation='1' numdivlines='4' caption='失败次数最多的5个任务' baseFont='宋体' baseFontSize='12'
+       useRoundEdges='1' legendBorderAlpha='0' numberSuffix='次' bgColor='FFFFFF,CCCCCC'>
+  <categories font='宋体' fontSize='12'>
+    <category label='0001-01-01 - 2011-03-10'/>
+    <category label='2011-04-30 - 2011-05-01'/>
+    <category label='2011-07-20 - 2011-07-21'/>
+    <category label='2011-08-10 - 2011-08-11'/>
+    <category label='2011-08-15 - 2011-08-16'/>
+    <category label='1000版'/>
+    <category label='1001版'/>
+    <category label='1002版'/>
+    <category label='1004版'/>
+    <category label='1006版'/>
+  </categories>
+  <dataset seriesname='上传任务' color='9ACCF6' alpha='90' showValues='1' dashed='1'>
+    <set value='12' />
+    <set value='10' />
+    <set value='8' />
+    <set value='7' />
+    <set value='5' />
+    <set />
+    <set />
+    <set />
+    <set />
+    <set />
+  </dataset>
+  <dataset seriesname='下载任务' color='82CF27' showValues='1' alpha='90'>
+    <set />
+    <set />
+    <set />
+    <set />
+    <set />
+    <set value='16' />
+    <set value='16' />
+    <set value='11' />
+    <set value='5' />
+    <set value='5' />
+  </dataset>
+</chart>

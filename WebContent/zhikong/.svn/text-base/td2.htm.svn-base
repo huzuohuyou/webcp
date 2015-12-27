@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>患者病例详细信息</title>
+	<link rel="stylesheet" href="../public/styles/demos.css">
+
+<style type="text/css"> 
+<!--
+a:link{
+text-decoration:none;
+color: #000000;
+font-size: 12px;
+}
+a:visited{
+text-decoration:none;
+color: #000000;
+font-size: 12px;
+}
+-->
+</style>
+
+</head>
+<body>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <!-- 病例详细信息 -->
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td height="30"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="24" bgcolor="#353c44"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="23"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="24" height="19" valign="bottom"><div align="center"><img src="../public/images/tb.gif" width="14" height="14" /></div></td>
+                <td valign="bottom"><span class="STYLE1"> 病例详细信息</span></td>
+              </tr>
+            </table></td>
+            <td>&nbsp;</td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td align="left"><table width="400" id="Table1" class="users" border="0" cellpadding="0" cellspacing="1" bgcolor="#a8c7ce">
+    <tbody id="Tbody1">    
+      <tr>
+        <td width="80" height="80" bgcolor="#FFFFFF"><div align="center"><a href="td1.htm">
+            <img src="../public/images/detail_1.png" style="border:0px" width="48" height="48" alt="病例概况" /><br />病例概况</a></div></td>
+        <td width="80" height="80" bgcolor="#0080C0"><div align="center"><a href="td2.htm">
+            <img src="../public/images/detail_2.png" style="border:0px" width="48" height="48" alt="临床路径执行情况" /><br />路径执行情况</a></div></td>
+        <td width="80" height="80" bgcolor="#FFFFFF"><div align="center"><a href="td3.htm">
+            <img src="../public/images/detail_3.png" style="border:0px" width="48" height="48" alt="治疗记录" /><br />治疗记录</a></div></td>
+        <td width="80" height="80" bgcolor="#FFFFFF"><div align="center"><a href="td4.htm">
+            <img src="../public/images/detail_4.png" style="border:0px" width="48" height="48" alt="检验检查结果" /><br />检验检查结果</a></div></td>
+        <td width="80" height="80" bgcolor="#FFFFFF"><div align="center"><a href="td5.htm">
+            <img src="../public/images/detail_5.png" style="border:0px" width="48" height="48" alt="相关病历内容" /><br />相关病历</a></div></td>
+      </tr>      				
+      </tbody>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td height="1"></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <!-- 路径执行概况 -->
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td><table width="100%" id="Table2" class="users" border="0" cellpadding="0" cellspacing="1" bgcolor="#a8c7ce">
+    <tbody id="Tbody2">
+      <tr>            
+        <td height="24" bgcolor="353c44" class="STYLE6" colspan="5"><div align="center"><span class="STYLE1">路径基本信息</span></div></td>        
+      </tr>
+      <tr>
+        <td width="10%" height="24" bgcolor="#d3eaef"><div align="center"><span class="STYLE10">路径状态</span></div></td>
+        <td width="5%" bgcolor="#FFFFFF"><div align="center"><img src="../public/images/detail_s2.png" width="24" height="24" alt="执行中" /></div></td>
+        <td width="10%" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">路径执行中</span></div></td>
+        <td width="10%" bgcolor="#d3eaef"><div align="center"><a href="t31.htm"><span class="STYLE10">执行的路径</span></a></div></td>
+        <td width="65%" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">2型糖尿病临床路径</span></div></td>
+      </tr>
+      </tbody>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <tr>
+  	<td height="1" width="3">&nbsp;</td>
+    <td></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <!-- 变异记录 -->
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td><table width="100%" id="Table4" class="users" border="0" cellpadding="0" cellspacing="1" bgcolor="#a8c7ce">
+    <tbody id="Tbody4">
+      <tr>            
+        <td height="24" bgcolor="353c44" class="STYLE6" colspan="5"><div align="center"><span class="STYLE1">路径变异记录</span></div></td>        
+      </tr>
+      <tr bgcolor="#d3eaef">
+        <td width="10%" height="24"><div align="center"><span class="STYLE10">节点序号</span></div></td>
+        <td width="20%"><div align="center"><span class="STYLE10">节点说明</span></div></td>
+        <td width="45%"><div align="center"><span class="STYLE10">变异描述</span></div></td>
+        <td width="15%"><div align="center"><span class="STYLE10">记录时间</span></div></td>
+        <td width="10%"><div align="center"><span class="STYLE10">记录人</span></div></td>
+      </tr>
+      <tr bgcolor="#FFFFFF">
+        <td height="24"><div align="center"><span class="STYLE10">3</span></div></td>
+        <td><div align="center"><span class="STYLE10">住院第2-4日</span></div></td>
+        <td><div align="center"><span class="STYLE10">发生并发症退出路径</span></div></td>
+        <td><div align="center"><span class="STYLE10">2011-04-08</span></div></td>
+        <td><div align="center"><span class="STYLE10">林医生</span></div></td>
+      </tr>
+      <tr bgcolor="#FFFFFF">
+        <td height="24"><div align="center"><span class="STYLE10">2</span></div></td>
+        <td><div align="center"><span class="STYLE10">住院第1日</span></div></td>
+        <td><div align="center"><span class="STYLE10">部分检验门诊已做，不做部分检验</span></div></td>
+        <td><div align="center"><span class="STYLE10">2011-04-07</span></div></td>
+        <td><div align="center"><span class="STYLE10">林医生</span></div></td>
+      </tr>
+      </tbody>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <tr>
+  	<td height="1" width="3">&nbsp;</td>
+    <td></td>
+  	<td width="3">&nbsp;</td>
+  </tr>  
+  <!-- 路径执行单 -->
+  <tr>
+  	<td width="3">&nbsp;</td>
+    <td><table width="100%" id="Table3" class="users" border="0" cellpadding="0" cellspacing="1" bgcolor="#a8c7ce">
+    <tbody id="Tbody3">
+      <tr>            
+        <td height="24" bgcolor="353c44" class="STYLE6" colspan="8"><div align="center"><span class="STYLE1">路径执行情况</span></div></td>        
+      </tr>
+      <tr>
+        <td width="15%" height="24" bgcolor="#d3eaef"><div align="center"><span class="STYLE10">床位费</span></div></td>
+        <td width="10%" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">123.78</span></div></td>
+        <td width="15%" bgcolor="#d3eaef"><div align="center"><span class="STYLE10">护理费</span></div></td>
+        <td width="10%" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">123.78</span></div></td>
+        <td width="15%" bgcolor="#d3eaef"><div align="center"><span class="STYLE10">西药费</span></div></td>
+        <td width="10%" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">123.78</span></div></td>
+        <td width="15%" bgcolor="#d3eaef"><div align="center"><span class="STYLE10">中成药费</span></div></td>
+        <td width="10%" bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">123.78</span></div></td>
+      </tr>
+      <tr>
+        <td height="24" bgcolor="#d3eaef"><div align="center"><span class="STYLE10">中草药费</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">123.78</span></div></td>
+        <td bgcolor="#d3eaef"><div align="center"><span class="STYLE10">放射费</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">123.78</span></div></td>
+        <td bgcolor="#d3eaef"><div align="center"><span class="STYLE10">化验费</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">123.78</span></div></td>
+        <td bgcolor="#d3eaef"><div align="center"><span class="STYLE10">输氧费</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">123.78</span></div></td>
+      </tr>
+      <tr>
+        <td height="24" bgcolor="#d3eaef"><div align="center"><span class="STYLE10">输血费</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">123.78</span></div></td>
+        <td bgcolor="#d3eaef"><div align="center"><span class="STYLE10">诊疗费</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">123.78</span></div></td>
+        <td bgcolor="#d3eaef"><div align="center"><span class="STYLE10">手术费</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">123.78</span></div></td>
+        <td bgcolor="#d3eaef"><div align="center"><span class="STYLE10">接生费</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">123.78</span></div></td>
+      </tr>
+      <tr>
+        <td height="24" bgcolor="#d3eaef"><div align="center"><span class="STYLE10">检查费</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">123.78</span></div></td>
+        <td bgcolor="#d3eaef"><div align="center"><span class="STYLE10">麻醉费</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">123.78</span></div></td>
+        <td bgcolor="#d3eaef"><div align="center"><span class="STYLE10">婴儿费</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">123.78</span></div></td>
+        <td bgcolor="#d3eaef"><div align="center"><span class="STYLE10">陪床费</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">123.78</span></div></td>
+      </tr>
+      <tr>
+        <td height="24" bgcolor="#d3eaef"><div align="center"><span class="STYLE10">其他费用</span></div></td>
+        <td bgcolor="#FFFFFF"><div align="center"><span class="STYLE10">123.78</span></div></td>
+        <td bgcolor="#d3eaef" colspan="3"><div align="center"><span class="STYLE10">合计</span></div></td>
+        <td bgcolor="#FFFF00" colspan="3"><div align="center"><span class="STYLE10">456783.78</span></div></td>
+      </tr>
+      </tbody>
+    </table></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  <tr>
+  	<td height="1" width="3">&nbsp;</td>
+    <td></td>
+  	<td width="3">&nbsp;</td>
+  </tr>
+  
+</table>
+
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
